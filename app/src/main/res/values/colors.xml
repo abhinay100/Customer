@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1d98f1</color>
+    <color name="colorAccent">#20d4f4</color>
+    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="apnacareBlue">#1d98f1</color>
+    <color name="apnacareDarkBlue">#007dd7</color>
+
+    <color name="colorGreen">#07ba04</color>
+    <color name="colorRed">#be180c</color>
+    <color name="colorOrange">#ff9500</color>
+</resources>
