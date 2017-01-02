@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_menu1"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Case Details" />
+
+        <item
+            android:id="@+id/nav_menu2"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Case History" />
+
+        <item
+            android:id="@+id/nav_menu3"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Assessment" />
+
+        <item
+            android:id="@+id/nav_menu4"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Schedules" />
+
+        <item
+            android:id="@+id/nav_menu5"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Duties" />
+    </group>
+</menu>
