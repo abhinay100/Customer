@@ -100,24 +100,17 @@ public class CasesListAdapter extends RealmBasedRecyclerViewAdapter<CaseRecord, 
                 viewHolder.requestMonth.setText(String.valueOf(new SimpleDateFormat("MMM").format(calendar.getTime())));
                 viewHolder.requestYear.setText(String.valueOf(calendar.get(Calendar.YEAR)));
             }
-//            viewHolder.patientName.setText(patient.getFirstName());
-//            viewHolder.service.setText(caseRecord.getServiceName());
-//            viewHolder.area.setText(patient.getArea()+", "+patient.getCity());
-//            viewHolder.status.setText("Status: "+caseRecord.getStatus());
+            viewHolder.patientName.setText(patient.getFirstName());
+            viewHolder.service.setText(caseRecord.getServiceName());
+            viewHolder.area.setText(patient.getArea()+", "+patient.getCity());
+            viewHolder.status.setText("Status: "+caseRecord.getStatus());
 
-            viewHolder.patientName.setText("Krishna");
-            viewHolder.service.setText("hi");
-            viewHolder.area.setText("Vijaynagar"+", "+"Bangalore");
-            viewHolder.status.setText("Status: "+"available");
+//            viewHolder.patientName.setText("Krishna");
+//            viewHolder.service.setText("hi");
+//            viewHolder.area.setText("Vijaynagar"+", "+"Bangalore");
+//            viewHolder.status.setText("Status: "+"available");
 
-//            viewHolder.cardView.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    Intent intent = new Intent(getContext(), MainActivity.class);
-//                    intent.putExtra("caseID",caseRecord.getId());
-//                    mContext.startActivity(intent);
-//                }
-//            });
+
             viewHolder.cardView.setOnClickListener((View view) -> {
                 Intent intent = new Intent(getContext(), ViewCaseActivity.class);
                 intent.putExtra("caseID",caseRecord.getId());
