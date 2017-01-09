@@ -1,32 +1,40 @@
 package customer.apnacare.in.customer.activity;
 
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.GravityCompat;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.util.Log;
 import android.view.View;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import customer.apnacare.in.customer.R;
+import customer.apnacare.in.customer.fragments.BasicProfile;
+import customer.apnacare.in.customer.fragments.CaseDetails;
+import customer.apnacare.in.customer.fragments.TasksTabFragment;
 import customer.apnacare.in.customer.model.CaseRecord;
 import customer.apnacare.in.customer.model.Patient;
+import customer.apnacare.in.customer.utils.Constants;
 import io.realm.Realm;
 
 /**
  * Created by root on 30/12/16.
  */
 
-public class ViewCaseActivity extends BaseActivity {
+public class ViewCaseActivity extends BaseActivity implements CaseDetails.ProviderStatus {
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -36,6 +44,12 @@ public class ViewCaseActivity extends BaseActivity {
     @BindView(R.id.case_nav_view)
     NavigationView navigationView;
 
+    Context mContext;
+    Bundle bundle;
+    private CoordinatorLayout mCoordinatorLayout;
+    ViewPager mViewPager;
+    TabLayout tabs;
+    ProgressDialog mDialog;
     private Realm realm;
 
     long caseID;
@@ -47,155 +61,91 @@ public class ViewCaseActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_case_view);
         ButterKnife.bind(this);
+        setUpNavigation("Case Details");
 
         realm = Realm.getDefaultInstance();
+
+//        Bundle extras = getIntent().getExtras();
+//        caseID = extras.getLong("caseID");
+//
+//        bundle =new Bundle();
+//        bundle.putLong("caseID", caseID);
 
         Bundle extras = getIntent().getExtras();
         caseID = extras.getLong("caseID");
 
-        if(caseID > 0){
-            caseRecord = realm.where(CaseRecord.class).equalTo("id",caseID).findFirst();
-            patient = realm.where(Patient.class).equalTo("id",caseRecord.getPatientId()).findFirst();
+        mContext = this;
+        mCoordinatorLayout = (CoordinatorLayout) findViewById(R.id.viewCaseCoordinatorLayout);
+        tabs = (TabLayout) findViewById(R.id.tabs);
+        mViewPager = (ViewPager)findViewById(R.id.viewpager);
+
+        // Setting ViewPager for each Tabs
+        setupViewPager(mViewPager);
+
+        // Set Tabs inside Toolbar
+        tabs.setupWithViewPager(mViewPager);
+
+
+
+        if (caseID > 0) {
+            caseRecord = realm.where(CaseRecord.class).equalTo("id", caseID).findFirst();
+            patient = realm.where(Patient.class).equalTo("id", caseRecord.getPatientId()).findFirst();
         }
 
-    //    toolbar.setTitle("Case - "+patient.getFirstName());
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(realm != null && !realm.isClosed()) {
-                    realm.close();
-                    realm = null;
-                }
-                finish();
-                moveTaskToBack(false);
-                onBackPressed();
-                return;
-            }
-        });
 
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
-
-        if(drawer != null){
-            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                    this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-            drawer.setDrawerListener(toggle);
-            toggle.setToolbarNavigationClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if(realm != null && !realm.isClosed()) {
-                        realm.close();
-                        realm = null;
-                    }
-                    finish();
-                    moveTaskToBack(false);
-                    onBackPressed();
-                }
-            });
-            toggle.setDrawerIndicatorEnabled(false);
-            toggle.syncState();
-        }
-
-        if(navigationView != null){
-            navigationView.setNavigationItemSelectedListener(this);
-            View header = LayoutInflater.from(this).inflate(R.layout.nav_case_menu_header, null);
-            navigationView.addHeaderView(header);
-        }
-
-        displaySelectedScreen(R.id.nav_menu1);
-
-        setStatusBarColor();
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        displaySelectedScreen(item.getItemId());
+    // Add Fragments to Tabs
+    private void setupViewPager(ViewPager viewPager){
+        Adapter adapter = new Adapter(getSupportFragmentManager());
+        adapter.addFragment(new CaseDetails(), "Details",bundle);
+        adapter.addFragment(new BasicProfile(), "CareGiver", bundle);
+        adapter.addFragment(new TasksTabFragment(), "Tasks", bundle);
 
-        return true;
-    }
-
-    private void displaySelectedScreen(int itemId) {
-        //creating fragment object
-        Fragment fragment = null;
-
-        //initializing the fragment object which is selected
-        switch (itemId) {
-            case R.id.nav_menu1:
-//                fragment = new CaseDetails();
-                break;
-//            case R.id.nav_menu2:
-//                fragment = new Menu2();
-//                break;
-//            case R.id.nav_menu3:
-//                fragment = new Menu3();
-//                break;
-        }
-
-        //replacing the fragment
-        if (fragment != null) {
-            Bundle args = new Bundle();
-            args.putLong("caseID",caseRecord.getId());
-            fragment.setArguments(args);
-
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.content_frame, fragment);
-            ft.commit();
-        }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-     //   drawer.closeDrawer(GravityCompat.END);
+        viewPager.setAdapter(adapter);
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.case_menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if(id == R.id.caseMenu){
-            if (drawer.isDrawerOpen(Gravity.RIGHT)) {
-                drawer.closeDrawer(Gravity.RIGHT);
-            }
-            else {
-                drawer.openDrawer(Gravity.RIGHT);
-            }
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onBackPressed() {
-        if (drawer != null && drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.END);
-        } else {
-
-        }
-        super.onBackPressed();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        if(realm != null && !realm.isClosed()) {
-            realm.close();
-            realm = null;
+    public void updateStatus(String status) {
+        if(status.equals("Accepted")){
+            tabs.setVisibility(View.VISIBLE);
+            setupViewPager(mViewPager);
         }
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-        if(realm != null && !realm.isClosed()) {
-            realm.close();
-            realm = null;
+    static class Adapter extends FragmentPagerAdapter{
+
+        private final List<Fragment> mFragmentList = new ArrayList<>();
+        private final List<String> mFragmentTitleList = new ArrayList<>();
+
+        public Adapter(FragmentManager manager) {
+            super(manager);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            Log.v(Constants.TAG,"fragmentpos"+ mFragmentList.get(position));
+            return mFragmentList.get(position);
+        }
+
+
+
+        @Override
+        public int getCount() {
+            Log.v(Constants.TAG,"fragmentsize"+ mFragmentList.size());
+            return mFragmentList.size();
+
+        }
+
+        public void addFragment(Fragment fragment, String title, Bundle bundle) {
+            mFragmentList.add(fragment);
+            mFragmentTitleList.add(title);
+            fragment.setArguments(bundle);
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return mFragmentTitleList.get(position);
         }
     }
 }
