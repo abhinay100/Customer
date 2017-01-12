@@ -51,6 +51,7 @@ public class ViewCaseActivity extends BaseActivity implements CaseDetails.Provid
     TabLayout tabs;
     ProgressDialog mDialog;
     private Realm realm;
+    public static String CASE_ID = "";
 
     long caseID;
     CaseRecord caseRecord;
