@@ -22,6 +22,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import customer.apnacare.in.customer.R;
+import customer.apnacare.in.customer.fragments.AssessmentTabFragment;
 import customer.apnacare.in.customer.fragments.BasicProfile;
 import customer.apnacare.in.customer.fragments.CaseDetails;
 import customer.apnacare.in.customer.fragments.TasksTabFragment;
@@ -102,6 +103,7 @@ public class ViewCaseActivity extends BaseActivity implements CaseDetails.Provid
         adapter.addFragment(new CaseDetails(), "Details",bundle);
         adapter.addFragment(new BasicProfile(), "CareGiver", bundle);
         adapter.addFragment(new TasksTabFragment(), "Tasks", bundle);
+        adapter.addFragment(new AssessmentTabFragment(), "Assessment", bundle);
 
         viewPager.setAdapter(adapter);
     }

@@ -21,14 +21,14 @@
             android:title="@string/menu_logout" />
     </group>
 
-    <group
-        android:id="@+id/menu_bottom"
-        android:checkableBehavior="none">
+    <!--<group-->
+        <!--android:id="@+id/menu_bottom"-->
+        <!--android:checkableBehavior="none">-->
 
-        <item
-            android:id="@+id/menu_about"
-            android:icon="@android:drawable/ic_menu_info_details"
-            android:title="About App" />
-    </group>
+        <!--<item-->
+            <!--android:id="@+id/menu_about"-->
+            <!--android:icon="@android:drawable/ic_menu_info_details"-->
+            <!--android:title="About App" />-->
+    <!--</group>-->
 
 </menu>
