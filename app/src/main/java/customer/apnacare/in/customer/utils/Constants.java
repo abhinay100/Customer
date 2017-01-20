@@ -8,7 +8,8 @@ import java.io.File;
 
 public class Constants {
 
-    public static final String API_URL = "http://192.168.0.15/apnacare_saas/public/api/";
+    public static final String API_URL = "https://portal.apnacare.in/api/v1/";
+    //public static final String API_URL = "https://portal.apnacare.in/api/v1/";
     public static final String DATABASE_NAME = "apnacare_leadmanager.db";
     public static final String TAG = "Customer.class";
     public static final int MODE_PRIVATE = 0;

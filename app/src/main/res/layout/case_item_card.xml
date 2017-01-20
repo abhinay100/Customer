@@ -140,41 +140,41 @@
                     android:layout_height="match_parent"
                     android:background="#CCC"/>
 
-                <LinearLayout
-                    android:layout_below="@id/line"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:minWidth="35dp"
-                    android:orientation="vertical"
-                    android:gravity="center|center_vertical|center_horizontal">
+                <!--<LinearLayout-->
+                    <!--android:layout_below="@id/line"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:minWidth="35dp"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:gravity="center|center_vertical|center_horizontal">-->
 
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_weight="1"
-                        android:layout_gravity="center|center_vertical|center_horizontal"
-                        android:src="@drawable/ic_location"
-                        android:minHeight="30dp"
-                        android:minWidth="30dp" />
+                    <!--<ImageView-->
+                        <!--android:layout_width="25dp"-->
+                        <!--android:layout_height="25dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_gravity="center|center_vertical|center_horizontal"-->
+                        <!--android:src="@drawable/ic_location"-->
+                        <!--android:minHeight="30dp"-->
+                        <!--android:minWidth="30dp" />-->
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="2dp"
-                        android:background="#CCC" />
+                    <!--<View-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="1dp"-->
+                        <!--android:layout_marginTop="2dp"-->
+                        <!--android:background="#CCC" />-->
 
-                    <ImageView
-                        android:id="@+id/btn_call_customer"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_weight="1"
-                        android:layout_gravity="center|center_vertical|center_horizontal"
-                        app:srcCompat="@drawable/ic_call"
-                        android:minHeight="30dp"
-                        android:minWidth="30dp"/>
+                    <!--<ImageView-->
+                        <!--android:id="@+id/btn_call_customer"-->
+                        <!--android:layout_width="25dp"-->
+                        <!--android:layout_height="25dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_gravity="center|center_vertical|center_horizontal"-->
+                        <!--app:srcCompat="@drawable/ic_call"-->
+                        <!--android:minHeight="30dp"-->
+                        <!--android:minWidth="30dp"/>-->
 
 
-                </LinearLayout>
+                <!--</LinearLayout>-->
 
             </LinearLayout>
 

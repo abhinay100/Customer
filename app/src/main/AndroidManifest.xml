@@ -55,6 +55,20 @@
                 android:value=".activity.CasesActivity" />
         </activity>
 
+        <activity
+            android:name=".activity.NewRequestActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainActivity"/>
+        </activity>
+
+        <activity
+            android:name=".activity.BillsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.CasesActivity"/>
+        </activity>
+
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="6d2ab9f90989242e2a47e6f3f61047f75eb8c95a" />

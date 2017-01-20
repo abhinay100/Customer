@@ -19,6 +19,7 @@ import java.util.Calendar;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import customer.apnacare.in.customer.R;
+import customer.apnacare.in.customer.activity.BillsActivity;
 import customer.apnacare.in.customer.activity.CasesActivity;
 import customer.apnacare.in.customer.activity.MainActivity;
 import customer.apnacare.in.customer.activity.ViewCaseActivity;
@@ -64,7 +65,7 @@ public class CasesListAdapter extends RealmBasedRecyclerViewAdapter<CaseRecord, 
         @BindView(R.id.lblArea) TextView area;
         @BindView(R.id.lblCaseStatus) TextView status;
 
-        @BindView(R.id.btn_call_customer) ImageView callCustomer;
+//        @BindView(R.id.btn_call_customer) ImageView callCustomer;
 
 
         public ViewHolder(View container) {
@@ -105,10 +106,10 @@ public class CasesListAdapter extends RealmBasedRecyclerViewAdapter<CaseRecord, 
 //            viewHolder.area.setText(patient.getArea()+", "+patient.getCity());
 //            viewHolder.status.setText("Status: "+caseRecord.getStatus());
 
-            viewHolder.patientName.setText("Krishna");
-            viewHolder.service.setText("hi");
-            viewHolder.area.setText("Vijaynagar"+", "+"Bangalore");
-            viewHolder.status.setText("Status: "+"available");
+            viewHolder.patientName.setText(String.valueOf(patient.getFirstName()));
+            viewHolder.service.setText(caseRecord.getLanguagePreference());
+            viewHolder.area.setText(patient.getArea()+", "+patient.getCity());
+            viewHolder.status.setText("Status: "+caseRecord.getStatus());
 
 
             viewHolder.cardView.setOnClickListener((View view) -> {

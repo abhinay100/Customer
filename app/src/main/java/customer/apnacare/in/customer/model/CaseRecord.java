@@ -41,7 +41,7 @@ public class CaseRecord extends RealmObject {
 
     public CaseRecord(JsonObject data) throws ParseException {
         this.id = data.get("id").getAsInt();
-        this.crnNumber = data.get("file_no").getAsString();
+        this.crnNumber = data.get("crn_number").getAsString();
         this.branchId = data.get("branch_id").getAsInt();
         this.patientId = data.get("patient_id").getAsLong();
         this.careplanName = data.get("careplan_name").getAsString();

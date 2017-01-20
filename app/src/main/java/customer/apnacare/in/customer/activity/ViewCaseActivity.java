@@ -76,6 +76,9 @@ public class ViewCaseActivity extends BaseActivity implements CaseDetails.Provid
         Bundle extras = getIntent().getExtras();
         caseID = extras.getLong("caseID");
 
+        bundle = new Bundle();
+        bundle.putLong("caseID", caseID);
+
         mContext = this;
         mCoordinatorLayout = (CoordinatorLayout) findViewById(R.id.viewCaseCoordinatorLayout);
         tabs = (TabLayout) findViewById(R.id.tabs);
@@ -89,10 +92,10 @@ public class ViewCaseActivity extends BaseActivity implements CaseDetails.Provid
 
 
 
-        if (caseID > 0) {
-            caseRecord = realm.where(CaseRecord.class).equalTo("id", caseID).findFirst();
-            patient = realm.where(Patient.class).equalTo("id", caseRecord.getPatientId()).findFirst();
-        }
+//        if (caseID > 0) {
+//            caseRecord = realm.where(CaseRecord.class).equalTo("id", caseID).findFirst();
+//            patient = realm.where(Patient.class).equalTo("id", caseRecord.getPatientId()).findFirst();
+//        }
 
 
     }

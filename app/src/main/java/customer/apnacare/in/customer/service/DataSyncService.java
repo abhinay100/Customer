@@ -190,8 +190,8 @@ public class DataSyncService extends IntentService {
     }
 
     public void loadCases(Intent intent){
-        userID = CustomerApp.preferences.getInt("userID",-1);
-        String userType = "Aggregator"; //PractitionerApp.preferences.getString("userType","Provider");
+        userID = 4; //CustomerApp.preferences.getInt("userID",-1);
+        String userType = "Customer"; //PractitionerApp.preferences.getString("userType","Provider");
         String type = intent.getStringExtra("type");
 
         //List<CaseRecord> cases = cr.getAllCases();
@@ -217,7 +217,7 @@ public class DataSyncService extends IntentService {
                 try {
                     if(data != null) {
                         if(data != null && data.get("result") != null && data.get("result").toString() != "false"){
-                            Log.v(Constants.TAG,"data: "+data.get("result").getAsJsonObject().get("cases"));
+                            Log.v(Constants.TAG,"lk: "+data.get("result").getAsJsonObject().get("cases"));
 
                             Realm realm = Realm.getDefaultInstance();
 
@@ -226,7 +226,7 @@ public class DataSyncService extends IntentService {
                             // Cases
                             try {
                                 JsonArray casesJsonArray = parser.parse(data.get("result").getAsJsonObject().get("cases").toString()).getAsJsonArray();
-                                //Log.v(Constants.TAG,"casesJsonArray: "+casesJsonArray);
+                                Log.v(Constants.TAG,"casesJsonArray: "+casesJsonArray);
                                 if(casesJsonArray.size() > 0) {
                                     realm.executeTransaction(new Realm.Transaction() {
                                         @Override
@@ -235,12 +235,13 @@ public class DataSyncService extends IntentService {
                                                 try {
                                                     JsonObject jsonObject = (JsonObject) casesJsonArray.get(i);
                                                     CaseRecord caseRecord = new CaseRecord(jsonObject);
+                                                    Log.v(Constants.TAG,"jsonObject: "+jsonObject);
 
-                                                    Patient patientObject = new Patient();
-                                                    patientObject.setId(jsonObject.get("patient_id").getAsLong());
-                                                    realm.copyToRealmOrUpdate(patientObject);
 
-                                                    caseRecord.patient = patientObject;
+//                                                    caseRecord.setLanguagePreference(jsonObject.get("language_preference").getAsString());
+//                                                    caseRecord.setCareplanName(jsonObject.get("careplan_name").getAsString());
+
+
 
                                                     realm.copyToRealmOrUpdate(caseRecord);
                                                 }catch (Exception e){
@@ -258,7 +259,7 @@ public class DataSyncService extends IntentService {
                             // Patients
                             try {
                                 JsonArray patientsJsonArray = parser.parse(data.get("result").getAsJsonObject().get("patients").toString()).getAsJsonArray();
-                                //Log.v(Constants.TAG,"patientsJsonArray: "+patientsJsonArray);
+                                Log.v(Constants.TAG,"patientsJsonArray: "+patientsJsonArray);
                                 if(patientsJsonArray.size() > 0) {
                                     realm.executeTransaction(new Realm.Transaction() {
                                         @Override
