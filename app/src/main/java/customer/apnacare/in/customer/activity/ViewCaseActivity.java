@@ -90,13 +90,7 @@ public class ViewCaseActivity extends BaseActivity implements CaseDetails.Provid
         // Set Tabs inside Toolbar
         tabs.setupWithViewPager(mViewPager);
 
-
-
-//        if (caseID > 0) {
-//            caseRecord = realm.where(CaseRecord.class).equalTo("id", caseID).findFirst();
-//            patient = realm.where(Patient.class).equalTo("id", caseRecord.getPatientId()).findFirst();
-//        }
-
+        
 
     }
 
