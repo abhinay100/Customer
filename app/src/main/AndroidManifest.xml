@@ -63,6 +63,13 @@
         </activity>
 
         <activity
+            android:name=".activity.PatientsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.CasesActivity"/>
+        </activity>
+
+        <activity
             android:name=".activity.BillsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

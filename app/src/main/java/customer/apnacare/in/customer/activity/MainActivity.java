@@ -49,6 +49,7 @@ public class MainActivity extends BaseActivity {
 
         Intent i = new Intent(mContext, DataSyncService.class);
         i.putExtra("serviceName", "loadCases");
+//        i.putExtra("serviceName", "careGiver");
         i.putExtra("type","All");
         startService(i);
     }

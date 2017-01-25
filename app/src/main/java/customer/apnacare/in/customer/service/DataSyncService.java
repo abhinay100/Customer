@@ -13,13 +13,13 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-import org.w3c.dom.Comment;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+import customer.apnacare.in.customer.model.Assessment;
+import customer.apnacare.in.customer.model.Caregiver;
 import customer.apnacare.in.customer.model.CaseRecord;
 import customer.apnacare.in.customer.model.Patient;
 import customer.apnacare.in.customer.network.NetworkRequest;
@@ -42,12 +42,13 @@ public class DataSyncService extends IntentService {
     public static final int STATUS_ERROR = 2;
 
     private RestAPI api;
+    private RestAPI json;
     private Subscription mNetworkSubscription;
 
     protected int userID;
     Realm realm;
 
-    public static final String ACTION = "in.apnacare.practitioner.service";
+    public static final String ACTION = "in.apnacare.customer.service";
 
     public DataSyncService() {
         super(DataSyncService.class.getName());
@@ -67,6 +68,7 @@ public class DataSyncService extends IntentService {
                 case "sendToken": sendToken(intent); break;
                 case "login": login(intent.getStringExtra("email"), intent.getStringExtra("password"), intent.getStringExtra("type")); break;
                 case "loadCases": loadCases(intent); break;
+//                case "careGiver": careGiver(intent); break;
             }
 
             Bundle bundle = new Bundle();
@@ -217,7 +219,7 @@ public class DataSyncService extends IntentService {
                 try {
                     if(data != null) {
                         if(data != null && data.get("result") != null && data.get("result").toString() != "false"){
-                            Log.v(Constants.TAG,"lk: "+data.get("result").getAsJsonObject().get("cases"));
+//                            Log.v(Constants.TAG,"lk: "+data.get("result").getAsJsonObject().get("cases"));
 
                             Realm realm = Realm.getDefaultInstance();
 
@@ -280,6 +282,66 @@ public class DataSyncService extends IntentService {
                             }catch (Exception e){
                                 Log.v(Constants.TAG,"patientsJsonArray Exception: "+e.toString());
                             }
+
+
+                            //Caregiver
+                            try {
+                              JsonArray caregiverJsonArray = parser.parse(data.get("result").getAsJsonObject().get("caregivers").toString()).getAsJsonArray();
+                                Log.v(Constants.TAG,"caregiverJsonArray: "+caregiverJsonArray);
+                                if(caregiverJsonArray.size() > 0){
+                                    realm.executeTransaction(new Realm.Transaction() {
+                                        @Override
+                                        public void execute(Realm realm) {
+                                            for(int i =0; i < caregiverJsonArray.size(); i++){
+                                                try {
+                                                    JsonObject jsonObject = (JsonObject) caregiverJsonArray.get(i);
+                                                    Caregiver caregiver = new Caregiver(jsonObject);
+                                                    realm.copyToRealmOrUpdate(caregiver);
+                                                }catch (Exception e){
+
+                                                }
+                                            }
+                                        }
+                                    });
+                                }
+
+
+                            }catch (Exception e){
+                                Log.v(Constants.TAG,"caregiverJsonArray Exception: "+e.toString());
+                            }
+
+                            //Assessments
+                            try {
+
+                                JsonArray assessmentsJsonArray = parser.parse(data.get("result").getAsJsonObject().get("assessments").toString()).getAsJsonArray();
+                                Log.v(Constants.TAG,"assessmentsJsonArray: "+ assessmentsJsonArray);
+                                if(assessmentsJsonArray.size() > 0){
+                                    realm.executeTransaction(new Realm.Transaction() {
+                                        @Override
+                                        public void execute(Realm realm) {
+                                            for(int i=0; i < assessmentsJsonArray.size(); i++){
+                                                try {
+                                                    JsonObject jsonObject = (JsonObject) assessmentsJsonArray.get(i);
+                                                    Assessment assessment = new Assessment(jsonObject);
+                                                    realm.copyToRealmOrUpdate(assessment);
+
+                                                }catch (Exception e){
+
+                                                }
+                                            }
+                                        }
+                                    });
+                                }
+
+
+
+
+
+                            }catch (Exception e){
+                                Log.v(Constants.TAG,"AssessmentsJsonArray Exception: "+e.toString());
+                            }
+
+
 
 
                             // Visits
@@ -355,5 +417,11 @@ public class DataSyncService extends IntentService {
             publishResults("loadAllCases",STATUS_ERROR, null);
         }
     }
+
+
+
+
+
+
 }
 

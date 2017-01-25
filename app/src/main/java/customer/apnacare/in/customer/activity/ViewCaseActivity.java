@@ -37,13 +37,14 @@ import io.realm.Realm;
 
 public class ViewCaseActivity extends BaseActivity implements CaseDetails.ProviderStatus {
 
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
-    @BindView(R.id.drawer_layout)
-    DrawerLayout drawer;
+    @BindView(R.id.toolbar) Toolbar toolbar;
+    @BindView(R.id.drawer_layout) DrawerLayout drawer;
     @Nullable
     @BindView(R.id.case_nav_view)
     NavigationView navigationView;
+
+    static CasesActivity INSTANCE;
+//    String data="FirstActivity";
 
     Context mContext;
     Bundle bundle;
@@ -64,6 +65,7 @@ public class ViewCaseActivity extends BaseActivity implements CaseDetails.Provid
         setContentView(R.layout.activity_case_view);
         ButterKnife.bind(this);
         setUpNavigation("Case Details");
+
 
         realm = Realm.getDefaultInstance();
 
@@ -90,7 +92,7 @@ public class ViewCaseActivity extends BaseActivity implements CaseDetails.Provid
         // Set Tabs inside Toolbar
         tabs.setupWithViewPager(mViewPager);
 
-        
+
 
     }
 
@@ -124,7 +126,6 @@ public class ViewCaseActivity extends BaseActivity implements CaseDetails.Provid
 
         @Override
         public Fragment getItem(int position) {
-            Log.v(Constants.TAG,"fragmentpos"+ mFragmentList.get(position));
             return mFragmentList.get(position);
         }
 
@@ -132,7 +133,6 @@ public class ViewCaseActivity extends BaseActivity implements CaseDetails.Provid
 
         @Override
         public int getCount() {
-            Log.v(Constants.TAG,"fragmentsize"+ mFragmentList.size());
             return mFragmentList.size();
 
         }

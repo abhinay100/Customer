@@ -80,6 +80,7 @@ public class CasesListAdapter extends RealmBasedRecyclerViewAdapter<CaseRecord, 
 
             View v = inflater.inflate(R.layout.case_item_card, viewGroup, false);
             vh = new ViewHolder(v);
+
         }catch (Exception e){
             Log.v(Constants.TAG,"onCreateRealmViewHolder Exception: "+e.toString());
         }

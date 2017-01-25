@@ -27,6 +27,9 @@ public interface RestAPI {
     @POST("cases/all")
     Observable<JsonObject> getCaseData(@Field("user_id") int userID, @Field("type") String type, @Field("new_case_ids") String caseID, @Field("existing_case_ids") String existing);
 
+
+
+
     // --------------------------------------------------------------------------------------------------------------------------------------------//
 
     @FormUrlEncoded
@@ -41,10 +44,10 @@ public interface RestAPI {
     @GET
     Call<ResponseBody> downloadProfileImage(@Url String fileUrl);
 
-
-    @FormUrlEncoded
-    @POST("provider/caregivers")
-    Observable<JsonObject> getCaregivers(@Field("user_id") int providerID, @Field("existing_emp_ids") String existing);
+//
+//    @FormUrlEncoded
+//    @POST("provider/caregivers")
+//    Observable<JsonObject> getCaregivers(@Field("user_id") int providerID, @Field("existing_emp_ids") String existing);
 
     @FormUrlEncoded
     @POST("provider/getEmployeeProfile")

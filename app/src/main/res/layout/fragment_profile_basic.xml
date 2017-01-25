@@ -26,7 +26,7 @@
                     android:layout_margin="5dp"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/ic_profile"
+                    android:src="@drawable/ic_circle_status"
                     android:layout_gravity="center|center_vertical|center_horizontal"/>
 
             </LinearLayout>
@@ -36,6 +36,390 @@
                 android:layout_height="1dp"
                 android:background="#ccc" />
 
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="5dp"-->
+            <!--android:padding="2dp"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<TableLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+            <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="5dp">-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="14sp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:text="Name"/>-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text=" : "/>-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/lblCareGiverName"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Ashok Kumar"/>-->
+
+            <!--</TableRow>-->
+
+            <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="5dp">-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="14sp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:text="Mobile No"/>-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text=" : "/>-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/lblCareGiverMobile"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="9845098450"/>-->
+
+            <!--</TableRow>-->
+
+            <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="5dp">-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="14sp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:text="City"/>-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text=" : "/>-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/lblCareGiverCity"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Bengaluru"/>-->
+
+            <!--</TableRow>-->
+
+            <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="#DDD">-->
+
+            <!--<TextView android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="5dp"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textColor="@color/apnacareDarkBlue"-->
+            <!--android:layout_column="2"-->
+            <!--android:gravity="center|center_vertical|center_horizontal"-->
+            <!--android:text="Professional Details"/>-->
+
+            <!--</TableRow>-->
+
+            <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="5dp">-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="14sp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:text="Specialization"/>-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text=" : "/>-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/lblCareGiverSpecialization"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Registered Nurse"/>-->
+
+            <!--</TableRow>-->
+
+            <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="5dp">-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="14sp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:text="Qualification"/>-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text=" : "/>-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/lblCareGiverQualification"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="B.Sc Nurse"/>-->
+
+            <!--</TableRow>-->
+
+            <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="5dp">-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="14sp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:text="Experience"/>-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text=" : "/>-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/lblCareGiverExperience"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="24 yr(s)"/>-->
+
+            <!--</TableRow>-->
+
+            <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="5dp">-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="14sp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:text="Certification"/>-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text=" : "/>-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="-"/>-->
+
+            <!--</TableRow>-->
+
+
+            <!--</TableLayout>-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="5dp"-->
+            <!--android:padding="2dp"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<TableLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+            <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="5dp">-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="14sp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:text="Name"/>-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text=" : "/>-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/lblCareGiverName"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Ashok Kumar"/>-->
+
+            <!--</TableRow>-->
+
+            <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="5dp">-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="14sp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:text="Mobile No"/>-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text=" : "/>-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/lblCareGiverMobile"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="9845098450"/>-->
+
+            <!--</TableRow>-->
+
+            <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="5dp">-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="14sp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:text="City"/>-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text=" : "/>-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/lblCareGiverCity"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Bengaluru"/>-->
+
+            <!--</TableRow>-->
+
+            <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="#DDD">-->
+
+            <!--<TextView android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="5dp"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textColor="@color/apnacareDarkBlue"-->
+            <!--android:layout_column="2"-->
+            <!--android:gravity="center|center_vertical|center_horizontal"-->
+            <!--android:text="Professional Details"/>-->
+
+            <!--</TableRow>-->
+
+            <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="5dp">-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="14sp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:text="Specialization"/>-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text=" : "/>-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/lblCareGiverSpecialization"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Registered Nurse"/>-->
+
+            <!--</TableRow>-->
+
+            <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="5dp">-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="14sp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:text="Qualification"/>-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text=" : "/>-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/lblCareGiverQualification"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="B.Sc Nurse"/>-->
+
+            <!--</TableRow>-->
+
+            <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="5dp">-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="14sp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:text="Experience"/>-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text=" : "/>-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/lblCareGiverExperience"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="24 yr(s)"/>-->
+
+            <!--</TableRow>-->
+
+            <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="5dp">-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="14sp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:text="Certification"/>-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text=" : "/>-->
+
+            <!--<TextView android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="-"/>-->
+
+            <!--</TableRow>-->
+
+
+            <!--</TableLayout>-->
+            <!--</LinearLayout>-->
+
+
+
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -43,188 +427,25 @@
                 android:padding="2dp"
                 android:orientation="vertical">
 
-                <TableLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
 
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp">
-
-                        <TextView android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
-                            android:text="Name"/>
-
-                        <TextView android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=" : "/>
-
-                        <TextView
-                            android:id="@+id/lblCareGiverName"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Ashok Kumar"/>
-
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp">
-
-                        <TextView android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
-                            android:text="Mobile No"/>
-
-                        <TextView android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=" : "/>
-
-                        <TextView
-                            android:id="@+id/lblCareGiverMobile"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="9845098450"/>
-
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp">
-
-                        <TextView android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
-                            android:text="City"/>
-
-                        <TextView android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=" : "/>
-
-                        <TextView
-                            android:id="@+id/lblCareGiverCity"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Bengaluru"/>
-
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#DDD">
-
-                        <TextView android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:padding="5dp"
-                            android:textSize="16sp"
-                            android:textColor="@color/apnacareDarkBlue"
-                            android:layout_column="2"
-                            android:gravity="center|center_vertical|center_horizontal"
-                            android:text="Professional Details"/>
-
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp">
-
-                        <TextView android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
-                            android:text="Specialization"/>
-
-                        <TextView android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=" : "/>
-
-                        <TextView
-                            android:id="@+id/lblCareGiverSpecialization"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Registered Nurse"/>
-
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp">
-
-                        <TextView android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
-                            android:text="Qualification"/>
-
-                        <TextView android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=" : "/>
-
-                        <TextView
-                            android:id="@+id/lblCareGiverQualification"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="B.Sc Nurse"/>
-
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp">
-
-                        <TextView android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
-                            android:text="Experience"/>
-
-                        <TextView android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=" : "/>
-
-                        <TextView
-                            android:id="@+id/lblCareGiverExperience"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="24 yr(s)"/>
-
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp">
-
-                        <TextView android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
-                            android:text="Certification"/>
-
-                        <TextView android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=" : "/>
-
-                        <TextView android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="-"/>
-
-                    </TableRow>
-
-
-                </TableLayout>
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtCareGiver"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:text=""/>
             </LinearLayout>
+
+            <Button
+                android:id="@+id/btnCaregiverInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorGreen"
+                android:textColor="#FFF"
+                android:textSize="20sp"
+                android:text="Details"/>
+
 
         </LinearLayout>
 
