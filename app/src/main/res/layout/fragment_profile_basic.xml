@@ -427,24 +427,27 @@
                 android:padding="2dp"
                 android:orientation="vertical">
 
-
                 <TextView android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:padding="5dp"
                     android:id="@+id/txtCareGiver"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
+                    android:textAlignment="inherit"
+                    android:textSize="15sp"
                     android:text=""/>
+
             </LinearLayout>
 
             <Button
                 android:id="@+id/btnCaregiverInfo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_margin="15dp"
+                android:layout_gravity="center|center_vertical|center_horizontal"
                 android:background="@color/colorGreen"
                 android:textColor="#FFF"
-                android:textSize="20sp"
-                android:text="Details"/>
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                android:text="More Details"/>
 
 
         </LinearLayout>

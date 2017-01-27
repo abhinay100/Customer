@@ -1,30 +1,22 @@
 package customer.apnacare.in.customer.fragments;
 
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.Color;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
-import android.support.v4.media.session.MediaControllerCompat;
+import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Transformation;
-import com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 import customer.apnacare.in.customer.R;
 import customer.apnacare.in.customer.model.Caregiver;
 import customer.apnacare.in.customer.utils.CircleTransform;
@@ -42,9 +34,6 @@ public class BasicProfile extends Fragment {
     Realm realm;
     Caregiver caregiver;
 
-
-
-
     public BasicProfile() {
         // Required empty public constructor
     }
@@ -52,7 +41,6 @@ public class BasicProfile extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
 
@@ -66,55 +54,82 @@ public class BasicProfile extends Fragment {
 
 
         caregiver = realm.where(Caregiver.class).findFirst();
-        Log.v(Constants.TAG,"caregiverprofile: "+caregiver);
+        //Log.v(Constants.TAG,"caregiverprofile: "+caregiver);
 
 
         txtConcat = (TextView) view.findViewById(R.id.txtCareGiver);
         caregiverImage = (ImageView) view.findViewById(R.id.careGiverImage);
-        String details1 = "I am";
-        String firstName = caregiver.getFirstName();
-//        String firstName = caregiver.getFirstName();
-        String lastName = caregiver.getLastName();
-        String details2 = "I am";
-        String age = "50";
-        String details3 = "years old";
-        String details4 = "I have";
-        int experience = caregiver.getExperience();
-        String details5 = "years experience as";
-        String specialization = caregiver.getSpecialization();
-        String details6 = " I studied at";
-        String school = "Oxford";
+
+        // Profile Description Builder
+        String profileDesc = "Hi \n\nI am <b>" + caregiver.getFirstName() + " " + caregiver.getLastName() + "</b>";
+        if(!caregiver.getDateOfBirth().isEmpty() && getAge(caregiver.getDateOfBirth()) != 0){
+            profileDesc += ". I am <b>" + String.valueOf(getAge(caregiver.getDateOfBirth())) + "</b> years old";
+        }
+
+        if(caregiver.getExperience() != 0){
+            profileDesc += ". I have <b>" + caregiver.getExperience() + "</b> years of experience as " + caregiver.getSpecialization();
+        }
+
+        if(!caregiver.getCollegeName().isEmpty()){
+            profileDesc += ". I studied at <b>" + caregiver.getCollegeName() + "</b>";
+        }
+
+        profileDesc += ".\n\nMy Contact number is <b>" + caregiver.getMobileNumber() + "</b>";
+        profileDesc += ". My supervisor is Krishna ";
+
+        profileDesc += ".\n\nIf you need more information about me, please click on this button";
+
 //        String details7 = "I am looking forward to provide services to your";
 //        String relationship = "grandmother";
-        String details8 = "My conatct numbers is";
-        String phone = caregiver.getMobileNumber();
-        String details9 = "My supervisor is";
-        String supervisor = "Krishna";
-        String details10 = "If you need more information about me, please click on this button";
         String profileImage = caregiver.getProfileImage();
 
-        Log.v(Constants.TAG,"profileImage: "+profileImage);
-
-
-        txtConcat .setText(details1 + " " + firstName + " " + lastName + "." + " " +  details2 + " " + age + " " + details3 + "." + " " + details4 + " " + experience + " " + details5 + " " + specialization + "." + " " + details6 + " " + school + "."  + " " + details8 + " " + phone + "." + " " + details9 + " " + supervisor + "." + " " + details10 + "." );
-
-
-
-
+        txtConcat .setText(Html.fromHtml(profileDesc));
 
         //Loading Image from URL
-        Picasso.with(this.getContext())
+        Picasso.with(getActivity())
                 .load(profileImage)
-                .placeholder(R.drawable.ic_profile)   // optional
-                .resize(400,400)
+                .resize(200,200)
                 .transform(new CircleTransform())
                 .into(caregiverImage);
 
-
-
-
-
-
         return view;
     }
+
+    private int getAge(String date){
+        int calculatedAge = 0;
+
+        if(date != null) {
+            try {
+                SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+                Date mDate = df.parse(date);
+
+                if (mDate != null) {
+                    int year = mDate.getYear()+1900;
+                    int month = mDate.getMonth();
+                    int day = mDate.getDay();
+
+                    Log.v(Constants.TAG,"year: "+year+" | month: "+month+" | day: "+day);
+
+                    Calendar dob = Calendar.getInstance();
+                    Calendar today = Calendar.getInstance();
+
+                    dob.set(year, month, day);
+
+                    int age = today.get(Calendar.YEAR) - dob.get(Calendar.YEAR);
+
+                    if (today.get(Calendar.DAY_OF_YEAR) < dob.get(Calendar.DAY_OF_YEAR)) {
+                        age--;
+                    }
+
+                    Integer ageInt = new Integer(age);
+                    calculatedAge = ageInt;
+                }
+            }catch (ParseException e){
+                Log.v(Constants.TAG,"exception: "+e.toString());
+            }
+        }
+
+        return calculatedAge;
+    }
 }
+

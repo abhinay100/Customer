@@ -13,22 +13,18 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-
 import customer.apnacare.in.customer.model.Assessment;
 import customer.apnacare.in.customer.model.Caregiver;
 import customer.apnacare.in.customer.model.CaseRecord;
 import customer.apnacare.in.customer.model.Patient;
+import customer.apnacare.in.customer.model.ServiceRequest;
+import customer.apnacare.in.customer.model.WorkLog;
 import customer.apnacare.in.customer.network.NetworkRequest;
 import customer.apnacare.in.customer.network.RestAPI;
 import customer.apnacare.in.customer.network.RestAPIBuilder;
 import customer.apnacare.in.customer.utils.Constants;
 import customer.apnacare.in.customer.utils.CustomerApp;
 import io.realm.Realm;
-import okhttp3.ResponseBody;
 import rx.Subscription;
 
 /**
@@ -66,9 +62,11 @@ public class DataSyncService extends IntentService {
 
             switch (serviceName){
                 case "sendToken": sendToken(intent); break;
-                case "login": login(intent.getStringExtra("email"), intent.getStringExtra("password"), intent.getStringExtra("type")); break;
+                case "signup": signup(intent.getStringExtra("email"), intent.getStringExtra("password")); break;
+                case "login": login(intent.getStringExtra("email"), intent.getStringExtra("password")); break;
                 case "loadCases": loadCases(intent); break;
-//                case "careGiver": careGiver(intent); break;
+                case "loadProfile": loadProfile(); break;
+                case "newServiceRequest": newServiceRequest(intent); break;
             }
 
             Bundle bundle = new Bundle();
@@ -89,53 +87,6 @@ public class DataSyncService extends IntentService {
         LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
     }
 
-    private boolean DownloadImage(String profileFolderPath, String fileName, ResponseBody body, String serviceName) {
-        try {
-            InputStream in = null;
-            FileOutputStream out = null;
-
-            // Profiles Folder Path
-            File profileFolder = new File(profileFolderPath);
-            if(!profileFolder.exists()){
-                profileFolder.mkdirs();
-            }
-
-            try {
-                in = body.byteStream();
-                out = new FileOutputStream(profileFolderPath + fileName);
-                int c;
-
-                while ((c = in.read()) != -1) {
-                    out.write(c);
-                }
-            }
-            catch (IOException e) {
-                Log.v(Constants.TAG,"DownloadImage bytestream IOException: "+e.toString());
-                return false;
-            }
-            finally {
-                if (in != null) {
-                    in.close();
-                }
-                if (out != null) {
-                    out.close();
-                }
-            }
-
-            File f =  new File(profileFolderPath + fileName);
-            Log.v(Constants.TAG,"downloadimage: "+f.exists() + " path: "+f.getAbsolutePath());
-
-            publishResults(serviceName,STATUS_FINISHED, null);
-
-            return true;
-
-        } catch (IOException e) {
-            Log.v(Constants.TAG,"DownloadImage IOException: "+e.toString());
-            publishResults(serviceName,STATUS_ERROR, null);
-            return false;
-        }
-    }
-
     /*-------------------------------------------------------*/
     /*              All Service Methods                      */
     /*-------------------------------------------------------*/
@@ -143,10 +94,47 @@ public class DataSyncService extends IntentService {
     public void sendToken(Intent intent){
     }
 
-    public void login(String email, String password, String type){
+    public void signup(String email, String password){
         try {
             // Simulate network access.
-            mNetworkSubscription = NetworkRequest.performAsyncRequest(api.login(email, password,type), (data) -> {
+            mNetworkSubscription = NetworkRequest.performAsyncRequest(api.signup(email, password), (data) -> {
+                // Update UI on main thread
+                try {
+                    if(data.getAsJsonObject().get("error") != null){
+                        CustomerApp.e.putBoolean("isLoggedIn",false);
+                        CustomerApp.e.apply();
+
+                        publishResults("signup",STATUS_ERROR, null);
+                    }
+
+                    CustomerApp.e.putLong("userID", data.getAsJsonObject().get("result").getAsLong());
+                    CustomerApp.e.putString("userType", "Customer");
+                    CustomerApp.e.putString("email", email);
+                    CustomerApp.e.putBoolean("isLoggedIn",true);
+                    CustomerApp.e.apply();
+
+                } catch (Exception e) {
+                    Log.e(Constants.TAG, "signup() exception: " + e.toString());
+                    publishResults("signup",STATUS_ERROR, null);
+                }finally {
+                    publishResults("signup",STATUS_FINISHED, null);
+                }
+            }, (error) -> {
+                // Handle Error
+                Log.e(Constants.TAG,"signup Error: "+error.toString());
+                publishResults("signup",STATUS_ERROR, null);
+            });
+
+        }catch (Exception e){
+            Log.e(Constants.TAG,"signup() Exception: "+e.toString());
+            publishResults("signup",STATUS_ERROR, null);
+        }
+    }
+
+    public void login(String email, String password){
+        try {
+            // Simulate network access.
+            mNetworkSubscription = NetworkRequest.performAsyncRequest(api.login(email, password), (data) -> {
                 // Update UI on main thread
                 try {
                     if(data.getAsJsonObject().get("error") != null){
@@ -156,20 +144,11 @@ public class DataSyncService extends IntentService {
                         publishResults("login",STATUS_ERROR, null);
                     }
 
-                    String token = data.getAsJsonObject().get("token").toString().replace("\"","");
-                    JsonObject profile = data.getAsJsonObject().get("profile").getAsJsonObject();
+//                    Log.v(Constants.TAG,"login response: "+data.getAsJsonObject().get("result"));
 
-                    Log.v(Constants.TAG,"profile: "+profile.toString());
-
-                    CustomerApp.e.putString("token", token);
-                    CustomerApp.e.putInt("userID", profile.get("id").getAsInt());
-                    CustomerApp.e.putString("userType", profile.get("user_type").getAsString());
-                    CustomerApp.e.putInt("tenantID", profile.get("tenant_id").getAsInt());
-                    CustomerApp.e.putString("organizationName", profile.get("organization_name").getAsString());
-                    CustomerApp.e.putString("fullName", profile.get("full_name").getAsString());
-                    CustomerApp.e.putString("email", profile.get("email").getAsString());
-                    CustomerApp.e.putInt("roleID", profile.get("role_id").getAsInt());
-                    CustomerApp.e.putString("profileImagePath", profile.get("profile_image").getAsString());
+                    CustomerApp.e.putLong("userID", data.getAsJsonObject().get("result").getAsLong());
+                    CustomerApp.e.putString("userType", "Customer");
+                    CustomerApp.e.putString("email", email);
                     CustomerApp.e.putBoolean("isLoggedIn",true);
                     CustomerApp.e.apply();
 
@@ -191,27 +170,56 @@ public class DataSyncService extends IntentService {
         }
     }
 
-    public void loadCases(Intent intent){
-        userID = 4; //CustomerApp.preferences.getInt("userID",-1);
-        String userType = "Customer"; //PractitionerApp.preferences.getString("userType","Provider");
-        String type = intent.getStringExtra("type");
+    public void loadProfile(){
+        String email = CustomerApp.preferences.getString("email",null);
 
-        //List<CaseRecord> cases = cr.getAllCases();
-        //String fileNos[] = new String[cases.size()];
+        if(email != null){
+            try {
+                // Simulate network access.
+                mNetworkSubscription = NetworkRequest.performAsyncRequest(api.loadProfile(email), (data) -> {
+                    // Update UI on main thread
+                    try {
+                        if(data.getAsJsonObject().get("error") != null){
+                            publishResults("loadProfile",STATUS_ERROR, null);
+                        }
+
+                        CustomerApp.e.putString("fullName", data.getAsJsonObject().get("result").getAsJsonObject().get("name").getAsString());
+                        CustomerApp.e.putString("phoneNumber", data.getAsJsonObject().get("result").getAsJsonObject().get("phone").getAsString());
+                        CustomerApp.e.apply();
+                    } catch (Exception e) {
+                        Log.e(Constants.TAG, "loadProfile() exception: " + e.toString());
+                        publishResults("loadProfile",STATUS_ERROR, null);
+                    }finally {
+                        publishResults("loadProfile",STATUS_FINISHED, null);
+                    }
+                }, (error) -> {
+                    // Handle Error
+                    Log.e(Constants.TAG,"loadProfile Error: "+error.toString());
+                    publishResults("loadProfile",STATUS_ERROR, null);
+                });
+
+            }catch (Exception e){
+                Log.e(Constants.TAG,"loadProfile() Exception: "+e.toString());
+                publishResults("loadProfile",STATUS_ERROR, null);
+            }
+        }
+
+    }
+
+    public void loadCases(Intent intent){
+        long userID = CustomerApp.preferences.getLong("userID",-1);
+        String userType = "Customer";
 
         String existingCaseIDs = "";
         String newCaseIDs = "";
 
-        if(type.equals("All")){
-            realm.beginTransaction();
-
-            realm.where(CaseRecord.class).findAll().deleteAllFromRealm();
-//            realm.where(Comment.class).findAll().deleteAllFromRealm();
-            realm.where(Patient.class).findAll().deleteAllFromRealm();
-//            realm.where(Visit.class).findAll().deleteAllFromRealm();
-
-            realm.commitTransaction();
-        }
+        realm.beginTransaction();
+        realm.where(CaseRecord.class).findAll().deleteAllFromRealm();
+        realm.where(Patient.class).findAll().deleteAllFromRealm();
+        realm.where(Caregiver.class).findAll().deleteAllFromRealm();
+        realm.where(Assessment.class).findAll().deleteAllFromRealm();
+        realm.where(WorkLog.class).findAll().deleteAllFromRealm();
+        realm.commitTransaction();
 
         try {
             mNetworkSubscription = NetworkRequest.performAsyncRequest(api.getCaseData(userID, userType, newCaseIDs, existingCaseIDs), (data) -> {
@@ -219,7 +227,7 @@ public class DataSyncService extends IntentService {
                 try {
                     if(data != null) {
                         if(data != null && data.get("result") != null && data.get("result").toString() != "false"){
-//                            Log.v(Constants.TAG,"lk: "+data.get("result").getAsJsonObject().get("cases"));
+                            //Log.v(Constants.TAG,"lk: "+data.get("result").getAsJsonObject().get("cases"));
 
                             Realm realm = Realm.getDefaultInstance();
 
@@ -228,7 +236,7 @@ public class DataSyncService extends IntentService {
                             // Cases
                             try {
                                 JsonArray casesJsonArray = parser.parse(data.get("result").getAsJsonObject().get("cases").toString()).getAsJsonArray();
-                                Log.v(Constants.TAG,"casesJsonArray: "+casesJsonArray);
+                                //Log.v(Constants.TAG,"casesJsonArray: "+casesJsonArray);
                                 if(casesJsonArray.size() > 0) {
                                     realm.executeTransaction(new Realm.Transaction() {
                                         @Override
@@ -237,13 +245,12 @@ public class DataSyncService extends IntentService {
                                                 try {
                                                     JsonObject jsonObject = (JsonObject) casesJsonArray.get(i);
                                                     CaseRecord caseRecord = new CaseRecord(jsonObject);
-                                                    Log.v(Constants.TAG,"jsonObject: "+jsonObject);
 
+                                                    Patient patientObject = new Patient();
+                                                    patientObject.setId(jsonObject.get("patient_id").getAsLong());
+                                                    realm.copyToRealmOrUpdate(patientObject);
 
-//                                                    caseRecord.setLanguagePreference(jsonObject.get("language_preference").getAsString());
-//                                                    caseRecord.setCareplanName(jsonObject.get("careplan_name").getAsString());
-
-
+                                                    caseRecord.patient = patientObject;
 
                                                     realm.copyToRealmOrUpdate(caseRecord);
                                                 }catch (Exception e){
@@ -283,10 +290,9 @@ public class DataSyncService extends IntentService {
                                 Log.v(Constants.TAG,"patientsJsonArray Exception: "+e.toString());
                             }
 
-
                             //Caregiver
                             try {
-                              JsonArray caregiverJsonArray = parser.parse(data.get("result").getAsJsonObject().get("caregivers").toString()).getAsJsonArray();
+                                JsonArray caregiverJsonArray = parser.parse(data.get("result").getAsJsonObject().get("caregivers").toString()).getAsJsonArray();
                                 Log.v(Constants.TAG,"caregiverJsonArray: "+caregiverJsonArray);
                                 if(caregiverJsonArray.size() > 0){
                                     realm.executeTransaction(new Realm.Transaction() {
@@ -296,9 +302,10 @@ public class DataSyncService extends IntentService {
                                                 try {
                                                     JsonObject jsonObject = (JsonObject) caregiverJsonArray.get(i);
                                                     Caregiver caregiver = new Caregiver(jsonObject);
+
                                                     realm.copyToRealmOrUpdate(caregiver);
                                                 }catch (Exception e){
-
+                                                    Log.v(Constants.TAG,"caregiver json exception: "+e.toString());
                                                 }
                                             }
                                         }
@@ -314,7 +321,7 @@ public class DataSyncService extends IntentService {
                             try {
 
                                 JsonArray assessmentsJsonArray = parser.parse(data.get("result").getAsJsonObject().get("assessments").toString()).getAsJsonArray();
-                                Log.v(Constants.TAG,"assessmentsJsonArray: "+ assessmentsJsonArray);
+                                //Log.v(Constants.TAG,"assessmentsJsonArray: "+ assessmentsJsonArray);
                                 if(assessmentsJsonArray.size() > 0){
                                     realm.executeTransaction(new Realm.Transaction() {
                                         @Override
@@ -342,6 +349,30 @@ public class DataSyncService extends IntentService {
                             }
 
 
+                            // Worklogs
+                            try {
+                                JsonArray worklogsJsonArray = parser.parse(data.get("result").getAsJsonObject().get("worklogs").toString()).getAsJsonArray();
+                                //Log.v(Constants.TAG,"worklogsJsonArray: "+worklogsJsonArray);
+                                if (worklogsJsonArray.size() > 0) {
+                                    realm.executeTransaction(new Realm.Transaction() {
+                                        @Override
+                                        public void execute(Realm realm) {
+                                            for (int i = 0; i < worklogsJsonArray.size(); i++) {
+                                                try {
+                                                    JsonObject jsonObject = (JsonObject) worklogsJsonArray.get(i);
+                                                    WorkLog worklog = new WorkLog(jsonObject);
+
+                                                    realm.copyToRealmOrUpdate(worklog);
+                                                }catch (Exception e){
+                                                    Log.v(Constants.TAG,"worklog json Exception: "+e.toString());
+                                                }
+                                            }
+                                        }
+                                    });
+                                }
+                            }catch (Exception e){
+                                Log.v(Constants.TAG,"worklogsJsonArray Exception: "+e.toString());
+                            }
 
 
                             // Visits
@@ -354,9 +385,9 @@ public class DataSyncService extends IntentService {
                                         public void execute(Realm realm) {
                                             for (int i = 0; i < visitsJsonArray.size(); i++) {
                                                 try {
-                                                    JsonObject jsonObject = (JsonObject) visitsJsonArray.get(i);
+//                                                    JsonObject jsonObject = (JsonObject) visitsJsonArray.get(i);
 //                                                    Visit visits = new Visit(jsonObject);
-
+//
 //                                                    realm.copyToRealmOrUpdate(visits);
                                                 }catch (Exception e){
 
@@ -370,45 +401,18 @@ public class DataSyncService extends IntentService {
                             }
 
 
-                            // Comments
-                            try {
-                                JsonArray commentsJsonArray = parser.parse(data.get("result").getAsJsonObject().get("comments").toString()).getAsJsonArray();
-                                //Log.v(Constants.TAG,"commentsJsonArray: "+commentsJsonArray);
-                                if (commentsJsonArray.size() > 0) {
-                                    realm.executeTransaction(new Realm.Transaction() {
-                                        @Override
-                                        public void execute(Realm realm) {
-                                            for (int i = 0; i < commentsJsonArray.size(); i++) {
-                                                try {
-                                                    JsonObject jsonObject = (JsonObject) commentsJsonArray.get(i);
-//                                                    Comment comments = new Comment(jsonObject);
-
-//                                                    realm.copyToRealmOrUpdate(comments);
-                                                }catch (Exception e){
-
-                                                }
-                                            }
-                                        }
-                                    });
-                                }
-                            }catch (Exception e){
-                                Log.v(Constants.TAG,"commentsJsonArray Exception: "+e.toString());
-                            }
+                            realm.close();
                         }
                     }
                 } catch (Exception e) {
                     Log.e(Constants.TAG, "loadAllCases() exception: " + e.toString());
                     publishResults("loadAllCases",STATUS_ERROR, null);
                 }finally {
-                    if(realm!=null && !realm.isClosed()){
-                        realm.close();
-                    }
-
                     publishResults("loadAllCases",STATUS_FINISHED, null);
                 }
             }, (error) -> {
                 // Handle Error
-                Log.e(Constants.TAG,"Error: "+error.toString());
+                Log.e(Constants.TAG,"loadCases Error: "+error.toString());
                 publishResults("loadAllCases",STATUS_ERROR, null);
             });
 
@@ -419,9 +423,54 @@ public class DataSyncService extends IntentService {
     }
 
 
+    public void newServiceRequest(Intent intent){
+        String serviceName = intent.getStringExtra("serviceName");
+        long requestID = intent.getLongExtra("requestID",0);
 
+        ServiceRequest request = realm.where(ServiceRequest.class).equalTo("id",requestID).findFirst();
+        if(request != null){
+            JsonObject requestObject = new JsonObject();
+            requestObject.addProperty("id",request.getId());
+            requestObject.addProperty("name",request.getName());
+            requestObject.addProperty("phone",request.getPhoneNumber());
+            requestObject.addProperty("email",request.getEmail());
+            requestObject.addProperty("area",request.getArea());
+            requestObject.addProperty("city",request.getCity());
+            requestObject.addProperty("requirement",request.getService());
 
+            JsonObject requestJson = new JsonObject();
+            requestJson.add("request",requestObject);
 
+            try {
+                // Simulate network access.
+                mNetworkSubscription = NetworkRequest.performAsyncRequest(api.newServiceRequest(requestJson), (data) -> {
+                    // Update UI on main thread
+                    try {
+                        if(data.getAsJsonObject().get("error") != null){
+                            publishResults(serviceName,STATUS_ERROR, null);
+                        }
+
+                        if(data.getAsJsonObject().get("result") != null){
+                            publishResults(serviceName,STATUS_FINISHED, null);
+                        }
+                    } catch (Exception e) {
+                        Log.v(Constants.TAG, "newServiceRequest() exception: " + e.toString());
+                        publishResults(serviceName,STATUS_ERROR, null);
+                    }finally {
+                        publishResults(serviceName,STATUS_FINISHED, null);
+                    }
+                }, (error) -> {
+                    // Handle Error
+                    Log.e(Constants.TAG,"newServiceRequest Error: "+error.toString());
+                    publishResults(serviceName,STATUS_ERROR, null);
+                });
+
+            }catch (Exception e){
+                Log.e(Constants.TAG,"newServiceRequest() Exception: "+e.toString());
+                publishResults(serviceName,STATUS_ERROR, null);
+            }
+        }
+    }
 
 }
 

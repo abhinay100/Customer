@@ -33,73 +33,104 @@
             android:orientation="vertical"
             android:layout_gravity="center|center_horizontal|center_vertical">
 
-            <ImageView
-                android:layout_width="158dp"
-                android:layout_height="70dp"
-                android:src="@mipmap/ac_logo"
-                android:layout_gravity="center_vertical|center_horizontal|center"/>
-
-            <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginTop="10dp"-->
-                <!--android:layout_marginBottom="40dp"-->
-                <!--android:text="Customer App"-->
-                <!--android:layout_gravity="center|center_vertical|center_horizontal"-->
-                <!--android:gravity="center|center_horizontal|center_vertical"-->
-                <!--android:singleLine="false"-->
-                <!--android:textSize="20sp"-->
-                <!--android:textAppearance="@style/TextAppearance.AppCompat.Title"/>-->
-
-            <android.support.design.widget.TextInputLayout
+            <LinearLayout
+                android:id="@+id/sign_in_block"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center|center_horizontal|center_vertical">
 
-                <AutoCompleteTextView
-                    android:id="@+id/email"
+                <ImageView
+                    android:layout_width="158dp"
+                    android:layout_height="70dp"
+                    android:src="@mipmap/ac_logo"
+                    android:layout_gravity="center_vertical|center_horizontal|center"/>
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_marginBottom="40dp"-->
+                    <!--android:text="Customer App"-->
+                    <!--android:layout_gravity="center|center_vertical|center_horizontal"-->
+                    <!--android:gravity="center|center_horizontal|center_vertical"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:textAppearance="@style/TextAppearance.AppCompat.Title"/>-->
+
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_email"
-                    android:inputType="textEmailAddress"
-                    android:maxLines="1"
-                    android:singleLine="true"
-                    android:text="" />
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
 
-            </android.support.design.widget.TextInputLayout>
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/prompt_email"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="" />
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                </android.support.design.widget.TextInputLayout>
 
-                <EditText
-                    android:id="@+id/password"
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_password"
-                    android:imeActionId="@+id/login"
-                    android:imeActionLabel="@string/action_sign_in_short"
-                    android:imeOptions="actionUnspecified"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:singleLine="true"
-                    android:text="" />
+                    android:layout_marginTop="10dp">
 
-            </android.support.design.widget.TextInputLayout>
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/prompt_password"
+                        android:imeActionId="@+id/login"
+                        android:imeActionLabel="@string/action_sign_in_short"
+                        android:imeOptions="actionUnspecified"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="" />
 
-            <Button
-                android:id="@+id/email_sign_in_button"
-                style="?android:textAppearanceSmall"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/apnacareDarkBlue"
-                android:textColor="#FFF"
-                android:layout_marginTop="30dp"
-                android:text="@string/action_sign_in"
-                android:textStyle="bold" />
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/email_sign_in_button"
+                        style="?android:textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/apnacareDarkBlue"
+                        android:textColor="#FFF"
+                        android:text="@string/action_sign_in"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/email_sign_up_button"
+                        style="?android:textAppearanceSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorGreen"
+                        android:textColor="#FFF"
+                        android:text="Sign Up"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
 
         </LinearLayout>
+
     </ScrollView>
 </LinearLayout>

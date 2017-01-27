@@ -285,7 +285,8 @@
                 android:layout_marginLeft="5dp"
                 android:text="Communication Details"
                 android:textColor="#333"
-                android:textSize="18sp"/>
+                android:textSize="18sp"
+                android:visibility="gone"/>
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -296,7 +297,8 @@
                 android:layout_marginRight="1dp"
                 app:cardCornerRadius="2dp"
                 android:elevation="2dp"
-                app:cardElevation="2dp">
+                app:cardElevation="2dp"
+                android:visibility="gone">
 
                 <TableLayout
                     android:layout_width="match_parent"

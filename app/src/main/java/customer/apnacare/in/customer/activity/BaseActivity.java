@@ -1,13 +1,18 @@
 package customer.apnacare.in.customer.activity;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -20,9 +25,13 @@ import android.widget.TextView;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import customer.apnacare.in.customer.R;
 import customer.apnacare.in.customer.utils.Constants;
 import customer.apnacare.in.customer.utils.CustomerApp;
+import customer.apnacare.in.customer.utils.PermissionsUtil;
 
 /**
  * Created by root on 21/12/16.
@@ -87,8 +96,8 @@ public class BaseActivity extends AppCompatActivity
             headerProviderName = (TextView) header.findViewById(R.id.lblHeaderProviderName);
             headerProviderEmail = (TextView) header.findViewById(R.id.lblHeaderProviderDesignation);
 
-            headerProviderName.setText(CustomerApp.preferences.getString("profile_first_name","").toString());
-            headerProviderEmail.setText(CustomerApp.preferences.getString("profile_email","").toString());
+            headerProviderName.setText(CustomerApp.preferences.getString("fullName","").toString());
+            headerProviderEmail.setText(CustomerApp.preferences.getString("phoneNumber","").toString());
 
             setStatusBarColor();
 
@@ -112,6 +121,16 @@ public class BaseActivity extends AppCompatActivity
                 .title(title)
                 .content("Please wait...")
                 .progress(true, 0)
+                .show();
+    }
+
+    public void showMaterialDialog(String title, String message){
+        if(materialDialog != null){
+            materialDialog.dismiss();
+        }
+        materialDialog = new MaterialDialog.Builder(this)
+                .title(title)
+                .content(message)
                 .show();
     }
 
@@ -174,13 +193,76 @@ public class BaseActivity extends AppCompatActivity
     }
 
     public void logout(){
-//        CustomerApp.e.putBoolean("isLoggedIn",false);
-//        CustomerApp.e.putInt("userID",-1);
-//        CustomerApp.e.apply();
+        CustomerApp.e.putBoolean("isLoggedIn",false);
+        CustomerApp.e.putLong("userID",-1);
+        CustomerApp.e.apply();
 
         Intent i = new Intent(BaseActivity.this, LoginActivity.class);
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(i);
+    }
+
+    public void checkPermissions(){
+        if(PermissionsUtil.doesAppNeedPermissions()) {
+            PermissionsUtil.askPermissions(this);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case PermissionsUtil.PERMISSION_ALL: {
+                Log.v(Constants.TAG,"grantResults: "+grantResults);
+                if (grantResults.length > 0) {
+
+                    List<Integer> indexesOfPermissionsNeededToShow = new ArrayList<>();
+
+                    for(int i = 0; i < permissions.length; ++i) {
+                        if(ActivityCompat.shouldShowRequestPermissionRationale(this, permissions[i])) {
+                            indexesOfPermissionsNeededToShow.add(i);
+                        }
+                    }
+
+                    int size = indexesOfPermissionsNeededToShow.size();
+                    if(size != 0) {
+                        int i = 0;
+                        boolean isPermissionGranted = true;
+
+                        while(i < size && isPermissionGranted) {
+                            isPermissionGranted = grantResults[indexesOfPermissionsNeededToShow.get(i)]
+                                    == PackageManager.PERMISSION_GRANTED;
+                            i++;
+                        }
+
+                        if(!isPermissionGranted) {
+
+                            showDialogNotCancelable("Permissions mandatory",
+                                    "All the permissions are required for this app",
+                                    new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int i) {
+                                            checkPermissions();
+                                        }
+                                    });
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private void showDialogNotCancelable(String title, String message,
+                                         DialogInterface.OnClickListener okListener) {
+        new AlertDialog.Builder(this)
+                .setTitle(title)
+                .setMessage(message)
+                .setPositiveButton("OK", okListener)
+                .setCancelable(false)
+                .create()
+                .show();
     }
 }
 

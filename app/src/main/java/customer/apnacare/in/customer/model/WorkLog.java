@@ -3,6 +3,11 @@ package customer.apnacare.in.customer.model;
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
 
+import java.security.PrivateKey;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
@@ -13,62 +18,70 @@ import io.realm.annotations.PrimaryKey;
 public class WorkLog extends RealmObject {
 
     @PrimaryKey
-    private  int id;
+    private int id;
 
-    @SerializedName("worklog_id")
-    private int worklogId;
-
-    @SerializedName("professional_id")
-    private int professionalID;
-
-    @SerializedName("case_id")
-    private String caseID;
-
-    @SerializedName("check_in")
-    private String checkIn;
-
-    @SerializedName("check_out")
-    private String checkOut;
-
-    @SerializedName("routines")
-    private String routines;
-
-    @SerializedName("vitals")
+    private long careplanId;
+    private long caregiverId;
+    private String caregiverName;
+    private String worklogDate;
     private String vitals;
-
-    @SerializedName("tasks")
-    private String tasks;
-
-    @SerializedName("current_status")
-    private String currentStatus;
-
-    @SerializedName("created_at")
-    private String createdAt;
+    private String routines;
+    private Date createdAt;
 
     public WorkLog(){}
 
-    public String getCreatedAt() {
-        return createdAt;
+    public WorkLog (JsonObject data) throws ParseException{
+        this.id = data.get("id").getAsInt();
+        this.careplanId = data.get("careplan_id").getAsLong();
+        this.caregiverId = data.get("caregiver_id").getAsLong();
+        this.caregiverName = data.get("caregiver_name").getAsString();
+        this.worklogDate = data.get("worklog_date").getAsString();
+        this.vitals = data.get("vitals").getAsString();
+        this.routines = data.get("routines").getAsString();
+        this.createdAt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(data.get("created_at").getAsString());
+
     }
 
-    public void setCreatedAt(String createdAt) {
-        this.createdAt = createdAt;
+
+
+    public long getId() {
+        return id;
     }
 
-    public String getCurrentStatus() {
-        return currentStatus;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setCurrentStatus(String currentStatus) {
-        this.currentStatus = currentStatus;
+    public long getCareplanId() {
+        return careplanId;
     }
 
-    public String getTasks() {
-        return tasks;
+    public void setCareplanId(long careplanId) {
+        this.careplanId = careplanId;
     }
 
-    public void setTasks(String tasks) {
-        this.tasks = tasks;
+    public String getCaregiverName() {
+        return caregiverName;
+    }
+
+    public void setCaregiverName(String caregiverName) {
+        this.caregiverName = caregiverName;
+    }
+
+    public long getCaregiverId() {
+        return caregiverId;
+    }
+
+    public void setCaregiverId(long caregiverId) {
+        this.caregiverId = caregiverId;
+    }
+
+    public String getWorklogDate() {
+        return worklogDate;
+    }
+
+    public void setWorklogDate(String worklogDate) {
+        this.worklogDate = worklogDate;
     }
 
     public String getVitals() {
@@ -79,6 +92,14 @@ public class WorkLog extends RealmObject {
         this.vitals = vitals;
     }
 
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
     public String getRoutines() {
         return routines;
     }
@@ -86,69 +107,4 @@ public class WorkLog extends RealmObject {
     public void setRoutines(String routines) {
         this.routines = routines;
     }
-
-    public String getCheckOut() {
-        return checkOut;
-    }
-
-    public void setCheckOut(String checkOut) {
-        this.checkOut = checkOut;
-    }
-
-    public String getCheckIn() {
-        return checkIn;
-    }
-
-    public void setCheckIn(String checkIn) {
-        this.checkIn = checkIn;
-    }
-
-    public String getCaseID() {
-        return caseID;
-    }
-
-    public void setCaseID(String caseID) {
-        this.caseID = caseID;
-    }
-
-    public int getProfessionalID() {
-        return professionalID;
-    }
-
-    public void setProfessionalID(int professionalID) {
-        this.professionalID = professionalID;
-    }
-
-    public int getWorklogId() {
-        return worklogId;
-    }
-
-    public void setWorklogId(int worklogId) {
-        this.worklogId = worklogId;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public WorkLog(JsonObject data){
-        if(data.isJsonObject()){
-            this.worklogId = data.get("id").getAsInt();
-            this.professionalID = data.get("professional_id").getAsInt();
-            this.caseID = data.get("case_id").getAsString();
-            this.checkIn = data.get("check_in").getAsString();
-            this.checkOut = data.get("check_out").getAsString();
-            this.routines = data.get("routines").getAsString();
-            this.vitals = data.get("vitals").getAsString();
-            this.tasks = data.get("tasks").getAsString();
-            this.currentStatus = data.get("current_status").getAsString();
-            this.createdAt = data.get("created_at").getAsString();
-        }
-    }
-
-
 }

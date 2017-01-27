@@ -30,6 +30,8 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+        checkPermissions();
+
         newRequestBtn = (FloatingActionButton) findViewById(R.id.btnNewRequest);
         newRequestBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,17 +84,15 @@ public class MainActivity extends BaseActivity {
         switch (id){
             case R.id.cardCases: startActivity(new Intent(MainActivity.this,CasesActivity.class)); break;
             case R.id.cardProfiles: startActivity(new Intent(MainActivity.this,PatientsActivity.class)); break;
-            case R.id.cardMessage: startActivity(new Intent(MainActivity.this,MessagesActivity.class)); break;
+            case R.id.cardMessage: showMaterialDialog("Messages","This feature is coming soon."); break;
             case R.id.cardBills: startActivity(new Intent(MainActivity.this,BillsActivity.class)); break;
-            case R.id.cardAccount: startActivity(new Intent(MainActivity.this,BillsActivity.class)); break;
+            case R.id.cardAccount: startActivity(new Intent(MainActivity.this,AccountActivity.class)); break;
             case R.id.cardShop: startActivity(new Intent(MainActivity.this,EshopActivity.class)); break;
         }
-
     }
 
-
-
-
-
-
+    @Override
+    public void onPause(){
+        super.onPause();
+    }
 }

@@ -63,8 +63,6 @@ public class Caregiver extends RealmObject {
         this.lastName = data.get("last_name").getAsString();
         this.dateOfBirth = data.get("date_of_birth").getAsString();
         this.gender = data.get("gender").getAsString();
-//        this.bloodGroup = data.get("blood_group").getAsString();
-//        this.maritalStatus = data.get("marital_status").getAsString();
         this.mobileNumber = data.get("mobile_number").getAsString();
         this.email = data.get("email").getAsString();
         this.currentAddress = data.get("current_address").getAsString();
@@ -79,8 +77,6 @@ public class Caregiver extends RealmObject {
         this.languagesKnown = data.get("languages_known").getAsString();
         this.achievements = data.get("achievements").getAsString();
         this.collegeName = data.get("college_name").getAsString();
-
-
     }
 
     public long getId() {

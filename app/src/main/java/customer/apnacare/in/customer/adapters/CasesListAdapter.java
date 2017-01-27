@@ -78,7 +78,7 @@ public class CasesListAdapter extends RealmBasedRecyclerViewAdapter<CaseRecord, 
         ViewHolder vh = null;
         try {
 
-            View v = inflater.inflate(R.layout.case_item_card, viewGroup, false);
+            View v = inflater.inflate(R.layout.case_card, viewGroup, false);
             vh = new ViewHolder(v);
 
         }catch (Exception e){
@@ -107,10 +107,11 @@ public class CasesListAdapter extends RealmBasedRecyclerViewAdapter<CaseRecord, 
 //            viewHolder.area.setText(patient.getArea()+", "+patient.getCity());
 //            viewHolder.status.setText("Status: "+caseRecord.getStatus());
 
-            viewHolder.patientName.setText(String.valueOf(patient.getFirstName()));
-            viewHolder.service.setText(caseRecord.getLanguagePreference());
-            viewHolder.area.setText(patient.getArea()+", "+patient.getCity());
-            viewHolder.status.setText("Status: "+caseRecord.getStatus());
+            viewHolder.patientName.setText("Name: "+ String.valueOf(patient.getFirstName()));
+            viewHolder.service.setText("Language: "+ caseRecord.getLanguagePreference());
+//            viewHolder.area.setText(patient.getArea()+", "+patient.getCity());
+            viewHolder.area.setText("Location: "+ patient.getCity());
+            viewHolder.status.setText("Status: "+ caseRecord.getStatus());
 
 
             viewHolder.cardView.setOnClickListener((View view) -> {

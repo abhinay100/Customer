@@ -12,7 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import customer.apnacare.in.customer.R;
-import customer.apnacare.in.customer.adapters.CaseTaskAdapter;
+import customer.apnacare.in.customer.adapters.CaseVitalsAdapter;
 import customer.apnacare.in.customer.model.WorkLog;
 import customer.apnacare.in.customer.utils.Constants;
 import io.realm.Realm;
@@ -27,8 +27,9 @@ public class TasksTabFragment extends Fragment {
 
     Context mContext;
     RecyclerView mRecyclerView;
-    CaseTaskAdapter caseTaskListAdapter;
+    CaseVitalsAdapter caseTaskListAdapter;
     private Realm realm;
+
 
     protected ProgressDialog mDialog;
     ViewGroup view;
@@ -44,15 +45,20 @@ public class TasksTabFragment extends Fragment {
     public void init_list(){
         try {
             realm = Realm.getDefaultInstance();
-            WorkLog workLog = new WorkLog();
-            workLog.setVitals("Heartbeat");
-            workLog.setTasks("Tasks");
-            realm.beginTransaction();
-            realm.copyToRealmOrUpdate(workLog);
-            realm.commitTransaction();
+//            WorkLog workLog = new WorkLog();
+//            workLog.setVitals("Heartbeat");
+//            workLog.setRoutines("Tasks");
+//            realm.beginTransaction();
+//            realm.copyToRealmOrUpdate(workLog);
+//            realm.commitTransaction();
             RealmResults<WorkLog> workList = realm.where(WorkLog.class).findAll();
+            Log.v(Constants.TAG,"workList size: "+workList.size());
+            Log.v(Constants.TAG,"workListt size: "+workList.toString());
+
+            Log.v(Constants.TAG, "workList " + workList);
+
             mRecyclerView = (RecyclerView) view.findViewById(R.id.caseTasksList);
-            caseTaskListAdapter = new CaseTaskAdapter(this.getContext(),workList,true,true);
+            caseTaskListAdapter = new CaseVitalsAdapter(this.getContext(),workList,true,true);
 
             mRecyclerView.setHasFixedSize(true);
             mRecyclerView.swapAdapter(caseTaskListAdapter,true);
