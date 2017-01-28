@@ -67,6 +67,7 @@ public class DataSyncService extends IntentService {
                 case "loadCases": loadCases(intent); break;
                 case "loadProfile": loadProfile(); break;
                 case "newServiceRequest": newServiceRequest(intent); break;
+                case "updateProfile": updateProfile(intent); break;
             }
 
             Bundle bundle = new Bundle();
@@ -441,6 +442,7 @@ public class DataSyncService extends IntentService {
             JsonObject requestJson = new JsonObject();
             requestJson.add("request",requestObject);
 
+
             try {
                 // Simulate network access.
                 mNetworkSubscription = NetworkRequest.performAsyncRequest(api.newServiceRequest(requestJson), (data) -> {
@@ -471,6 +473,67 @@ public class DataSyncService extends IntentService {
             }
         }
     }
+
+    public void updateProfile(Intent intent){
+        String serviceName = intent.getStringExtra("serviceName");
+        long requestID = intent.getLongExtra("requestID", 0);
+        Patient patient = realm.where(Patient.class).equalTo("id",requestID ).findFirst();
+
+        if(patient != null){
+            JsonObject patientObject = new JsonObject();
+            patientObject.addProperty("id",patient.getId());
+            patientObject.addProperty("first_name",patient.getFirstName());
+            patientObject.addProperty("last_name",patient.getLastName());
+            patientObject.addProperty("gender",patient.getGender());
+            patientObject.addProperty("patient_age",patient.getPatientAge());
+            patientObject.addProperty("patient_weight",patient.getPatientWeight());
+            patientObject.addProperty("street_address",patient.getStreetAddress());
+            patientObject.addProperty("area",patient.getArea());
+            patientObject.addProperty("city",patient.getCity());
+            patientObject.addProperty("zipcode",patient.getZipcode());
+            patientObject.addProperty("state",patient.getState());
+
+            JsonObject patientJson = new JsonObject();
+            patientJson.add("request",patientObject);
+            Log.e(Constants.TAG,"winchester "+patientJson);
+
+
+            try {
+                // Simulate network access.
+                mNetworkSubscription = NetworkRequest.performAsyncRequest(api.updateProfile(patientJson), (data) -> {
+                    // Update UI on main thread
+                    try {
+                        if(data.getAsJsonObject().get("error") != null){
+                            publishResults(serviceName,STATUS_ERROR, null);
+                        }
+
+                        if(data.getAsJsonObject().get("result") != null){
+                            publishResults(serviceName,STATUS_FINISHED, null);
+                        }
+                    } catch (Exception e) {
+                        Log.v(Constants.TAG, "newServiceRequest() exception: " + e.toString());
+                        publishResults(serviceName,STATUS_ERROR, null);
+                    }finally {
+                        publishResults(serviceName,STATUS_FINISHED, null);
+                    }
+                }, (error) -> {
+                    // Handle Error
+                    Log.e(Constants.TAG,"newServiceRequest Error: "+error.toString());
+                    publishResults(serviceName,STATUS_ERROR, null);
+                });
+
+            }catch (Exception e){
+                Log.e(Constants.TAG,"newServiceRequest() Exception: "+e.toString());
+                publishResults(serviceName,STATUS_ERROR, null);
+            }
+
+
+        }
+    }
+
+
+
+
 
 }
 

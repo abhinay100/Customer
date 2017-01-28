@@ -33,5 +33,10 @@ public interface RestAPI {
     @POST("request/new")
     Observable<JsonObject> newServiceRequest(@Body JsonObject requestData);
 
+    @POST("patient/update")
+    Observable<JsonObject> updateProfile(@Body JsonObject requestData);
+
+
+
 }
 
