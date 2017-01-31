@@ -14,11 +14,13 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import customer.apnacare.in.customer.model.Assessment;
+import customer.apnacare.in.customer.model.Bills;
 import customer.apnacare.in.customer.model.Caregiver;
 import customer.apnacare.in.customer.model.CaseRecord;
 import customer.apnacare.in.customer.model.Patient;
 import customer.apnacare.in.customer.model.ServiceRequest;
 import customer.apnacare.in.customer.model.WorkLog;
+import customer.apnacare.in.customer.model.WorkLogFeedback;
 import customer.apnacare.in.customer.network.NetworkRequest;
 import customer.apnacare.in.customer.network.RestAPI;
 import customer.apnacare.in.customer.network.RestAPIBuilder;
@@ -68,6 +70,8 @@ public class DataSyncService extends IntentService {
                 case "loadProfile": loadProfile(); break;
                 case "newServiceRequest": newServiceRequest(intent); break;
                 case "updateProfile": updateProfile(intent); break;
+                case "worklogFeedback": worklogFeedback(intent); break;
+                case "getMyBills": getMyBills(); break;
             }
 
             Bundle bundle = new Bundle();
@@ -220,6 +224,7 @@ public class DataSyncService extends IntentService {
         realm.where(Caregiver.class).findAll().deleteAllFromRealm();
         realm.where(Assessment.class).findAll().deleteAllFromRealm();
         realm.where(WorkLog.class).findAll().deleteAllFromRealm();
+        realm.where(WorkLogFeedback.class).findAll().deleteAllFromRealm();
         realm.commitTransaction();
 
         try {
@@ -269,7 +274,7 @@ public class DataSyncService extends IntentService {
                             // Patients
                             try {
                                 JsonArray patientsJsonArray = parser.parse(data.get("result").getAsJsonObject().get("patients").toString()).getAsJsonArray();
-                                Log.v(Constants.TAG,"patientsJsonArray: "+patientsJsonArray);
+                                //Log.v(Constants.TAG,"patientsJsonArray: "+patientsJsonArray);
                                 if(patientsJsonArray.size() > 0) {
                                     realm.executeTransaction(new Realm.Transaction() {
                                         @Override
@@ -294,7 +299,7 @@ public class DataSyncService extends IntentService {
                             //Caregiver
                             try {
                                 JsonArray caregiverJsonArray = parser.parse(data.get("result").getAsJsonObject().get("caregivers").toString()).getAsJsonArray();
-                                Log.v(Constants.TAG,"caregiverJsonArray: "+caregiverJsonArray);
+                                //Log.v(Constants.TAG,"caregiverJsonArray: "+caregiverJsonArray);
                                 if(caregiverJsonArray.size() > 0){
                                     realm.executeTransaction(new Realm.Transaction() {
                                         @Override
@@ -320,7 +325,6 @@ public class DataSyncService extends IntentService {
 
                             //Assessments
                             try {
-
                                 JsonArray assessmentsJsonArray = parser.parse(data.get("result").getAsJsonObject().get("assessments").toString()).getAsJsonArray();
                                 //Log.v(Constants.TAG,"assessmentsJsonArray: "+ assessmentsJsonArray);
                                 if(assessmentsJsonArray.size() > 0){
@@ -340,10 +344,6 @@ public class DataSyncService extends IntentService {
                                         }
                                     });
                                 }
-
-
-
-
 
                             }catch (Exception e){
                                 Log.v(Constants.TAG,"AssessmentsJsonArray Exception: "+e.toString());
@@ -373,6 +373,31 @@ public class DataSyncService extends IntentService {
                                 }
                             }catch (Exception e){
                                 Log.v(Constants.TAG,"worklogsJsonArray Exception: "+e.toString());
+                            }
+
+                            // Feedbacks
+                            try {
+                                JsonArray feedbacksJsonArray = parser.parse(data.get("result").getAsJsonObject().get("feedbacks").toString()).getAsJsonArray();
+                                //Log.v(Constants.TAG,"feedbacksJsonArray: "+feedbacksJsonArray);
+                                if (feedbacksJsonArray.size() > 0) {
+                                    realm.executeTransaction(new Realm.Transaction() {
+                                        @Override
+                                        public void execute(Realm realm) {
+                                            for (int i = 0; i < feedbacksJsonArray.size(); i++) {
+                                                try {
+                                                    JsonObject jsonObject = (JsonObject) feedbacksJsonArray.get(i);
+                                                    WorkLogFeedback workLogFeedback = new WorkLogFeedback(jsonObject);
+
+                                                    realm.copyToRealmOrUpdate(workLogFeedback);
+                                                }catch (Exception e){
+                                                    Log.v(Constants.TAG,"workLogFeedback json Exception: "+e.toString());
+                                                }
+                                            }
+                                        }
+                                    });
+                                }
+                            }catch (Exception e){
+                                Log.v(Constants.TAG,"feedbacksJsonArray Exception: "+e.toString());
                             }
 
 
@@ -495,8 +520,7 @@ public class DataSyncService extends IntentService {
 
             JsonObject patientJson = new JsonObject();
             patientJson.add("request",patientObject);
-            Log.e(Constants.TAG,"winchester "+patientJson);
-
+           
 
             try {
                 // Simulate network access.
@@ -526,14 +550,113 @@ public class DataSyncService extends IntentService {
                 Log.e(Constants.TAG,"newServiceRequest() Exception: "+e.toString());
                 publishResults(serviceName,STATUS_ERROR, null);
             }
-
-
         }
     }
 
 
+    public void worklogFeedback(Intent intent){
+        String serviceName = intent.getStringExtra("serviceName");
+        long feedbackID = intent.getLongExtra("feedbackID", 0);
+        WorkLogFeedback feedback = realm.where(WorkLogFeedback.class).equalTo("id",feedbackID).findFirst();
+
+        if(feedback != null){
+            long careplanID = feedback.getCareplanId();
+            long worklogID = feedback.getWorklogId();
+            String customerName = feedback.getCustomerName();
+            float rating = feedback.getRating();
+            String comment = feedback.getComment();
+            try {
+                // Simulate network access.
+                mNetworkSubscription = NetworkRequest.performAsyncRequest(api.worklogFeedback(careplanID, worklogID, customerName, rating, comment), (data) -> {
+                    // Update UI on main thread
+                    try {
+                        if(data.getAsJsonObject().get("error") != null){
+                            publishResults(serviceName,STATUS_ERROR, null);
+                        }
+
+                        if(data.getAsJsonObject().get("result") != null){
+                            publishResults(serviceName,STATUS_FINISHED, null);
+                        }
+                    } catch (Exception e) {
+                        Log.v(Constants.TAG, "worklogFeedback() exception: " + e.toString());
+                        publishResults(serviceName,STATUS_ERROR, null);
+                    }finally {
+                        publishResults(serviceName,STATUS_FINISHED, null);
+                    }
+                }, (error) -> {
+                    // Handle Error
+                    Log.e(Constants.TAG,"worklogFeedback Error: "+error.toString());
+                    publishResults(serviceName,STATUS_ERROR, null);
+                });
+
+            }catch (Exception e){
+                Log.e(Constants.TAG,"worklogFeedback() Exception: "+e.toString());
+                publishResults(serviceName,STATUS_ERROR, null);
+            }
+        }
+    }
 
 
+    public void getMyBills(){
+        String email = CustomerApp.preferences.getString("email",null);
 
+        if(email != null){
+            try {
+                // Simulate network access.
+                mNetworkSubscription = NetworkRequest.performAsyncRequest(api.getMyBills(email), (data) -> {
+                    // Update UI on main thread
+                    try {
+                        if(data.getAsJsonObject().get("error") != null && data.getAsJsonObject().get("error").getAsBoolean() == true){
+                            publishResults("getMyBills",STATUS_ERROR, null);
+                        }
+
+                        if(data.getAsJsonObject().get("result") != null) {
+                            // Bills
+                            try {
+                                Realm realm = Realm.getDefaultInstance();
+                                JsonParser parser = new JsonParser();
+                                JsonArray billsJsonArray = parser.parse(data.get("result").getAsJsonObject().get("bills").toString()).getAsJsonArray();
+                                //Log.v(Constants.TAG,"billsJsonArray: "+billsJsonArray);
+                                if (billsJsonArray.size() > 0) {
+                                    realm.executeTransaction(new Realm.Transaction() {
+                                        @Override
+                                        public void execute(Realm realm) {
+                                            for (int i = 0; i < billsJsonArray.size(); i++) {
+                                                try {
+                                                    JsonObject jsonObject = (JsonObject) billsJsonArray.get(i);
+                                                    Bills bills = new Bills(jsonObject);
+
+                                                    realm.copyToRealmOrUpdate(bills);
+                                                } catch (Exception e) {
+                                                    Log.v(Constants.TAG, "billsJsonArray json Exception: " + e.toString());
+                                                }
+                                            }
+                                        }
+                                    });
+                                }
+                            } catch (Exception e) {
+                                Log.v(Constants.TAG, "billsJsonArray Exception: " + e.toString());
+                            }
+                        }
+
+                    } catch (Exception e) {
+                        Log.e(Constants.TAG, "getMyBills() exception: " + e.toString());
+                        publishResults("getMyBills",STATUS_ERROR, null);
+                    }finally {
+                        publishResults("getMyBills",STATUS_FINISHED, null);
+                    }
+                }, (error) -> {
+                    // Handle Error
+                    Log.e(Constants.TAG,"getMyBills Error: "+error.toString());
+                    publishResults("getMyBills",STATUS_ERROR, null);
+                });
+
+            }catch (Exception e){
+                Log.e(Constants.TAG,"getMyBills() Exception: "+e.toString());
+                publishResults("getMyBills",STATUS_ERROR, null);
+            }
+        }
+
+    }
 }
 

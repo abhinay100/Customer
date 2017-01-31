@@ -21,8 +21,6 @@ public class MainActivity extends BaseActivity {
 
     FloatingActionButton newRequestBtn;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,18 +38,14 @@ public class MainActivity extends BaseActivity {
             }
         });
         setUpNavigation("Home");
-
-        loadCaseData();
-
     }
 
     // Launching the Case loading service
     public void loadCaseData() {
-        //showProgressBar("Fetching Cases");
+        showProgressBar("Fetching Cases");
 
         Intent i = new Intent(mContext, DataSyncService.class);
         i.putExtra("serviceName", "loadCases");
-//        i.putExtra("serviceName", "careGiver");
         i.putExtra("type","All");
         startService(i);
     }
@@ -83,8 +77,9 @@ public class MainActivity extends BaseActivity {
 
         switch (id){
             case R.id.cardCases: startActivity(new Intent(MainActivity.this,CasesActivity.class)); break;
+            case R.id.cardNewRequest: startActivity(new Intent(MainActivity.this,NewRequestActivity.class)); break;
             case R.id.cardProfiles: startActivity(new Intent(MainActivity.this,PatientsActivity.class)); break;
-            case R.id.cardMessage: showMaterialDialog("Messages","This feature is coming soon."); break;
+            case R.id.cardTracking: startActivity(new Intent(MainActivity.this,LiveTrackingActivity.class)); break;
             case R.id.cardBills: startActivity(new Intent(MainActivity.this,BillsActivity.class)); break;
             case R.id.cardAccount: startActivity(new Intent(MainActivity.this,AccountActivity.class)); break;
             case R.id.cardShop: startActivity(new Intent(MainActivity.this,EshopActivity.class)); break;

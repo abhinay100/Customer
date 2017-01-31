@@ -3,6 +3,7 @@ package customer.apnacare.in.customer.fragments;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,16 +51,14 @@ public class AssessmentTabFragment extends Fragment {
             JsonObject assess = parser.parse(assessment.getFormData().toString()).getAsJsonObject();
             String date = (String.valueOf(assess.get("assessment_date")).replaceAll("\"", ""));
             String name = (String.valueOf(assess.get("assessor_name")).replaceAll("\"", ""));
-            String patientConditions = (String.valueOf(assess.get("patient_condition")).replaceAll("\"", ""));
-            String medicalProcedures = (String.valueOf(assess.get("medical_procedures")).replaceAll("\"", ""));
             String suggestedProfessional = (String.valueOf(assess.get("suggested_professional")).replaceAll("\"", ""));
             String comment = (String.valueOf(assess.get("comment")).replaceAll("\"", ""));
 
 
             assessmentDate.setText(date);
             assessor.setText(name);
-            assessmentPatientConditions.setText(patientConditions);
-            assessmentMedicalProcedures.setText(medicalProcedures);
+            assessmentPatientConditions.setText("   \u2022 " + TextUtils.join("\n   \u2022 ",assess.get("patient_condition").toString().replace("\"","").replace("[","").replace("]","").split(",")));
+            assessmentMedicalProcedures.setText("   \u2022 " + TextUtils.join("\n   \u2022 ",assess.get("medical_procedures").toString().replace("\"","").replace("[","").replace("]","").split(",")));
             assessmentSuggestedProfessional.setText(suggestedProfessional);
             assessmentComment.setText(comment);
         }

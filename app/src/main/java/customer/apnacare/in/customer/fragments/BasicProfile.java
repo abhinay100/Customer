@@ -103,9 +103,11 @@ public class BasicProfile extends Fragment {
                 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
                 Date mDate = df.parse(date);
 
+                Log.v(Constants.TAG,"mDate: " + mDate);
+
                 if (mDate != null) {
                     int year = mDate.getYear()+1900;
-                    int month = mDate.getMonth();
+                    int month = mDate.getMonth() + 01;
                     int day = mDate.getDay();
 
                     Log.v(Constants.TAG,"year: "+year+" | month: "+month+" | day: "+day);

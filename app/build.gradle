@@ -74,8 +74,26 @@ dependencies {
 
     compile "com.squareup.picasso:picasso:2.4.0"
 
+    compile 'com.google.android.gms:play-services-location:10.0.1'
+    compile 'com.google.android.gms:play-services-maps:10.0.1'
+    compile 'com.google.android.gms:play-services-places:10.0.1'
+    compile 'com.android.support:support-v4:24.2.1'
+
+    compile 'com.google.firebase:firebase-messaging:10.0.1'
+    compile 'com.google.firebase:firebase-database:10.0.1'
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile('com.citruspay.sdk:plug-n-play-sdk:1.2') {
+        transitive = true;
+        exclude module: 'payment-sdk'
+    }
+    compile 'com.citruspay.sdk:payment-sdk:4.0.1'
+    //compile project(':citruspay-sdk-ui')
+
     compile('com.crashlytics.sdk.android:crashlytics:2.6.5@aar') {
         transitive = true;
     }
 
 }
+
+apply plugin: 'com.google.gms.google-services'

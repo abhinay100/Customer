@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
+import customer.apnacare.in.customer.model.AppEnvironment;
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 
@@ -15,6 +16,9 @@ import io.realm.RealmConfiguration;
  */
 
 public class CustomerApp extends Application {
+
+    AppEnvironment appEnvironment;
+
 
     public static SharedPreferences preferences;
     public static SharedPreferences.Editor e;
@@ -41,7 +45,18 @@ public class CustomerApp extends Application {
         preferences = getApplicationContext().getSharedPreferences(Constants.SETTINGS_FILE_NAME, Constants.MODE_PRIVATE);
         e = preferences.edit();
 
+        appEnvironment = AppEnvironment.SANDBOX;
+
     }
+
+    public AppEnvironment getAppEnvironment() {
+        return appEnvironment;
+    }
+
+    public void setAppEnvironment(AppEnvironment appEnvironment) {
+        this.appEnvironment = appEnvironment;
+    }
+
 
     public static Context getContext(){
         return mContext;

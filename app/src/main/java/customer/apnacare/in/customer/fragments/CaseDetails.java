@@ -3,11 +3,9 @@ package customer.apnacare.in.customer.fragments;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,9 +16,8 @@ import butterknife.ButterKnife;
 import customer.apnacare.in.customer.R;
 import customer.apnacare.in.customer.model.CaseRecord;
 import customer.apnacare.in.customer.model.Patient;
-import customer.apnacare.in.customer.utils.Constants;
+import customer.apnacare.in.customer.utils.CustomerApp;
 import io.realm.Realm;
-import io.realm.RealmResults;
 
 /**
  * Created by root on 4/1/17.
@@ -61,9 +58,6 @@ public class CaseDetails extends Fragment {
         caseID = getArguments().getLong("caseID");
 
 
-
-
-
         caseRecord = realm.where(CaseRecord.class).equalTo("id",getArguments().getLong("caseID")).findFirst();
         patient = realm.where(Patient.class).equalTo("id",caseRecord.getPatientId()).findFirst();
 
@@ -77,15 +71,15 @@ public class CaseDetails extends Fragment {
 
             lblEnquirerName.setText(patient.getEnquirerName());
             lblEnquirerPhone.setText(patient.getEnquirerPhone());
-            lblEnquirerEmail.setText("-");
+            lblEnquirerEmail.setText(CustomerApp.preferences.getString("email","-"));
             lblAddress.setText(patient.getStreetAddress()+" \n"+patient.getArea()+"\n"+patient.getCity()+"\n"+patient.getState());
 
 
         }
 
         if(caseRecord != null){
-            lblMedicalConditions.setText(caseRecord.getMedicalConditions());
-            lblMedications.setText(caseRecord.getMedications());
+            lblMedicalConditions.setText("   \u2022 " + TextUtils.join("\n   \u2022 ",caseRecord.getMedicalConditions().toString().replace("\"","").split(",")));
+            lblMedications.setText("   \u2022 " + TextUtils.join("\n   \u2022 ",caseRecord.getMedications().toString().replace("\"","").split(",")));
             lblService.setText(caseRecord.getServiceName());
             lblNoOfHours.setText(caseRecord.getNoOfHours());
             lblGenderPreference.setText(caseRecord.getGenderPreference());

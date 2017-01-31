@@ -39,10 +39,9 @@
                             android:layout_marginTop="5dp"
                             android:minWidth="130dp"
                             android:layout_gravity="left|center_horizontal|center_vertical"
-                            android:background="#CCC"
+                            android:textColor="@color/apnacareBlue"
                             android:padding="5dp"
                             android:text="Assessment Date"
-                            android:textStyle="bold"
                             android:textSize="15sp"/>
 
                         <TextView
@@ -69,10 +68,9 @@
                             android:layout_marginTop="5dp"
                             android:minWidth="130dp"
                             android:layout_gravity="left|center_horizontal|center_vertical"
-                            android:background="#CCC"
+                            android:textColor="@color/apnacareBlue"
                             android:padding="5dp"
                             android:text="Assessed By"
-                            android:textStyle="bold"
                             android:textSize="15sp"/>
 
                         <TextView
@@ -94,10 +92,9 @@
                         android:layout_height="30dp"
                         android:layout_marginTop="10dp"
                         android:layout_gravity="left|center_horizontal|center_vertical"
-                        android:background="#CCC"
+                        android:textColor="@color/apnacareBlue"
                         android:padding="5dp"
                         android:text="Patient Condition"
-                        android:textStyle="bold"
                         android:textSize="15sp"/>
 
                     <TextView
@@ -115,10 +112,9 @@
                         android:layout_height="30dp"
                         android:layout_marginTop="10dp"
                         android:layout_gravity="left|center_horizontal|center_vertical"
-                        android:background="#CCC"
+                        android:textColor="@color/apnacareBlue"
                         android:padding="5dp"
                         android:text="Medical Procedures"
-                        android:textStyle="bold"
                         android:textSize="15sp"/>
 
                     <TextView
@@ -136,10 +132,9 @@
                         android:layout_height="30dp"
                         android:layout_marginTop="10dp"
                         android:layout_gravity="left|center_horizontal|center_vertical"
-                        android:background="#CCC"
+                        android:textColor="@color/apnacareBlue"
                         android:padding="5dp"
                         android:text="Suggested Professional"
-                        android:textStyle="bold"
                         android:textSize="15sp"/>
 
                     <TextView
@@ -157,10 +152,9 @@
                         android:layout_height="30dp"
                         android:layout_marginTop="10dp"
                         android:layout_gravity="left|center_horizontal|center_vertical"
-                        android:background="#CCC"
+                        android:textColor="@color/apnacareBlue"
                         android:padding="5dp"
                         android:text="Remarks / Comments"
-                        android:textStyle="bold"
                         android:textSize="15sp"/>
 
                     <TextView
