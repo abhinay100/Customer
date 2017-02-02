@@ -1,1 +1,1 @@
-include ':app', ':citruspay-sdk-ui'
+include ':app', ':citruspay-sdk-ui', ':GooglePlaceAutoComplete'

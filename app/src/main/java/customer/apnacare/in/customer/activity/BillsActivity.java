@@ -43,9 +43,9 @@ public class BillsActivity extends BaseActivity {
     Context mContext;
     @BindView(R.id.billsList) RealmRecyclerView billsListRecycler;
 
-    public static final String returnUrlLoadMoney = "http://apnacare.in/citrus/redirectUrlLoadCash.html";
+
+    public static final String returnUrlLoadMoney = "https://beta.apnacare.in/gateway/redirectUrlLoadCash.html";
     SharedPreferences settings;
-    SharedPreferences.Editor editor;
 
     private Realm realm;
     BillsListAdapter billsListAdapter;
@@ -59,7 +59,14 @@ public class BillsActivity extends BaseActivity {
         setUpNavigation("Bill Details");
         mContext = this;
 
+
+
+
         realm = Realm.getDefaultInstance();
+
+
+
+//        realm.copyToRealmOrUpdate(bills);
 
         RealmResults<Bills> billsList = realm.where(Bills.class).findAll();
         billsListAdapter = new BillsListAdapter(this, billsList, true, true);
@@ -74,15 +81,14 @@ public class BillsActivity extends BaseActivity {
             }
         });
 
+        //setting citrus to production environment
         settings = getSharedPreferences("settings", MODE_PRIVATE);
-
-
         if (settings.getBoolean("is_prod_env", true)) {
             ((CustomerApp) getApplication()).setAppEnvironment(AppEnvironment.PRODUCTION);
         } else {
             ((CustomerApp) getApplication()).setAppEnvironment(AppEnvironment.SANDBOX);
         }
-     
+
 
         setupCitrusConfigs();
     }
@@ -109,9 +115,9 @@ public class BillsActivity extends BaseActivity {
     private void setupCitrusConfigs() {
         AppEnvironment appEnvironment = ((CustomerApp) getApplication()).getAppEnvironment();
         if (appEnvironment == AppEnvironment.PRODUCTION) {
-            Toast.makeText(BillsActivity.this, "Environment Set to Production", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(BillsActivity.this, "Environment Set to Production", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(BillsActivity.this, "Environment Set to SandBox", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(BillsActivity.this, "Environment Set to SandBox", Toast.LENGTH_SHORT).show();
         }
         CitrusFlowManager.initCitrusConfig(appEnvironment.getSignUpId(),
                 appEnvironment.getSignUpSecret(), appEnvironment.getSignInId(),

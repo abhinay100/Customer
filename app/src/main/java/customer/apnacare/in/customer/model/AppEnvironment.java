@@ -83,7 +83,7 @@ public enum AppEnvironment {
     SANDBOX {
         @Override
         public String getBillUrl() {
-            return "http://apnacare.in/citrus/billGenerator.php";
+            return "https://beta.apnacare.in/gateway/billGenerator.production.php";
         }
 
         @Override
@@ -119,7 +119,7 @@ public enum AppEnvironment {
     PRODUCTION {
         @Override
         public String getBillUrl() {
-            return "http://apnacare.in/citrus/billGenerator.php";
+            return "https://beta.apnacare.in/gateway/billGenerator.production.php";
         }
 
         @Override

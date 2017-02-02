@@ -46,9 +46,9 @@ public class BillsListAdapter extends RealmBasedRecyclerViewAdapter<Bills, Bills
 
     Context mContext;
 
-    public static final String returnUrlLoadMoney = "http://apnacare.in/citrus/redirectUrlLoadCash.html";
-    public static String dummyMobile = "7019801302";
-    public static String dummyEmail = "abhinayg100@gmail.com";
+//    public static final String returnUrlLoadMoney = "http://apnacare.in/citrus/redirectUrlLoadCash.html";
+    public static String dummyMobile = "9945288044";
+    public static String dummyEmail = "abhinay@apnacare.in";
     public String dummyAmount = "1";
 
 
@@ -121,12 +121,17 @@ public class BillsListAdapter extends RealmBasedRecyclerViewAdapter<Bills, Bills
             viewHolder.toPeriod.setText("To Date: "+ outputToPeriodStr);
 
             viewHolder.invoiceNo.setText(bill.getInvoiceNo());
-            viewHolder.invoiceAmount.setText(bill.getInvoiceAmount());
+//            viewHolder.invoiceAmount.setText("Rs. " + bill.getInvoiceAmount());
+            viewHolder.invoiceAmount.setText("Rs." + 1.00);
             viewHolder.status.setText("Status: "+ bill.getStatus());
+
+
 
             viewHolder.btnQuickPay.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+
+//                    dummyAmount = bill.getInvoiceAmount();
 
                     CitrusFlowManager.startShoppingFlowStyle(getContext(),
                             dummyEmail, dummyMobile, dummyAmount, R.style.AppTheme, false);
