@@ -12,6 +12,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -87,16 +88,16 @@ dependencies {
         transitive = true;
         exclude module: 'payment-sdk'
     }
+
+    compile project(':GooglePlaceAutoComplete')
+    compile project(path: ':GooglePlaceAutoComplete')
     compile 'com.citruspay.sdk:payment-sdk:4.0.1'
     //compile project(':citruspay-sdk-ui')
 
     compile('com.crashlytics.sdk.android:crashlytics:2.6.5@aar') {
         transitive = true;
     }
-    compile project(':GooglePlaceAutoComplete')
-    compile project(path: ':GooglePlaceAutoComplete')
 
-    
 }
 
 apply plugin: 'com.google.gms.google-services'

@@ -450,16 +450,16 @@
 
         </LinearLayout>
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/btnNewRequest"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="20dp"
-            app:fabSize="normal"
-            app:rippleColor="@color/apnacareDarkBlue"
-            android:src="@drawable/ic_add"
-            android:clickable="true"/>
+        <!--<android.support.design.widget.FloatingActionButton-->
+            <!--android:id="@+id/btnNewRequest"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="bottom|end"-->
+            <!--android:layout_margin="20dp"-->
+            <!--app:fabSize="normal"-->
+            <!--app:rippleColor="@color/apnacareDarkBlue"-->
+            <!--android:src="@drawable/ic_add"-->
+            <!--android:clickable="true"/>-->
 
     </android.support.design.widget.CoordinatorLayout>
 

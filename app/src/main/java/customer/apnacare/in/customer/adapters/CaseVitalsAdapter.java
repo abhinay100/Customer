@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -19,10 +21,13 @@ import android.widget.TextView;
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -44,8 +49,8 @@ import io.realm.RealmViewHolder;
 public class CaseVitalsAdapter extends RealmBasedRecyclerViewAdapter<WorkLog, CaseVitalsAdapter.ViewHolder> {
 
     Context mContext;
-    TableLayout.LayoutParams tableLayoutParams;
-    TableRow.LayoutParams tableRowParams;
+    JsonArray vitals, routines;
+    String strTime = "-";
 
     public CaseVitalsAdapter(
             Context context,
@@ -107,33 +112,39 @@ public class CaseVitalsAdapter extends RealmBasedRecyclerViewAdapter<WorkLog, Ca
                     viewHolder.btnFeedback.setVisibility(View.GONE);
                 }
 
+                strTime = new SimpleDateFormat("HH:mm a").format(worklog.getCreatedAt()).toString();
+
+                JsonParser parser = new JsonParser();
+
+                if(!worklog.getVitals().isEmpty()) {
+                    vitals = parser.parse(worklog.getVitals().toString()).getAsJsonArray();
+                }
+
+                if(!worklog.getRoutines().isEmpty() && !worklog.getRoutines().equals("")) {
+                    routines = parser.parse(worklog.getRoutines().toString()).getAsJsonArray();
+                }
+
+//            Log.v(Constants.TAG,"vitals   : "+vitals);
+//            Log.v(Constants.TAG,"routines : "+routines);
+
                 viewHolder.btnViewVitalMorning.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        JsonParser parser = new JsonParser();
-                        JsonArray vitals = parser.parse(worklog.getVitals().toString()).getAsJsonArray();
-
-                        createVitalsTableLayout(vitals, "morning");
+                        createTasksWebView("morning");
                     }
                 });
 
                 viewHolder.btnViewVitalNoon.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        JsonParser parser = new JsonParser();
-                        JsonArray vitals = parser.parse(worklog.getVitals().toString()).getAsJsonArray();
-
-                        createVitalsTableLayout(vitals, "afternoon");
+                        createTasksWebView("afternoon");
                     }
                 });
 
                 viewHolder.btnViewVitalEvening.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        JsonParser parser = new JsonParser();
-                        JsonArray vitals = parser.parse(worklog.getVitals().toString()).getAsJsonArray();
-
-                        createVitalsTableLayout(vitals, "evening");
+                        createTasksWebView("evening");
                     }
                 });
 
@@ -200,166 +211,93 @@ public class CaseVitalsAdapter extends RealmBasedRecyclerViewAdapter<WorkLog, Ca
         }
     }
 
-    private void createVitalsTableLayout(JsonArray vitals, String sessionName) {
-        // 1) Create a tableLayout and its params
-        tableLayoutParams = new TableLayout.LayoutParams();
-        TableLayout tableLayout = new TableLayout(mContext);
-        tableLayout.setBackgroundColor(Color.BLACK);
+    private void createTasksWebView(String sessionName) {
+        try {
+            MaterialDialog materialDialog = new MaterialDialog.Builder(mContext)
+                    .title(toTitleCase(sessionName) + " Tasks")
+                    .customView(R.layout.layout_tasks_view, true)
+                    .positiveText("Ok")
+                    .build();
 
-        // 2) create tableRow params
-        tableRowParams = new TableRow.LayoutParams();
-        tableRowParams.setMargins(1, 1, 1, 1);
-        tableRowParams.weight = 1;
+            View view = materialDialog.getCustomView();
+            TextView progressBar = (TextView) view.findViewById(R.id.progressBar);
+            WebView tasksWebView = (WebView) view.findViewById(R.id.tasksView);
 
+            progressBar.setVisibility(View.VISIBLE);
 
-        JsonObject vitalObject = vitals.get(0).getAsJsonObject();
-        if(vitalObject.getAsJsonObject().get(sessionName).isJsonObject()){
-            JsonObject morningSession = (JsonObject) vitalObject.getAsJsonObject().get(sessionName);
+            materialDialog.show();
 
-            TableRow tableHeaderRow = new TableRow(mContext);
-            tableHeaderRow.setBackgroundColor(Color.GRAY);
+            tasksWebView.getSettings().setJavaScriptEnabled(false);
+            tasksWebView.getSettings().setSupportZoom(false);
+            tasksWebView.getSettings().setBuiltInZoomControls(false);
 
-            TextView lblSessionName = new TextView(mContext);
-            lblSessionName.setWidth(LinearLayout.LayoutParams.MATCH_PARENT);
-            lblSessionName.setText("Vitals");
-            lblSessionName.setTextColor(Color.WHITE);
-            lblSessionName.setGravity(Gravity.CENTER|Gravity.CENTER_HORIZONTAL|Gravity.CENTER_VERTICAL);
+            String borderCss = " style='border: 1px solid silver; padding: 5px'";
+            String htmlString = "";
+            String emptyDataRow = "<tr height='20'><td colspan='2' " + borderCss + "><center>No data</center></td></tr>";
 
-            TableRow.LayoutParams params = (TableRow.LayoutParams) lblSessionName.getLayoutParams();
-            if(params != null) {
-                params.span = 2; //amount of columns you will span
-                lblSessionName.setLayoutParams(params);
+            // Prepare Vitals Table
+            htmlString = "<table style='width: 100%; text-align: left;'>";
+            htmlString += "<tr height='20'><th colspan='2'><center>Vitals</center></th></tr>";
+            if (vitals != null && vitals.size() > 0) {
+                JsonObject vitalObject = vitals.get(0).getAsJsonObject();
+                if (vitalObject.getAsJsonObject().get(sessionName).isJsonObject()) {
+                    JsonObject sessionObject = (JsonObject) vitalObject.getAsJsonObject().get(sessionName);
+
+                    if (sessionObject.size() > 0) {
+                        htmlString += "<tr><td colspan='2'><center>Captured at " + strTime+ "</center></td></tr>";
+                        htmlString += "<tr><th " + borderCss + ">Blood Pressure</th><td " + borderCss + ">" + sessionObject.get("blood_pressure").toString().replace("\"", "") + "</td></tr>";
+                        htmlString += "<tr><th " + borderCss + ">Sugar Level</th><td " + borderCss + ">" + sessionObject.get("sugar_level").toString().replace("\"", "") + "</td></tr>";
+                        htmlString += "<tr><th " + borderCss + ">Temperature</th><td " + borderCss + ">" + sessionObject.get("temperature").toString().replace("\"", "") + "</td></tr>";
+                        htmlString += "<tr><th " + borderCss + ">Pulse Rate</th><td " + borderCss + ">" + sessionObject.get("pulse_rate").toString().replace("\"", "") + "</td></tr>";
+                    } else {
+                        htmlString += emptyDataRow;
+                    }
+                } else {
+                    htmlString += emptyDataRow;
+                }
+            } else {
+                htmlString += emptyDataRow;
             }
+            htmlString += "</table><br>";
 
-            tableHeaderRow.addView(lblSessionName);
-            tableLayout.addView(tableHeaderRow);
+            // Prepare Routines Table
+            htmlString += "<table style='width: 100%; text-align: left;'>";
+            htmlString += "<tr height='20'><th colspan='2'><center>Routines</center></th></tr>";
+            if (routines != null && routines.size() > 0) {
+                JsonObject routinesObject = routines.get(0).getAsJsonObject();
+                if (routinesObject.getAsJsonObject().get(sessionName).isJsonObject()) {
+                    JsonObject sessionObject = (JsonObject) routinesObject.getAsJsonObject().get(sessionName);
 
-            tableLayout = addVitalParameters(tableLayout,morningSession);
+                    if (sessionObject.size() > 0) {
+                        for (Map.Entry<String, JsonElement> entry : sessionObject.entrySet()) {
+                            // Add Routine Name
+                            htmlString += "<tr><th " + borderCss + ">" + toTitleCase(entry.getKey().toString().replaceAll("\"", "")) + "</th>";
 
-            TableRow tableEmptyRow = new TableRow(mContext);
-            tableEmptyRow.setBackgroundColor(Color.WHITE);
+                            // Add Routine Timestamp
+                            htmlString += "<td " + borderCss + ">" + entry.getValue().toString().replaceAll("\"", "") + "</td></tr>";
+                        }
+                    } else {
+                        htmlString += emptyDataRow;
+                    }
+                }
+            } else {
+                htmlString += emptyDataRow;
+            }
+            htmlString += "</table>";
 
-            TextView lblEmpty = new TextView(mContext);
-            lblEmpty.setWidth(LinearLayout.LayoutParams.MATCH_PARENT);
-            lblEmpty.setHeight(80);
-            lblEmpty.setText("");
-            lblEmpty.setGravity(Gravity.CENTER|Gravity.CENTER_HORIZONTAL|Gravity.CENTER_VERTICAL);
+            tasksWebView.setWebViewClient(new WebViewClient() {
+                @Override
+                public void onPageFinished(WebView view, String url) {
+                    if (materialDialog != null && materialDialog.isShowing()) {
+                        progressBar.setVisibility(View.GONE);
+                    }
+                }
+            });
 
-            tableEmptyRow.addView(lblEmpty);
-            tableLayout.addView(tableEmptyRow);
-
-            TableRow tableRoutineRow = new TableRow(mContext);
-            tableRoutineRow.setBackgroundColor(Color.GRAY);
-
-            TextView lblRoutine = new TextView(mContext);
-            lblRoutine.setWidth(LinearLayout.LayoutParams.MATCH_PARENT);
-            lblRoutine.setText("Routines");
-            lblRoutine.setTextColor(Color.WHITE);
-            lblRoutine.setGravity(Gravity.CENTER|Gravity.CENTER_HORIZONTAL|Gravity.CENTER_VERTICAL);
-
-            tableRoutineRow.addView(lblRoutine);
-            tableLayout.addView(tableRoutineRow);
-
-            ScrollView sv = new ScrollView(mContext);
-            sv.setFillViewport(true);
-            sv.setScrollContainer(false);
-            sv.addView(tableLayout);
-
-            MaterialDialog materialDialog = new MaterialDialog.Builder(mContext)
-                    .title("Worklog")
-                    .customView(sv,true)
-                    .positiveText("Ok")
-                    .show();
-        }else{
-            MaterialDialog materialDialog = new MaterialDialog.Builder(mContext)
-                    .title("Worklog")
-                    .content("No vital data collected for this session")
-                    .positiveText("Ok")
-                    .show();
+            tasksWebView.loadData(htmlString, "text/html; charset=utf-8", "UTF-8");
+        }catch (Exception e){
+            Log.v(Constants.TAG,"createTasksWebView Exception: "+e.toString());
         }
-    }
-
-    public TableLayout addVitalParameters(TableLayout tableLayout, JsonObject session ){
-        TableRow tableRow1 = new TableRow(mContext);
-
-        // Add BP Before Food
-        TextView txt11 = new TextView(mContext);
-        txt11.setText("Blood Pressure");
-        txt11.setBackgroundColor(Color.WHITE);
-        txt11.setGravity(Gravity.LEFT);
-
-        tableRow1.addView(txt11, tableRowParams);
-
-        // Add Value
-        TextView txt12 = new TextView(mContext);
-        txt12.setText(session.get("blood_pressure").toString().replace("\"",""));
-        txt12.setBackgroundColor(Color.WHITE);
-        txt12.setGravity(Gravity.CENTER);
-
-        tableRow1.addView(txt12, tableRowParams);
-
-        tableLayout.addView(tableRow1, tableLayoutParams);
-
-        TableRow tableRow3 = new TableRow(mContext);
-        // Add Sugar Level Before Food
-        TextView txt31 = new TextView(mContext);
-        txt31.setText("Sugar Level");
-        txt31.setBackgroundColor(Color.WHITE);
-        txt31.setGravity(Gravity.LEFT);
-
-        tableRow3.addView(txt31, tableRowParams);
-
-        // Add Value
-        TextView txt32 = new TextView(mContext);
-        txt32.setText(session.get("sugar_level").toString().replace("\"",""));
-        txt32.setBackgroundColor(Color.WHITE);
-        txt32.setGravity(Gravity.CENTER);
-
-        tableRow3.addView(txt32, tableRowParams);
-
-        tableLayout.addView(tableRow3, tableLayoutParams);
-
-        TableRow tableRow5 = new TableRow(mContext);
-        // Add Temperature
-        TextView txt51 = new TextView(mContext);
-        txt51.setText("Temperature");
-        txt51.setBackgroundColor(Color.WHITE);
-        txt51.setGravity(Gravity.LEFT);
-
-        tableRow5.addView(txt51, tableRowParams);
-
-        // Add Value
-        TextView txt52 = new TextView(mContext);
-        txt52.setText(session.get("temperature").toString().replace("\"",""));
-        txt52.setBackgroundColor(Color.WHITE);
-        txt52.setGravity(Gravity.CENTER);
-
-        tableRow5.addView(txt52, tableRowParams);
-
-        tableLayout.addView(tableRow5, tableLayoutParams);
-
-        TableRow tableRow6 = new TableRow(mContext);
-        // Add Pulse Rate
-        TextView txt61 = new TextView(mContext);
-        txt61.setText("Pulse Rate");
-        txt61.setBackgroundColor(Color.WHITE);
-        txt61.setGravity(Gravity.LEFT);
-
-        tableRow6.addView(txt61, tableRowParams);
-
-        // Add Value
-        TextView txt62 = new TextView(mContext);
-        txt62.setText(session.get("pulse_rate").toString().replace("\"",""));
-        txt62.setBackgroundColor(Color.WHITE);
-        txt62.setGravity(Gravity.CENTER);
-
-        tableRow6.addView(txt62, tableRowParams);
-
-        tableLayout.addView(tableRow6, tableLayoutParams);
-
-        //Log.v(Constants.TAG," key: " + entry.getKey() + "  value: "+ entry.getValue());
-
-        return tableLayout;
     }
 
     public String toTitleCase(String input) {

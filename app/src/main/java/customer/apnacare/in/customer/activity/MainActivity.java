@@ -19,7 +19,7 @@ import io.fabric.sdk.android.Fabric;
 
 public class MainActivity extends BaseActivity {
 
-    FloatingActionButton newRequestBtn;
+//    FloatingActionButton newRequestBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +30,13 @@ public class MainActivity extends BaseActivity {
 
         checkPermissions();
 
-        newRequestBtn = (FloatingActionButton) findViewById(R.id.btnNewRequest);
-        newRequestBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,NewRequestActivity.class));
-            }
-        });
+//        newRequestBtn = (FloatingActionButton) findViewById(R.id.btnNewRequest);
+//        newRequestBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(MainActivity.this,NewRequestActivity.class));
+//            }
+//        });
         setUpNavigation("Home");
     }
 

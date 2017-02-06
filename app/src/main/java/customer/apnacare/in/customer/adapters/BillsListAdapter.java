@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +29,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import customer.apnacare.in.customer.R;
 import customer.apnacare.in.customer.activity.BillsActivity;
+import customer.apnacare.in.customer.activity.InvoiceActivity;
 import customer.apnacare.in.customer.model.AppEnvironment;
 import customer.apnacare.in.customer.model.Bills;
 import customer.apnacare.in.customer.utils.Constants;
@@ -47,7 +49,7 @@ public class BillsListAdapter extends RealmBasedRecyclerViewAdapter<Bills, Bills
     Context mContext;
 
 //    public static final String returnUrlLoadMoney = "http://apnacare.in/citrus/redirectUrlLoadCash.html";
-    public static String dummyMobile = "9945288044";
+    public static String dummyMobile = "9901647100";
     public static String dummyEmail = "abhinay@apnacare.in";
     public String dummyAmount = "1";
 
@@ -74,6 +76,7 @@ public class BillsListAdapter extends RealmBasedRecyclerViewAdapter<Bills, Bills
         @BindView(R.id.lblInvoiceAmount) TextView invoiceAmount;
         @BindView(R.id.lblStatus) TextView status;
         @BindView(R.id.quick_pay) Button btnQuickPay;
+        @BindView(R.id.btnDocument) ImageButton btnDocument;
 
 
         public ViewHolder(View container) {
@@ -121,8 +124,8 @@ public class BillsListAdapter extends RealmBasedRecyclerViewAdapter<Bills, Bills
             viewHolder.toPeriod.setText("To Date: "+ outputToPeriodStr);
 
             viewHolder.invoiceNo.setText(bill.getInvoiceNo());
-//            viewHolder.invoiceAmount.setText("Rs. " + bill.getInvoiceAmount());
-            viewHolder.invoiceAmount.setText("Rs." + 1.00);
+            viewHolder.invoiceAmount.setText("Rs. " + bill.getInvoiceAmount());
+//            viewHolder.invoiceAmount.setText("Rs." + 1.00);
             viewHolder.status.setText("Status: "+ bill.getStatus());
 
 
@@ -131,13 +134,25 @@ public class BillsListAdapter extends RealmBasedRecyclerViewAdapter<Bills, Bills
                 @Override
                 public void onClick(View view) {
 
-//                    dummyAmount = bill.getInvoiceAmount();
+                    dummyAmount = bill.getInvoiceAmount();
 
                     CitrusFlowManager.startShoppingFlowStyle(getContext(),
                             dummyEmail, dummyMobile, dummyAmount, R.style.AppTheme, false);
 //                    Toast.makeText(getContext(), "Click", Toast.LENGTH_SHORT).show();
                 }
             });
+
+            viewHolder.btnDocument.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    Intent intent = new Intent(getContext(), InvoiceActivity.class);
+                    intent.putExtra("invoiceId",bill.getId());
+                    mContext.startActivity(intent);
+                }
+            });
+
+
 
 
         }catch (Exception e){

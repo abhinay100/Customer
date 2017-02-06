@@ -100,6 +100,14 @@
         </activity>
 
         <activity
+            android:name=".activity.InvoiceActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainActivity"/>
+        </activity>
+
+
+        <activity
             android:name=".activity.AccountActivity"
             android:windowSoftInputMode="stateHidden">
             <meta-data
@@ -109,7 +117,7 @@
         <activity android:name=".activity.LiveTrackingActivity" />
 
         <meta-data android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBrXnChrybZX9z5mtHkKg50wZZmGzvWuSY"/>
+            android:value="AIzaSyAArbfiwtXT3diP0g85RJjYzLzUKezL_Gc"/>
 
         <meta-data
             android:name="io.fabric.ApiKey"

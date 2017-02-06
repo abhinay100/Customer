@@ -31,6 +31,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+
 import co.geeksters.googleplaceautocomplete.lib.CustomAutoCompleteTextView;
 import customer.apnacare.in.customer.R;
 import customer.apnacare.in.customer.model.ServiceList;
@@ -48,7 +49,7 @@ public class NewRequestActivity extends BaseActivity implements View.OnClickList
 
     Context mContext;
     EditText txtName, txtPhone, txtEmail;
-    EditText txtArea, txtState;
+    EditText txtCity, txtState;
     Spinner careType;
     Button btnSubmitRequest;
     private ProgressDialog mDialog;
@@ -56,7 +57,7 @@ public class NewRequestActivity extends BaseActivity implements View.OnClickList
     private int requestServiceID = 0;
     String name,phone,email,area,city,state;
 
-    CustomAutoCompleteTextView cityName;
+    CustomAutoCompleteTextView areaName;
     private GoogleApiClient mGoogleApiClient;
     private static final int GOOGLE_API_CLIENT_ID = 0;
 
@@ -105,29 +106,33 @@ public class NewRequestActivity extends BaseActivity implements View.OnClickList
                 .addConnectionCallbacks(this)
                 .build();
 
-
-        cityName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        areaName = (CustomAutoCompleteTextView) findViewById(R.id.Area);
+        areaName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean b) {
                 if (!b) {
 
 
-                    if(cityName.googlePlace != null) {
-                        Log.v(Constants.TAG, "Clinic City: " + cityName.googlePlace.getCity());
+                    if(areaName.googlePlace != null) {
+                        Log.v(Constants.TAG, "City: " + areaName.googlePlace.getCity());
 
-                        cityName.setText(cityName.googlePlace.getCity());
+                        areaName.setText(areaName.googlePlace.getCity());
 
-                        String description = cityName.googlePlace.getDescription();
+                        String description = areaName.googlePlace.getDescription();
                         if (description != null) {
                             List<String> str = Arrays.asList(description.split(","));
                             if (str.size() >= 3) {
-                                txtState.setText(str.get(str.size() - 3));
+                                txtCity.setText(str.get(str.size() - 3));
                             }
+                            if (str.size() >= 2) {
+                                txtState.setText(str.get(str.size() - 2));
+                            }
+
                         }
 
-                        Places.GeoDataApi.getPlaceById(mGoogleApiClient, cityName.googlePlace.getPlace_id());
+                        Places.GeoDataApi.getPlaceById(mGoogleApiClient, areaName.googlePlace.getPlace_id());
                         PendingResult<PlaceBuffer> placeResult = Places.GeoDataApi
-                                .getPlaceById(mGoogleApiClient, cityName.googlePlace.getPlace_id());
+                                .getPlaceById(mGoogleApiClient, areaName.googlePlace.getPlace_id());
                         placeResult.setResultCallback(mUpdatePlaceDetailsCallback);
                     }
                     else{
@@ -147,9 +152,9 @@ public class NewRequestActivity extends BaseActivity implements View.OnClickList
         txtPhone = (EditText) findViewById(R.id.phone);
         txtEmail = (EditText) findViewById(R.id.email);
 //        txtArea = (EditText) findViewById(R.id.area);
-//        txtCity = (EditText) findViewById(R.id.city);
+        txtCity = (EditText) findViewById(R.id.city);
         txtState = (EditText) findViewById(R.id.state);
-        cityName = (CustomAutoCompleteTextView) findViewById(R.id.city);
+//        cityName = (CustomAutoCompleteTextView) findViewById(R.id.city);
 
         // Fill the details from Preferences
         txtName.setText(CustomerApp.preferences.getString("fullName",""));
@@ -192,6 +197,29 @@ public class NewRequestActivity extends BaseActivity implements View.OnClickList
 
     }
 
+
+    private ResultCallback<PlaceBuffer> mUpdatePlaceDetailsCallback
+            = new ResultCallback<PlaceBuffer>() {
+        @Override
+        public void onResult(PlaceBuffer places) {
+            if (!places.getStatus().isSuccess()) {
+                Log.v(Constants.TAG, "Place query did not complete. Error: " +
+                        places.getStatus().toString());
+                return;
+            }
+
+            // Selecting the first object buffer.
+            final Place place = places.get(0);
+            Log.v(Constants.TAG, "place: " + place.getAddress());
+
+//            cityName.setText(Html.fromHtml(place.getName() + ""));
+//            cityName.setText(Html.fromHtml(place.getAddress() + ""));
+            txtState.setText(Html.fromHtml(place.getAddress() + ""));
+
+//            pharmaNumber.setText(Html.fromHtml(place.getPhoneNumber() + ""));
+        }
+    };
+
     public void addRequest(){
         ServiceRequest request = new ServiceRequest();
 
@@ -208,7 +236,7 @@ public class NewRequestActivity extends BaseActivity implements View.OnClickList
                 request.setPhoneNumber(txtPhone.getText().toString());
                 request.setEmail(txtEmail.getText().toString());
 //                request.setArea(txtArea.getText().toString());
-//                request.setCity(txtCity.getText().toString());
+                request.setCity(txtCity.getText().toString());
                 request.setState(txtState.getText().toString());
                 request.setService(String.valueOf(requestServiceID));
 
@@ -262,25 +290,7 @@ public class NewRequestActivity extends BaseActivity implements View.OnClickList
 
 
 
-    private ResultCallback<PlaceBuffer> mUpdatePlaceDetailsCallback
-            = new ResultCallback<PlaceBuffer>() {
-        @Override
-        public void onResult(PlaceBuffer places) {
-            if (!places.getStatus().isSuccess()) {
-                Log.v(Constants.TAG, "Place query did not complete. Error: " +
-                        places.getStatus().toString());
-                return;
-            }
 
-            // Selecting the first object buffer.
-            final Place place = places.get(0);
-            Log.v(Constants.TAG, "place: " + place.getAddress());
-
-//            pharmaName.setText(Html.fromHtml(place.getName() + ""));
-            txtState.setText(Html.fromHtml(place.getAddress() + ""));
-//            pharmaNumber.setText(Html.fromHtml(place.getPhoneNumber() + ""));
-        }
-    };
 
 
     @Override

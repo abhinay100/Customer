@@ -43,8 +43,7 @@ public class ViewCaseActivity extends BaseActivity implements CaseDetails.Provid
     @BindView(R.id.case_nav_view)
     NavigationView navigationView;
 
-    static CasesActivity INSTANCE;
-//    String data="FirstActivity";
+
 
     Context mContext;
     Bundle bundle;
@@ -99,10 +98,11 @@ public class ViewCaseActivity extends BaseActivity implements CaseDetails.Provid
     // Add Fragments to Tabs
     private void setupViewPager(ViewPager viewPager){
         Adapter adapter = new Adapter(getSupportFragmentManager());
-        adapter.addFragment(new CaseDetails(), "Details",bundle);
+        adapter.addFragment(new CaseDetails(), "Patient Details",bundle);
+        adapter.addFragment(new AssessmentTabFragment(), "Assessment", bundle);
         adapter.addFragment(new BasicProfile(), "CareGiver", bundle);
         adapter.addFragment(new TasksTabFragment(), "Tasks", bundle);
-        adapter.addFragment(new AssessmentTabFragment(), "Assessment", bundle);
+
 
         viewPager.setAdapter(adapter);
     }

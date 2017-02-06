@@ -56,7 +56,7 @@ public class BillsActivity extends BaseActivity {
         setContentView(R.layout.activity_bills);
         ButterKnife.bind(this);
 
-        setUpNavigation("Bill Details");
+        setUpNavigation("Payment Details");
         mContext = this;
 
 

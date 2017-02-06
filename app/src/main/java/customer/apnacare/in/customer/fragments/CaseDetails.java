@@ -11,11 +11,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import customer.apnacare.in.customer.R;
 import customer.apnacare.in.customer.model.CaseRecord;
 import customer.apnacare.in.customer.model.Patient;
+import customer.apnacare.in.customer.utils.CircleTransform;
 import customer.apnacare.in.customer.utils.CustomerApp;
 import io.realm.Realm;
 
@@ -123,7 +126,6 @@ public class CaseDetails extends Fragment {
 //            lblNoOfHours.setText(caseRecord.getNoOfHours());
 //            lblGenderPreference.setText(caseRecord.getGenderPreference());
 //            lblLanguagePreference.setText(caseRecord.getLanguagePreference());
-
 
 
 

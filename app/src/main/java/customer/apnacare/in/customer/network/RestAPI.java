@@ -5,7 +5,9 @@ import com.google.gson.JsonObject;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 import rx.Observable;
 
 /**
@@ -43,6 +45,11 @@ public interface RestAPI {
     @FormUrlEncoded
     @POST("customer/bills")
     Observable<JsonObject> getMyBills(@Field("email") String email);
+
+    @GET("caregiver/document/all")
+    Observable<JsonObject> getDocuments(@Query("id") long caregiverId);
+
+
 
 }
 
