@@ -626,7 +626,6 @@ public class DataSyncService extends IntentService {
 
     public void getMyBills(){
         String email = CustomerApp.preferences.getString("email",null);
-
         if(email != null){
             try {
                 // Simulate network access.
@@ -688,7 +687,13 @@ public class DataSyncService extends IntentService {
 
     public void caregiverDocuments() {
 
-        long caregiverId = 26;
+
+
+
+        realm = Realm.getDefaultInstance();
+        Caregiver caregiver = realm.where(Caregiver.class).findFirst();
+        caregiver.getId();
+        long caregiverId = caregiver.getId();
 
 
         try {

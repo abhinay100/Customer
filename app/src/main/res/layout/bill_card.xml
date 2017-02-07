@@ -123,14 +123,14 @@
                                 android:text="Rs. 2500"/>
                         </LinearLayout>
 
-                        <Button
-                            android:text="PAY"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/quick_pay"
-                            android:layout_marginTop="7dp"
-                            android:background="@color/colorGreen"
-                            android:layout_weight="1" />
+                        <!--<Button-->
+                            <!--android:text="PAY"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:id="@+id/quick_pay"-->
+                            <!--android:layout_marginTop="7dp"-->
+                            <!--android:background="@color/colorGreen"-->
+                            <!--android:layout_weight="1" />-->
 
                     </LinearLayout>
 
@@ -141,23 +141,39 @@
                         android:layout_below="@id/details"
                         android:background="#CCC"/>
 
+                   <RelativeLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content">
+
                     <TextView
                         android:id="@+id/lblStatus"
                         android:layout_width="170dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
                         android:layout_marginLeft="5dp"
-                        android:layout_below="@id/line"
                         android:layout_marginBottom="5dp"
                         tools:text="Status: "
                         android:textColor="#333"
                         android:textSize="14sp" />
 
+                       <Button
+                           android:layout_width="65dp"
+                           android:layout_height="25dp"
+                           android:text="PAY"
+                           android:id="@+id/quick_pay"
+                           android:layout_marginRight="5dp"
+                           android:background="@color/colorGreen"
+                           android:layout_toLeftOf="@+id/btnDocument"
+                          />
+
+
                     <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="65dp"
+                        android:layout_height="25dp"
                         android:id="@+id/btnDocument"
-                        android:background="@drawable/ic_document" />
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/ic_invoice" />
+                   </RelativeLayout>
 
 
                 </LinearLayout>

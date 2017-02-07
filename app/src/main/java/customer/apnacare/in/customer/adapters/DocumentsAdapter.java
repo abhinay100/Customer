@@ -136,8 +136,8 @@ public class DocumentsAdapter extends RealmBasedRecyclerViewAdapter<Documents, D
                         }
                     });
 
-                    Toast.makeText(mContext, documents.getDocumentURL(),
-                            Toast.LENGTH_LONG).show();
+//                    Toast.makeText(mContext, documents.getDocumentURL(),
+//                            Toast.LENGTH_LONG).show();
 
                 }
             });

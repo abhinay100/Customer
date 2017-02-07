@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Customer</string>
+    <string name="app_name">Family App</string>
     <!-- Drawer Menu List -->
     <string name="menu_home">Home</string>
     <!--<string name="menu_my_inbox">My Inbox</string>-->
