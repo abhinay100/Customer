@@ -64,13 +64,6 @@ public class InvoiceActivity extends BaseActivity {
         setContentView(mWebView);
     }
 
-//    @Override
-//    public void onBackPressed() {
-//        super.onBackPressed();
-//
-//        Intent i = new Intent(mContext,BillsActivity.class);
-//        startActivity(i);
-//    }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
