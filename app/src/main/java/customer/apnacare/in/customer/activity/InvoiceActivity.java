@@ -22,8 +22,7 @@ public class InvoiceActivity extends BaseActivity {
 
     Context context;
     WebView mWebView;
-    WebSettings mWebSettings;
-    WebViewClientImpl webViewClient;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
