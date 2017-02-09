@@ -17,6 +17,7 @@ import customer.apnacare.in.customer.model.Assessment;
 import customer.apnacare.in.customer.model.Bills;
 import customer.apnacare.in.customer.model.Caregiver;
 import customer.apnacare.in.customer.model.CaseRecord;
+import customer.apnacare.in.customer.model.Comments;
 import customer.apnacare.in.customer.model.Documents;
 import customer.apnacare.in.customer.model.Patient;
 import customer.apnacare.in.customer.model.ServiceRequest;
@@ -371,6 +372,63 @@ public class DataSyncService extends IntentService {
 
                             } catch (Exception e) {
                                 Log.v(Constants.TAG, "AssessmentsJsonArray Exception: " + e.toString());
+                            }
+
+
+                            //comments
+                            try{
+                                JsonArray commentsJsonArray = parser.parse(data.get("result").getAsJsonObject().get("comments").toString()).getAsJsonArray();
+                                Log.v(Constants.TAG,"commentsJsonArray: "+ commentsJsonArray);
+                                if(commentsJsonArray.size() > 0){
+                                    realm.executeTransaction(new Realm.Transaction() {
+                                        @Override
+                                        public void execute(Realm realm) {
+                                            for(int i = 0; i < commentsJsonArray.size(); i++){
+                                                try {
+                                                    JsonObject jsonObject = (JsonObject) commentsJsonArray.get(i);
+                                                    Comments comments = new Comments(jsonObject);
+                                                    realm.copyToRealmOrUpdate(comments);
+
+                                                }catch (Exception e){
+
+                                                }
+
+                                            }
+                                        }
+                                    });
+                                }
+
+                            }catch (Exception e){
+                                Log.v(Constants.TAG, "CommentsJsonArray Exception: " + e.toString());
+                            }
+
+                            //Disposition
+                            try {
+                               JsonArray dispositionJsonArray = parser.parse(data.get("result").getAsJsonObject().get("dispositions").toString()).getAsJsonArray();
+                                Log.v(Constants.TAG,"dispositionJsonArray: "+ dispositionJsonArray);
+                                if(dispositionJsonArray.size() > 0){
+                                    realm.executeTransaction(new Realm.Transaction() {
+                                        @Override
+                                        public void execute(Realm realm) {
+                                            for(int i = 0;i < dispositionJsonArray.size(); i++){
+                                                try{
+                                                    JsonObject jsonObject = (JsonObject) dispositionJsonArray.get(i);
+
+
+
+                                                }catch (Exception e){
+
+                                                }
+
+                                            }
+                                        }
+                                    });
+                                }
+
+
+                            }catch (Exception e){
+
+                                Log.v(Constants.TAG, "dispositionJsonArray Exception: " + e.toString());
                             }
 
 

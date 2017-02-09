@@ -32,7 +32,7 @@
             <ScrollView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:layout_editor_absoluteY="483dp"
+                tools:layout_editor_absoluteY="508dp"
                 tools:layout_editor_absoluteX="8dp">
 
                 <RelativeLayout
@@ -156,7 +156,7 @@
                                 android:id="@+id/city"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="city"
+                                android:hint="City"
                                 android:inputType="textAutoComplete"
                                 android:maxLines="1"
                                 android:singleLine="true"

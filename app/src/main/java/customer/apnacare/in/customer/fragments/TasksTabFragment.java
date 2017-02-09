@@ -52,10 +52,10 @@ public class TasksTabFragment extends Fragment {
 //            realm.copyToRealmOrUpdate(workLog);
 //            realm.commitTransaction();
             RealmResults<WorkLog> workList = realm.where(WorkLog.class).findAll();
-            Log.v(Constants.TAG,"workList size: "+workList.size());
-            Log.v(Constants.TAG,"workListt size: "+workList.toString());
-
-            Log.v(Constants.TAG, "workList " + workList);
+//            Log.v(Constants.TAG,"workList size: "+workList.size());
+//            Log.v(Constants.TAG,"workListt size: "+workList.toString());
+//
+//            Log.v(Constants.TAG, "workList " + workList);
 
             mRecyclerView = (RecyclerView) view.findViewById(R.id.caseTasksList);
             caseTaskListAdapter = new CaseVitalsAdapter(this.getContext(),workList,true,true);
