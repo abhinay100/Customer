@@ -136,6 +136,46 @@
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
+                        android:id="@+id/cardNewRequest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:minHeight="90dp"
+                        android:layout_margin="5dp"
+                        android:elevation="5dp"
+                        app:cardElevation="5dp"
+                        app:cardCornerRadius="2dp"
+                        android:onClick="openActivity">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical|center"
+                            android:padding="5dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_gravity="center|center_horizontal|center_vertical"
+                                android:background="@drawable/ic_add"
+                                android:backgroundTint="@color/apnacareDarkBlue"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_marginTop="2dp"
+                                android:layout_gravity="bottom|center_horizontal"
+                                android:text="New Request"
+                                android:textSize="15sp"
+                                android:gravity="center|bottom|center_horizontal"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
                         android:id="@+id/cardProfiles"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -174,47 +214,6 @@
                         </LinearLayout>
 
                     </android.support.v7.widget.CardView>
-
-                    <android.support.v7.widget.CardView
-                        android:id="@+id/cardMessage"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:minHeight="90dp"
-                        android:layout_margin="5dp"
-                        android:elevation="5dp"
-                        app:cardElevation="5dp"
-                        app:cardCornerRadius="2dp"
-                        android:onClick="openActivity">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal|center_vertical|center"
-                            android:padding="5dp"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="35dp"
-                                android:layout_height="35dp"
-                                android:layout_marginTop="2dp"
-                                android:backgroundTint="@color/apnacareDarkBlue"
-                                android:layout_gravity="center|center_horizontal|center_vertical"
-                                android:background="@drawable/ic_messages" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="fill_parent"
-                                android:layout_marginTop="2dp"
-                                android:layout_gravity="bottom|center_horizontal"
-                                android:text="Messages"
-                                android:textSize="15sp"
-                                android:gravity="center|bottom|center_horizontal"/>
-
-                        </LinearLayout>
-
-                    </android.support.v7.widget.CardView>
-
 
                 </LinearLayout>
 
@@ -265,6 +264,45 @@
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
+                        android:id="@+id/cardTracking"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:minHeight="90dp"
+                        android:layout_margin="5dp"
+                        android:elevation="5dp"
+                        app:cardElevation="5dp"
+                        app:cardCornerRadius="2dp"
+                        android:onClick="openActivity">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical|center"
+                            android:padding="5dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_gravity="center|center_horizontal|center_vertical"
+                                android:background="@drawable/ic_location" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_marginTop="2dp"
+                                android:layout_gravity="bottom|center_horizontal"
+                                android:text="Track Caregiver"
+                                android:textSize="15sp"
+                                android:gravity="center|bottom|center_horizontal"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
                         android:id="@+id/cardAccount"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -302,6 +340,15 @@
                         </LinearLayout>
 
                     </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/iconRow3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iconRow2"
+                    android:orientation="horizontal">
 
                     <android.support.v7.widget.CardView
                         android:id="@+id/cardShop"
@@ -342,21 +389,77 @@
 
                     </android.support.v7.widget.CardView>
 
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardAccounts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:minHeight="90dp"
+                        android:layout_margin="5dp"
+                        android:elevation="5dp"
+                        app:cardElevation="5dp"
+                        app:cardCornerRadius="2dp"
+                        android:visibility="invisible"
+                        android:onClick="openActivity">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical|center"
+                            android:padding="5dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_gravity="center|center_horizontal|center_vertical"
+                                android:background="@drawable/ic_profile" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_marginTop="2dp"
+                                android:layout_gravity="bottom|center_horizontal"
+                                android:text="My Account"
+                                android:textSize="15sp"
+                                android:gravity="center|bottom|center_horizontal"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardShops"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:minHeight="90dp"
+                        android:elevation="5dp"
+                        android:layout_margin="5dp"
+                        app:cardElevation="5dp"
+                        app:cardCornerRadius="2dp"
+                        android:onClick="openActivity"
+                        android:visibility="invisible">
+
+                    </android.support.v7.widget.CardView>
+
                 </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/btnNewRequest"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="20dp"
-            app:fabSize="normal"
-            app:rippleColor="@color/apnacareDarkBlue"
-            android:src="@drawable/ic_add"
-            android:clickable="true"/>
+        <!--<android.support.design.widget.FloatingActionButton-->
+            <!--android:id="@+id/btnNewRequest"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="bottom|end"-->
+            <!--android:layout_margin="20dp"-->
+            <!--app:fabSize="normal"-->
+            <!--app:rippleColor="@color/apnacareDarkBlue"-->
+            <!--android:src="@drawable/ic_add"-->
+            <!--android:clickable="true"/>-->
 
     </android.support.design.widget.CoordinatorLayout>
 

@@ -25,12 +25,14 @@
             android:layout_height="match_parent"
             android:layout_marginTop="56dp">
 
-            <TextView
+            <co.moonmonkeylabs.realmrecyclerview.RealmRecyclerView
+                android:id="@+id/billsList"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center|center_horizontal|center_vertical"
-                android:hint="No bill(s) to show."
-                android:textSize="16sp"/>
+                android:layout_height="wrap_content"
+                app:rrvLayoutType="LinearLayout"
+                app:rrvEmptyLayoutId="@layout/empty_view"
+                app:rrvIsRefreshable="true"
+                app:rrvSwipeToDelete="false"/>
 
         </LinearLayout>
 

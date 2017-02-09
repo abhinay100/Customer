@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/src/main/assets"/><source path="/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/src/debug/assets"/></dataSet></merger>

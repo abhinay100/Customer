@@ -5,12 +5,9 @@ import android.content.Intent;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.widget.CardView;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -19,16 +16,12 @@ import java.util.Calendar;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import customer.apnacare.in.customer.R;
-import customer.apnacare.in.customer.activity.BillsActivity;
-import customer.apnacare.in.customer.activity.CasesActivity;
-import customer.apnacare.in.customer.activity.MainActivity;
 import customer.apnacare.in.customer.activity.ViewCaseActivity;
 import customer.apnacare.in.customer.model.CaseRecord;
 import customer.apnacare.in.customer.model.Patient;
 import customer.apnacare.in.customer.utils.Constants;
 import io.realm.Realm;
 import io.realm.RealmBasedRecyclerViewAdapter;
-import io.realm.RealmRecyclerViewAdapter;
 import io.realm.RealmResults;
 import io.realm.RealmViewHolder;
 
@@ -49,7 +42,6 @@ public class CasesListAdapter extends RealmBasedRecyclerViewAdapter<CaseRecord, 
         super(context, realmResults, automaticUpdate, animateIdType);
         mContext = context;
     }
-
 
 
     public class ViewHolder extends RealmViewHolder {
@@ -98,6 +90,9 @@ public class CasesListAdapter extends RealmBasedRecyclerViewAdapter<CaseRecord, 
                 Calendar calendar = Calendar.getInstance();
                 calendar.setTime(caseRecord.getCreatedAt());
 
+
+
+
                 viewHolder.requestDay.setText(String.valueOf(calendar.get(Calendar.DAY_OF_MONTH)));
                 viewHolder.requestMonth.setText(String.valueOf(new SimpleDateFormat("MMM").format(calendar.getTime())));
                 viewHolder.requestYear.setText(String.valueOf(calendar.get(Calendar.YEAR)));
@@ -108,8 +103,7 @@ public class CasesListAdapter extends RealmBasedRecyclerViewAdapter<CaseRecord, 
 //            viewHolder.status.setText("Status: "+caseRecord.getStatus());
 
             viewHolder.patientName.setText("Name: "+ String.valueOf(patient.getFirstName()));
-            viewHolder.service.setText("Language: "+ caseRecord.getLanguagePreference());
-//            viewHolder.area.setText(patient.getArea()+", "+patient.getCity());
+            viewHolder.service.setText("Service: "+ caseRecord.getServiceName());
             viewHolder.area.setText("Location: "+ patient.getCity());
             viewHolder.status.setText("Status: "+ caseRecord.getStatus());
 

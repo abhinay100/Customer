@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "814142655231",
+    "firebase_url": "https://apnacare-portal.firebaseio.com",
+    "project_id": "apnacare-portal",
+    "storage_bucket": "apnacare-portal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814142655231:android:dcf990059d2072fe",
+        "android_client_info": {
+          "package_name": "customer.apnacare.in.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "814142655231-ar12q9cqreqm93crqn7mjfp1pv2mooqm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "customer.apnacare.in.customer",
+            "certificate_hash": "1A408495405085463B68607C6BA973314F919073"
+          }
+        },
+        {
+          "client_id": "814142655231-8di7i0svuc2g570rjhci075k1p2iad3p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "customer.apnacare.in.customer",
+            "certificate_hash": "A82548C306F711146243C1489553EF3626453A23"
+          }
+        },
+        {
+          "client_id": "814142655231-r16nmp5vvapgo3d5e364gqs9p74r73sf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZCOf5-PNj2gp7iNYFzZ0u8r1e9Xc3loo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "814142655231-r16nmp5vvapgo3d5e364gqs9p74r73sf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

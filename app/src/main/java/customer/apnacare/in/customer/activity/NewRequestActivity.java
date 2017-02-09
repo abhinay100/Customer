@@ -7,7 +7,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.content.LocalBroadcastManager;
+import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -15,12 +19,25 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import java.util.ArrayList;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.PendingResult;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.location.places.Place;
+import com.google.android.gms.location.places.PlaceBuffer;
+import com.google.android.gms.location.places.Places;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+
+import co.geeksters.googleplaceautocomplete.lib.CustomAutoCompleteTextView;
 import customer.apnacare.in.customer.R;
 import customer.apnacare.in.customer.model.ServiceList;
 import customer.apnacare.in.customer.model.ServiceRequest;
 import customer.apnacare.in.customer.service.DataSyncService;
+import customer.apnacare.in.customer.utils.Constants;
 import customer.apnacare.in.customer.utils.CustomerApp;
 import io.realm.Realm;
 
@@ -28,17 +45,22 @@ import io.realm.Realm;
  * Created by root on 18/1/17.
  */
 
-public class NewRequestActivity extends BaseActivity {
+public class NewRequestActivity extends BaseActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener,GoogleApiClient.ConnectionCallbacks {
 
     Context mContext;
     EditText txtName, txtPhone, txtEmail;
-    EditText txtArea, txtCity, txtState;
+    EditText txtCity, txtState;
     Spinner careType;
     Button btnSubmitRequest;
     private ProgressDialog mDialog;
     ArrayList<ServiceList> serviceList;
     private int requestServiceID = 0;
     String name,phone,email,area,city,state;
+
+    CustomAutoCompleteTextView areaName;
+    private GoogleApiClient mGoogleApiClient;
+    private static final int GOOGLE_API_CLIENT_ID = 0;
+
 
     Realm realm;
 
@@ -76,15 +98,63 @@ public class NewRequestActivity extends BaseActivity {
         serviceList.add(new ServiceList(18,"AMBULANCE"));
 
         init();
+
+
+        mGoogleApiClient = new GoogleApiClient.Builder(NewRequestActivity.this)
+                .addApi(Places.GEO_DATA_API)
+                .enableAutoManage(this, GOOGLE_API_CLIENT_ID,this)
+                .addConnectionCallbacks(this)
+                .build();
+
+        areaName = (CustomAutoCompleteTextView) findViewById(R.id.Area);
+        areaName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+                if (!b) {
+
+
+                    if(areaName.googlePlace != null) {
+                        Log.v(Constants.TAG, "City: " + areaName.googlePlace.getCity());
+
+                        areaName.setText(areaName.googlePlace.getCity());
+
+                        String description = areaName.googlePlace.getDescription();
+                        if (description != null) {
+                            List<String> str = Arrays.asList(description.split(","));
+                            if (str.size() >= 3) {
+                                txtCity.setText(str.get(str.size() - 3));
+                            }
+                            if (str.size() >= 2) {
+                                txtState.setText(str.get(str.size() - 2));
+                            }
+
+                        }
+
+                        Places.GeoDataApi.getPlaceById(mGoogleApiClient, areaName.googlePlace.getPlace_id());
+                        PendingResult<PlaceBuffer> placeResult = Places.GeoDataApi
+                                .getPlaceById(mGoogleApiClient, areaName.googlePlace.getPlace_id());
+                        placeResult.setResultCallback(mUpdatePlaceDetailsCallback);
+                    }
+                    else{
+                        Log.e(Constants.TAG, "onFocusChange: google connection failed ");
+                    }
+                }
+            }
+        });
+
+
+
+
     }
 
     public void init(){
         txtName = (EditText) findViewById(R.id.name);
         txtPhone = (EditText) findViewById(R.id.phone);
         txtEmail = (EditText) findViewById(R.id.email);
-        txtArea = (EditText) findViewById(R.id.area);
+//        txtArea = (EditText) findViewById(R.id.area);
         txtCity = (EditText) findViewById(R.id.city);
         txtState = (EditText) findViewById(R.id.state);
+//        cityName = (CustomAutoCompleteTextView) findViewById(R.id.city);
 
         // Fill the details from Preferences
         txtName.setText(CustomerApp.preferences.getString("fullName",""));
@@ -96,6 +166,8 @@ public class NewRequestActivity extends BaseActivity {
         ArrayAdapter<ServiceList> adapter = new ArrayAdapter<ServiceList>(mContext, android.R.layout.simple_spinner_item, serviceList);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         careType.setAdapter(adapter);
+
+
 
         careType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -113,6 +185,8 @@ public class NewRequestActivity extends BaseActivity {
             }
         });
 
+
+
         btnSubmitRequest = (Button) findViewById(R.id.btnSubmitRequest);
         btnSubmitRequest.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,7 +194,31 @@ public class NewRequestActivity extends BaseActivity {
                 addRequest();
             }
         });
+
     }
+
+
+    private ResultCallback<PlaceBuffer> mUpdatePlaceDetailsCallback
+            = new ResultCallback<PlaceBuffer>() {
+        @Override
+        public void onResult(PlaceBuffer places) {
+            if (!places.getStatus().isSuccess()) {
+                Log.v(Constants.TAG, "Place query did not complete. Error: " +
+                        places.getStatus().toString());
+                return;
+            }
+
+            // Selecting the first object buffer.
+            final Place place = places.get(0);
+            Log.v(Constants.TAG, "place: " + place.getAddress());
+
+//            cityName.setText(Html.fromHtml(place.getName() + ""));
+//            cityName.setText(Html.fromHtml(place.getAddress() + ""));
+            txtState.setText(Html.fromHtml(place.getAddress() + ""));
+
+//            pharmaNumber.setText(Html.fromHtml(place.getPhoneNumber() + ""));
+        }
+    };
 
     public void addRequest(){
         ServiceRequest request = new ServiceRequest();
@@ -137,7 +235,7 @@ public class NewRequestActivity extends BaseActivity {
                 request.setName(txtName.getText().toString());
                 request.setPhoneNumber(txtPhone.getText().toString());
                 request.setEmail(txtEmail.getText().toString());
-                request.setArea(txtArea.getText().toString());
+//                request.setArea(txtArea.getText().toString());
                 request.setCity(txtCity.getText().toString());
                 request.setState(txtState.getText().toString());
                 request.setService(String.valueOf(requestServiceID));
@@ -191,6 +289,10 @@ public class NewRequestActivity extends BaseActivity {
     }
 
 
+
+
+
+
     @Override
     public void onDestroy(){
         LocalBroadcastManager.getInstance(mContext).unregisterReceiver(DataSyncReceiver);
@@ -207,5 +309,25 @@ public class NewRequestActivity extends BaseActivity {
         hideProgressBar();
 
         super.onStop();
+    }
+
+    @Override
+    public void onConnected(@Nullable Bundle bundle) {
+
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+
+    }
+
+    @Override
+    public void onClick(View view) {
+
     }
 }

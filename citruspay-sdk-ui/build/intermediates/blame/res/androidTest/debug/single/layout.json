@@ -1,0 +1,658 @@
+[
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/design_layout_snackbar.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_list_menu_item_icon.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_saved_card_item.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_saved_card_item.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_otpconfirmation.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_otpconfirmation.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/notification_template_big_media_narrow.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/notification_template_lines.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_lines.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/toolbar.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/toolbar.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_action_menu_layout.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/notification_template_big_media.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/design_menu_item_action_area.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_menu_item_action_area.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/design_menu_item_action_area.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_menu_item_action_area.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/otp_txn_auto_detect.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/layout/otp_txn_auto_detect.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_screen_toolbar.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/activity_citrus_ui.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/activity_citrus_ui.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_quick_pay.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_quick_pay.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_action_bar_up_container.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/design_navigation_menu_item.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_menu_item.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_wallet_screen.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_wallet_screen.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_my_banks.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_my_banks.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_list.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_list.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/otp_txn_bottom_bar.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/layout/otp_txn_bottom_bar.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/design_navigation_menu_item.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_menu_item.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/select_dialog_singlechoice_material.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_result.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_result.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_wallet_screen.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_wallet_screen.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/design_layout_snackbar.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_sign_up.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_sign_up.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_search_view.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_search_view.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/design_navigation_item.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_item.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_expanded_menu_layout.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_action_bar_title_item.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/activity_citrus.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/layout/activity_citrus.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/notification_media_cancel_action.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_get_cvv.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_get_cvv.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_pay_with_card.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_pay_with_card.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/design_navigation_menu.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_menu.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_citrus_trust_powered.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_citrus_trust_powered.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_action_menu_item_layout.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_terms_condition.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_terms_condition.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/activity_login_flow.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/activity_login_flow.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_action_mode_close_item_material.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_wallet_sign_in.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_wallet_sign_in.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/design_navigation_item.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_item.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/notification_media_cancel_action.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_otpconfirmation.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_otpconfirmation.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/sample_otppopup_view.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/layout/sample_otppopup_view.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_wallet_sign_in.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_wallet_sign_in.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_pay_new.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_pay_new.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_saved_cards.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_saved_cards.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_verify_phone.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_verify_phone.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_action_bar_up_container.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/design_layout_snackbar_include.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_get_cvv.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_get_cvv.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/select_dialog_singlechoice_material.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/otp_txn_options.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/layout/otp_txn_options.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/select_dialog_multichoice_material.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_dialog_title_material.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_action_bar_view_list_nav_layout.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/design_navigation_item_subheader.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_cvv_radio.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_cvv_radio.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_sign_up.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_sign_up.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/notification_template_big_media.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_add_money_options.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_add_money_options.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/sample_otppopup_view.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/layout/sample_otppopup_view.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/activity_login_flow.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/activity_login_flow.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/notification_template_media.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_activity_chooser_view.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_popup_menu_item_layout.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/design_navigation_item_separator.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/select_dialog_item_material.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_item_material.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_mobile_otp.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_mobile_otp.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_saved_cards.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_saved_cards.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/notification_template_lines.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_lines.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_list_menu_item_checkbox.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/select_dialog_multichoice_material.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_screen_simple.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_simple.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/otp_txn_options.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/layout/otp_txn_options.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/otp_txn_bottom_bar.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/layout/otp_txn_bottom_bar.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_dialog_title_material.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_get_account_detail.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_get_account_detail.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/notification_template_big_media_narrow.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/activity_citrus_ui.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/activity_citrus_ui.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_pay_with_bank.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_pay_with_bank.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_screen_content_include.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_content_include.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_citrus_trust_powered.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_citrus_trust_powered.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/design_layout_tab_icon.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_tab_icon.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_action_menu_item_layout.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/notification_template_part_time.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_bank_item.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_bank_item.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/activity_citrus.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/layout/activity_citrus.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/design_layout_snackbar_include.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_select_dialog_material.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/notification_media_action.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_media_action.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_alert_dialog_material.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_add_card.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_add_card.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_action_bar_view_list_nav_layout.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_action_mode_bar.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/notification_template_part_time.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/design_layout_tab_text.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_tab_text.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_cvv_radio.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_cvv_radio.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_otp_password.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_otp_password.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_action_bar_title_item.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_alert_dialog_material.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_pay_with_card.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_pay_with_card.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_screen_toolbar.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_quick_pay.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_quick_pay.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/otp_txn_auto_detect.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/layout/otp_txn_auto_detect.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/design_navigation_item_header.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_item_header.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_my_banks.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_my_banks.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_list_menu_item_icon.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_list_menu_item_radio.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_screen_content_include.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_content_include.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_list_menu_item_radio.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_expanded_menu_layout.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_get_account_detail.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_get_account_detail.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_add_money_options.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_add_money_options.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_add_card.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_add_card.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_search_view.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_search_view.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_activity_chooser_view.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_otp_password.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_otp_password.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_screen_simple.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_simple.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/notification_media_action.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_media_action.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/design_navigation_item_subheader.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_terms_condition.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_terms_condition.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/design_layout_tab_text.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_tab_text.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_result.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_result.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_add_money.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_add_money.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_action_mode_close_item_material.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/design_navigation_item_header.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_item_header.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_select_dialog_material.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_wallet_header.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_wallet_header.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_list.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_list.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_bank_item.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_bank_item.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_action_mode_bar.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_pay_new.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_pay_new.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/select_dialog_item_material.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_item_material.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/design_layout_tab_icon.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_tab_icon.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_verify_phone.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_verify_phone.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_pay_with_bank.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_pay_with_bank.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/design_navigation_item_separator.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/design_navigation_menu.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_menu.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_saved_card_item.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_saved_card_item.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/fragment_add_money.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/fragment_add_money.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/toolbar.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/toolbar.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_action_menu_layout.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_mobile_otp.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_mobile_otp.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/notification_template_media.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/layout_wallet_header.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/layout/layout_wallet_header.xml"
+    },
+    {
+        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_popup_menu_item_layout.xml",
+        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/layout/abc_list_menu_item_checkbox.xml",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_checkbox.xml"
+    }
+]

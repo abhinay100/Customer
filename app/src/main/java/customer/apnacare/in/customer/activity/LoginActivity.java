@@ -146,6 +146,14 @@ public class LoginActivity extends AppCompatActivity {
         startService(i);
     }
 
+    public void loadBills() {
+        showProgressBar("Fetching Bills");
+
+        Intent i = new Intent(mContext, DataSyncService.class);
+        i.putExtra("serviceName", "getMyBills");
+        startService(i);
+    }
+
     public void showProgressBar(String title){
         if(materialDialog != null){
             materialDialog.dismiss();
@@ -187,8 +195,9 @@ public class LoginActivity extends AppCompatActivity {
                         case "signup": loadProfile(); break;
                         case "login": loadProfile(); break;
                         case "loadProfile": loadCaseData(); break;
+                        case "loadCases": loadBills(); break;
                         //case "updateRegistrationToken": loadCaseData(); break;
-                        case "loadCases": redirect(); break;
+                        case "getMyBills": redirect(); break;
                         default: redirect(); break;
                     }
                 }else{
