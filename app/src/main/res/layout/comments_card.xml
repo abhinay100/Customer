@@ -95,36 +95,10 @@
                                 android:gravity="left"
                                 android:text="From Period:"/>
 
-                            <!--<TextView-->
-                                <!--android:id="@+id/lblToPeriod"-->
-                                <!--android:layout_width="match_parent"-->
-                                <!--android:layout_height="match_parent"-->
-                                <!--android:text="To Period:"/>-->
+
                         </LinearLayout>
 
-                        <!--<LinearLayout-->
-                            <!--android:layout_width="wrap_content"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_gravity="center|center_horizontal|center_vertical"-->
-                            <!--android:gravity="center|center_vertical|center_horizontal"-->
-                            <!--android:layout_weight="0.3">-->
 
-                            <!--<TextView-->
-                                <!--android:id="@+id/lblInvoiceAmount"-->
-                                <!--android:layout_width="wrap_content"-->
-                                <!--android:layout_height="wrap_content"-->
-                                <!--android:textSize="24sp"-->
-                                <!--android:text="Rs. 2500"/>-->
-                        <!--</LinearLayout>-->
-
-                        <!--<Button-->
-                        <!--android:text="PAY"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:id="@+id/quick_pay"-->
-                        <!--android:layout_marginTop="7dp"-->
-                        <!--android:background="@color/colorGreen"-->
-                        <!--android:layout_weight="1" />-->
 
                     </LinearLayout>
 
@@ -136,50 +110,9 @@
                         android:layout_below="@id/details"
                         android:background="#CCC"/>
 
-                    <!--<RelativeLayout-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_marginBottom="2dp">-->
-
-                        <!--<TextView-->
-                            <!--android:id="@+id/lblStatus"-->
-                            <!--android:layout_width="170dp"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_marginTop="2dp"-->
-                            <!--android:layout_marginLeft="5dp"-->
-                            <!--android:layout_marginBottom="5dp"-->
-                            <!--tools:text="Status: "-->
-                            <!--android:textColor="#333"-->
-                            <!--android:textSize="14sp" />-->
-
-                        <!--<Button-->
-                            <!--android:layout_width="65dp"-->
-                            <!--android:layout_height="25dp"-->
-                            <!--android:text="PAY"-->
-                            <!--android:id="@+id/quick_pay"-->
-                            <!--android:layout_marginRight="5dp"-->
-                            <!--android:background="@color/colorGreen"-->
-                            <!--android:layout_toLeftOf="@+id/btnDocument"-->
-                            <!--/>-->
-
-
-                        <!--<ImageButton-->
-                            <!--android:layout_width="25dp"-->
-                            <!--android:layout_height="25dp"-->
-                            <!--android:id="@+id/btnDocument"-->
-                            <!--android:layout_marginLeft="10dp"-->
-                            <!--android:layout_marginRight="10dp"-->
-                            <!--android:layout_alignParentRight="true"-->
-                            <!--android:background="@drawable/ic_invoice" />-->
-                    <!--</RelativeLayout>-->
 
 
                 </LinearLayout>
-
-                <!--<View-->
-                    <!--android:layout_width="1dp"-->
-                    <!--android:layout_height="match_parent"-->
-                    <!--android:background="#CCC"/>-->
 
 
 

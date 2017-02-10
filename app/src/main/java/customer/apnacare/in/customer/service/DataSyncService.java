@@ -18,6 +18,7 @@ import customer.apnacare.in.customer.model.Bills;
 import customer.apnacare.in.customer.model.Caregiver;
 import customer.apnacare.in.customer.model.CaseRecord;
 import customer.apnacare.in.customer.model.Comments;
+import customer.apnacare.in.customer.model.Dispositions;
 import customer.apnacare.in.customer.model.Documents;
 import customer.apnacare.in.customer.model.Patient;
 import customer.apnacare.in.customer.model.ServiceRequest;
@@ -413,6 +414,8 @@ public class DataSyncService extends IntentService {
                                             for(int i = 0;i < dispositionJsonArray.size(); i++){
                                                 try{
                                                     JsonObject jsonObject = (JsonObject) dispositionJsonArray.get(i);
+                                                    Dispositions dispositions = new Dispositions(jsonObject);
+                                                    realm.copyToRealmOrUpdate(dispositions);
 
 
 
