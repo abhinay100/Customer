@@ -75,7 +75,7 @@ public class CaseDetails extends Fragment {
             lblEnquirerName.setText(patient.getEnquirerName());
             lblEnquirerPhone.setText(patient.getEnquirerPhone());
             lblEnquirerEmail.setText(CustomerApp.preferences.getString("email","-"));
-            lblAddress.setText(patient.getStreetAddress()+" \n"+patient.getArea()+"\n"+patient.getCity()+"\n"+patient.getState());
+            lblAddress.setText(patient.getStreetAddress()+"," + " \n"+patient.getCity()+"," + "\n"+patient.getState());
 
 
         }

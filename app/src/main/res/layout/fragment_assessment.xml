@@ -6,15 +6,23 @@
     android:layout_centerHorizontal="true">
 
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fillViewport="false"
-        android:isScrollContainer="false">
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:fillViewport="false"-->
+        <!--android:isScrollContainer="false">-->
 
-        <RelativeLayout
+    <!--<android.support.design.widget.NavigationView-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_gravity="start"-->
+        <!--android:fitsSystemWindows="true">-->
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:orientation="vertical">
 
             <android.support.v7.widget.CardView
                 android:id="@+id/assessmentDetails"
@@ -174,10 +182,10 @@
 
 
 
-        </RelativeLayout>
+        </LinearLayout>
 
 
-    </ScrollView>
+    <!--</ScrollView>-->
 
-
+<!--</android.support.design.widget.NavigationView>-->
 </RelativeLayout>

@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
     android:layout_centerHorizontal="true">
 
-    <ScrollView
-        android:layout_width="match_parent"
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:fillViewport="true"-->
+        <!--android:isScrollContainer="false">-->
+
+    <android.support.design.widget.NavigationView
         android:layout_height="match_parent"
-        android:fillViewport="true"
-        android:isScrollContainer="false">
+        android:layout_width="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -70,13 +76,20 @@
                 android:textColor="#FFF"
                 android:textSize="18sp"
                 android:textAllCaps="false"
-                android:text="More Details"/>
+                android:text="More Info"/>
 
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fillViewport="true"
-                android:isScrollContainer="false">
+            <!--<ScrollView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:fillViewport="true"-->
+                <!--android:isScrollContainer="false">-->
+
+            <!--<android.support.design.widget.NavigationView-->
+                <!--android:id="@+id/navv_view"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_gravity="start"-->
+                <!--android:fitsSystemWindows="true">-->
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/documentList"
@@ -87,22 +100,26 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"/>
 
-            </ScrollView>
-
+            <!--</ScrollView>-->
+              <!--</android.support.design.widget.NavigationView>-->
 
         </LinearLayout>
 
 
 
 
-    </ScrollView>
+    <!--</ScrollView>-->
+
+
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/imageLayout"
+        android:visibility="gone"
         android:orientation="vertical">
+
 
         <Button
             android:id="@+id/btnClose"
@@ -114,6 +131,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/documentImage" />
-    </LinearLayout>
 
-</FrameLayout>
+
+    </LinearLayout>
+    </android.support.design.widget.NavigationView>
+
+
+</RelativeLayout>
