@@ -5,17 +5,17 @@
     android:layout_height="fill_parent"
     android:layout_centerHorizontal="true">
 
-    <!--<ScrollView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:fillViewport="true"-->
-        <!--android:isScrollContainer="false">-->
-
-    <android.support.design.widget.NavigationView
-        android:layout_height="match_parent"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true">
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:isScrollContainer="false">
+
+    <!--<android.support.design.widget.NavigationView-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_gravity="start"-->
+        <!--android:fitsSystemWindows="true">-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -72,17 +72,17 @@
                 android:layout_height="40dp"
                 android:layout_margin="15dp"
                 android:layout_gravity="center|center_vertical|center_horizontal"
-                android:background="@color/colorGreen"
+                android:background="@drawable/layoutbutton"
                 android:textColor="#FFF"
                 android:textSize="18sp"
                 android:textAllCaps="false"
                 android:text="More Info"/>
 
-            <!--<ScrollView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:fillViewport="true"-->
-                <!--android:isScrollContainer="false">-->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:isScrollContainer="false">
 
             <!--<android.support.design.widget.NavigationView-->
                 <!--android:id="@+id/navv_view"-->
@@ -100,7 +100,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"/>
 
-            <!--</ScrollView>-->
+            </ScrollView>
               <!--</android.support.design.widget.NavigationView>-->
 
         </LinearLayout>
@@ -108,7 +108,7 @@
 
 
 
-    <!--</ScrollView>-->
+    </ScrollView>
 
 
 
@@ -125,6 +125,8 @@
             android:id="@+id/btnClose"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/layoutbutton"
             android:text="Close"/>
 
         <ImageView
@@ -134,7 +136,7 @@
 
 
     </LinearLayout>
-    </android.support.design.widget.NavigationView>
+    <!--</android.support.design.widget.NavigationView>-->
 
 
 </RelativeLayout>

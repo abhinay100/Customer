@@ -108,6 +108,20 @@
                 android:value=".activity.MainActivity"/>
         </activity>
 
+        <activity
+            android:name=".activity.RoutinesActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainActivity"/>
+        </activity>
+
+        <activity
+            android:name=".activity.VitalsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainActivity"/>
+        </activity>
+
 
         <activity
             android:name=".activity.AccountActivity"
@@ -120,6 +134,10 @@
 
         <meta-data android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAArbfiwtXT3diP0g85RJjYzLzUKezL_Gc"/>
+
+        <!--<meta-data-->
+            <!--android:name="io.fabric.ApiKey"-->
+            <!--android:value="db64f449e61bfe0f2e367041b970b310a0b15239" />-->
 
         <meta-data
             android:name="io.fabric.ApiKey"

@@ -102,7 +102,7 @@ public class ViewCaseActivity extends BaseActivity implements CaseDetails.Provid
         Adapter adapter = new Adapter(getSupportFragmentManager());
         adapter.addFragment(new CaseDetails(), "Patient Details",bundle);
         adapter.addFragment(new AssessmentTabFragment(), "Assessment", bundle);
-        adapter.addFragment(new BasicProfile(), "CareGiver", bundle);
+        adapter.addFragment(new BasicProfile(), "Care Professional", bundle);
         adapter.addFragment(new TasksTabFragment(), "Tasks", bundle);
         adapter.addFragment(new CaseDisposition(), "Case Disposition", bundle);
         adapter.addFragment(new CaseComments(), "Case Comments",bundle);

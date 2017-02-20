@@ -209,7 +209,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_gravity="center|center_horizontal|center_vertical"
-                    android:backgroundTint="@color/apnacareDarkBlue"
+                    android:background="@drawable/layoutbutton"
                     android:gravity="center|center_vertical|center_horizontal"
                     android:text="Update Profile"/>
             </LinearLayout>

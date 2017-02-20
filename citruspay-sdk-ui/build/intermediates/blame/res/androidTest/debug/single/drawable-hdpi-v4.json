@@ -4,20 +4,16 @@
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/united_bank_of_india.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/enterpassword.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/enterpassword.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/cosmos_bank.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/cosmos_bank.png"
-    },
-    {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/canara_bank.png",
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/canara_bank.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/cvv_radio_button.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/cvv_radio_button.png"
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/andhra_bank.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/andhra_bank.png"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/indian_bank.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/indian_bank.png"
     },
     {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/union_bank.png",
@@ -28,416 +24,32 @@
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/hdfc_bank.png"
     },
     {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/img_abc_textfield_default_mtrl_alpha.9.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/img_abc_textfield_default_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/bank_of_maharshtra.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/bank_of_maharshtra.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/img_terms.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/img_terms.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/amex.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/amex.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/citrus_cash.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/citrus_cash.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_wallet_small.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_wallet_small.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/btn_confirm_disabled.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/btn_confirm_disabled.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/discover.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/discover.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/btn_resend.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/btn_resend.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/trust_branding.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/trust_branding.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/mtro.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/mtro.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/img_abc_textfield_default_mtrl_alpha.9.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/img_abc_textfield_default_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_visibility_off.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_visibility_off.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/karnataka_bank.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/karnataka_bank.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/img_abc_textfield_activated_mtrl_alpha.9.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/img_abc_textfield_activated_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/citrus_card_background.9.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/citrus_card_background.9.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/uco.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/uco.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_wallet_small.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_wallet_small.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/citi_bank.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/citi_bank.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/andhra_bank.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/andhra_bank.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/dinerclub.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/dinerclub.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/optionbutton.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/optionbutton.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/img_abc_spinner_mtrl_am_alpha.9.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/img_abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_visa.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_visa.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_launcher.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_launcher.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/state_bank_of_travancore.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/state_bank_of_travancore.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/yes_bank.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/yes_bank.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/arrow_down_icon.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/arrow_down_icon.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/state_bank_of_mysore.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/state_bank_of_mysore.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/indian_bank.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/indian_bank.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/bank_of_maharshtra.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/bank_of_maharshtra.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/bank_of_maharashtra.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/bank_of_maharashtra.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/jcb.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/jcb.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_go.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_go.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/img_cross_red.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/img_cross_red.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/secured.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/secured.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/idbi_bank.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/idbi_bank.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/citrus_card_background.9.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/citrus_card_background.9.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/sbi_bank.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/sbi_bank.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_withdraw_money.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_withdraw_money.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/state_bank_of_mysore_.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/state_bank_of_mysore_.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/btn_confirm_disabled.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/btn_confirm_disabled.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/city_union_bank.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/city_union_bank.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/bank_of_baroda.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/bank_of_baroda.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/rupay.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/rupay.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/img_abc_textfield_activated_mtrl_alpha.9.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/img_abc_textfield_activated_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/dcb_bank.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/dcb_bank.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/cvv_radio_button_selected.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/cvv_radio_button_selected.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/discover.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/discover.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/bank_of_maharashtra.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/bank_of_maharashtra.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/state_bank_of_hyderabad.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/state_bank_of_hyderabad.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/img_powered_by.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/img_powered_by.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/united_bank_of_india.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/united_bank_of_india.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/karur_vyasa_bank.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/karur_vyasa_bank.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_info_pressed.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_info_pressed.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_launcher.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_launcher.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/indusind_bank.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/indusind_bank.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/south_indian_bank.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/south_indian_bank.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_info_pressed.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_info_pressed.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/citi_bank.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/citi_bank.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_visibility_off.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_visibility_off.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/yes_bank.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/yes_bank.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_shadow_bg.9.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_shadow_bg.9.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/kotak_mahindra_bank.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/kotak_mahindra_bank.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/cirrus.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/cirrus.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/federal_bank.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/federal_bank.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/img_checkmark_green.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/img_checkmark_green.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/federal_bank.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/federal_bank.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/corporation_bank.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/corporation_bank.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/south_indian_bank.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/south_indian_bank.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_action_delete.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_action_delete.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/jcb.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/jcb.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/state_bank_of_hyderabad.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/state_bank_of_hyderabad.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/visa.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/visa.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/state_bank_of_patiala.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/state_bank_of_patiala.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ing_vysa.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/ing_vysa.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/icici_bank.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/icici_bank.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/rupay.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/rupay.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_edit.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_edit.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_info_normal.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_info_normal.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/btn_confirm.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/btn_confirm.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/state_bank_of_travancore.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/state_bank_of_travancore.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_withdraw_money.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_withdraw_money.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/otpicon.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/otpicon.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_bank_alert.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_bank_alert.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/textbox.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/textbox.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/catholic_syrian.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/catholic_syrian.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_card_default.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_card_default.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/credit_card_bg.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/credit_card_bg.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/shadowlayout.9.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/shadowlayout.9.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/rpay.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/rpay.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_visibility_on.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_visibility_on.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/andhra_bank.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/andhra_bank.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/state_bank_of_bikaner_and_jaipur.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/state_bank_of_bikaner_and_jaipur.png"
-    },
-    {
-        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/indian_bank.png",
-        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/indian_bank.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/btn_resend_disabled.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/btn_resend_disabled.png"
-    },
-    {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/state_bank_of_mysore.png",
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/state_bank_of_mysore.png"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/img_abc_textfield_default_mtrl_alpha.9.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/img_abc_textfield_default_mtrl_alpha.9.png"
     },
     {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/punjab_national.png",
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/punjab_national.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/axis_bank.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/axis_bank.png"
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/citrus_cash.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/citrus_cash.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/img_powered_by.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/img_powered_by.png"
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/discover.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/discover.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/img_checkmark_green.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/img_checkmark_green.png"
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/trust_branding.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/trust_branding.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/citrus_cash.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/citrus_cash.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/dcb_bank.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/dcb_bank.png"
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_visibility_off.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_visibility_off.png"
     },
     {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/img_back_arrow.png",
@@ -452,12 +64,16 @@
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/karnataka_bank.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/deutsche_bank.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/deutsche_bank.png"
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/uco.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/uco.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/state_bank_of_patiala.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/state_bank_of_patiala.png"
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_wallet_small.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_wallet_small.png"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/citi_bank.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/citi_bank.png"
     },
     {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_action_delete.png",
@@ -476,28 +92,16 @@
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/indusind_bank.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/state_bank_of_mysore_.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/state_bank_of_mysore_.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/idbi_bank.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/idbi_bank.png"
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/dinerclub.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/dinerclub.png"
     },
     {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/default_bank.png",
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/default_bank.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/mcrd.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/mcrd.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/union_bank.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/union_bank.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/img_abc_spinner_mtrl_am_alpha.9.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/img_abc_spinner_mtrl_am_alpha.9.png"
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/img_abc_spinner_mtrl_am_alpha.9.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/img_abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_go.png",
@@ -512,6 +116,18 @@
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/sbi_bank.png"
     },
     {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_launcher.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_launcher.png"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/state_bank_of_travancore.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/state_bank_of_travancore.png"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/yes_bank.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/yes_bank.png"
+    },
+    {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/citrus.png",
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/citrus.png"
     },
@@ -520,40 +136,44 @@
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/btn_resend.png"
     },
     {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/arrow_down_icon.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/arrow_down_icon.png"
+    },
+    {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/indian_overseas_bank.png",
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/indian_overseas_bank.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_manage_cards.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_manage_cards.png"
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/bank_of_maharshtra.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/bank_of_maharshtra.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/indian_overseas_bank.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/indian_overseas_bank.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_add_money.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_add_money.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/otpicon.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/otpicon.png"
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/bank_of_maharashtra.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/bank_of_maharashtra.png"
     },
     {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/catholic_syrian.png",
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/catholic_syrian.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/visa.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/visa.png"
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/idbi_bank.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/idbi_bank.png"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/citrus_card_background.9.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/citrus_card_background.9.png"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_withdraw_money.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_withdraw_money.png"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/state_bank_of_mysore_.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/state_bank_of_mysore_.png"
     },
     {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_edit.png",
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_edit.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_wallet_big.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_wallet_big.png"
     },
     {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/textbox.png",
@@ -568,12 +188,12 @@
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_go_pressed.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_go_pressed.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_go_pressed.png"
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/btn_confirm_disabled.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/btn_confirm_disabled.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/vijaya_bank.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/vijaya_bank.png"
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/city_union_bank.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/city_union_bank.png"
     },
     {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/cvv_radio_button.png",
@@ -604,32 +224,40 @@
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/deutsche_bank.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/bank_of_india.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/bank_of_india.png"
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/bank_of_baroda.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/bank_of_baroda.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_card_default.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_card_default.png"
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/img_abc_textfield_activated_mtrl_alpha.9.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/img_abc_textfield_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/dcb_bank.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/dcb_bank.png"
     },
     {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/mtro.png",
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/mtro.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/hdfc_bank.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/hdfc_bank.png"
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/state_bank_of_hyderabad.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/state_bank_of_hyderabad.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/trust_branding.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/trust_branding.png"
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/img_powered_by.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/img_powered_by.png"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/karur_vyasa_bank.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/karur_vyasa_bank.png"
     },
     {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_add_money.png",
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_add_money.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/arrow_up_icon.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/arrow_up_icon.png"
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_info_pressed.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_info_pressed.png"
     },
     {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_visa.png",
@@ -640,20 +268,12 @@
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/central_bank_of_india.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/dinerclub.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/dinerclub.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_shadow_bg.9.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_shadow_bg.9.png"
-    },
-    {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/btn_resend_disabled.png",
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/btn_resend_disabled.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/karur_vyasa_bank.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/karur_vyasa_bank.png"
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_shadow_bg.9.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_shadow_bg.9.png"
     },
     {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/mcrd.png",
@@ -668,32 +288,28 @@
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/icici_bank.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/canara_bank.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/canara_bank.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/central_bank_of_india.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/central_bank_of_india.png"
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/federal_bank.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/federal_bank.png"
     },
     {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/enterpassword.png",
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/enterpassword.png"
     },
     {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/img_checkmark_green.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/img_checkmark_green.png"
+    },
+    {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/cirrus.png",
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/cirrus.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/img_back_arrow.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/img_back_arrow.png"
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/south_indian_bank.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/south_indian_bank.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ing_vysa.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/ing_vysa.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/citrus.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/citrus.png"
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/jcb.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/jcb.png"
     },
     {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/cosmos_bank.png",
@@ -704,24 +320,28 @@
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_visibility_on.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/punjab_national.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/punjab_national.png"
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/visa.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/visa.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/arrow_down_icon.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/arrow_down_icon.png"
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/state_bank_of_patiala.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/state_bank_of_patiala.png"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ing_vysa.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/ing_vysa.png"
     },
     {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/rpay.png",
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/rpay.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/bank_of_baroda.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/bank_of_baroda.png"
-    },
-    {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_bank_alert.png",
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_bank_alert.png"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/rupay.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/rupay.png"
     },
     {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/secured.png",
@@ -736,6 +356,10 @@
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_info_normal.png"
     },
     {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/otpicon.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/otpicon.png"
+    },
+    {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_manage_cards.png",
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_manage_cards.png"
     },
@@ -748,23 +372,15 @@
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/vijaya_bank.png"
     },
     {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/uco.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/uco.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/city_union_bank.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/city_union_bank.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/default_bank.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.citrus.sdk/payment-sdk/3.4.4.1/retrofitoldRelease/res/drawable-hdpi-v4/default_bank.png"
-    },
-    {
-        "merged": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/shadowlayout.9.png",
-        "source": "/home/suhas/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/shadowlayout.9.png"
-    },
-    {
         "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/credit_card_bg.png",
         "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/credit_card_bg.png"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_card_default.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_card_default.png"
+    },
+    {
+        "merged": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/shadowlayout.9.png",
+        "source": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/bundles/debug/res/drawable-hdpi-v4/shadowlayout.9.png"
     }
 ]

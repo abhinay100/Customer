@@ -164,7 +164,7 @@
                            android:text="PAY"
                            android:id="@+id/quick_pay"
                            android:layout_marginRight="5dp"
-                           android:background="@color/colorGreen"
+                           android:background="@drawable/layoutbutton"
                            android:layout_toLeftOf="@+id/btnDocument"
                           />
 

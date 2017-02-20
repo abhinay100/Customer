@@ -48,7 +48,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
-                    android:background="@color/apnacareDarkBlue"
+                    android:background="@drawable/layoutbutton"
                     android:textColor="#FFF"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"

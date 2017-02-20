@@ -2,20 +2,14 @@ package customer.apnacare.in.customer.adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.RatingBar;
-import android.widget.ScrollView;
-import android.widget.TableLayout;
-import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.afollestad.materialdialogs.DialogAction;
@@ -25,13 +19,19 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import customer.apnacare.in.customer.R;
+import customer.apnacare.in.customer.activity.BillsActivity;
+import customer.apnacare.in.customer.activity.RoutinesActivity;
+import customer.apnacare.in.customer.activity.ViewPatientsActivity;
+import customer.apnacare.in.customer.activity.VitalsActivity;
 import customer.apnacare.in.customer.model.WorkLog;
 import customer.apnacare.in.customer.model.WorkLogFeedback;
 import customer.apnacare.in.customer.service.DataSyncService;
@@ -46,9 +46,9 @@ import io.realm.RealmViewHolder;
  * Created by root on 10/1/17.
  */
 
-public class CaseVitalsAdapter extends RealmBasedRecyclerViewAdapter<WorkLog, CaseVitalsAdapter.ViewHolder> {
+public class CaseVitalsAdapter extends  RealmBasedRecyclerViewAdapter<WorkLog, CaseVitalsAdapter.ViewHolder> {
 
-    Context mContext;
+     Context mContext;
     JsonArray vitals, routines;
     String strTime = "-";
 
@@ -64,9 +64,10 @@ public class CaseVitalsAdapter extends RealmBasedRecyclerViewAdapter<WorkLog, Ca
     public class ViewHolder extends RealmViewHolder {
 
         @BindView(R.id.lbl_caseTask_date) TextView vitalInspectionDate;
+        @BindView(R.id.lbl_caseTask_day) TextView vitalInspectionDay;
         @BindView(R.id.lblTaskName) TextView caregiverName;
         @BindView(R.id.btnViewMorning) public Button btnViewVitalMorning;
-        @BindView(R.id.btnViewAfternoon) public Button btnViewVitalNoon;
+//        @BindView(R.id.btnViewAfternoon) public Button btnViewVitalNoon;
         @BindView(R.id.btnViewEvening) public Button btnViewVitalEvening;
         @BindView(R.id.lblRating) public TextView lblRating;
         @BindView(R.id.btnFeedback) public Button btnFeedback;
@@ -82,7 +83,7 @@ public class CaseVitalsAdapter extends RealmBasedRecyclerViewAdapter<WorkLog, Ca
     public ViewHolder onCreateRealmViewHolder(ViewGroup viewGroup, int viewType) {
         ViewHolder vh = null;
         try {
-            View v = inflater.inflate(R.layout.task_item_card, viewGroup, false);
+            View v = inflater.inflate(R.layout.routine_card, viewGroup, false);
             vh = new ViewHolder(v);
         }catch (Exception e){
             Log.v(Constants.TAG,"onCreateRealmViewHolder Exception: "+e.toString());
@@ -94,11 +95,20 @@ public class CaseVitalsAdapter extends RealmBasedRecyclerViewAdapter<WorkLog, Ca
     @Override
     public void onBindRealmViewHolder(ViewHolder viewHolder, int position) {
         final WorkLog worklog = realmResults.get(position);
+        Log.v(Constants.TAG,"worksize: "+worklog);
         Realm realm = Realm.getDefaultInstance();
 
         try {
             if(worklog != null) {
                 viewHolder.vitalInspectionDate.setText(worklog.getWorklogDate());
+
+                DateFormat inputFormat = new SimpleDateFormat("dd-MM-yyyy");
+                DateFormat outputFormat = new SimpleDateFormat("EEEE");
+                String inputInvoiceDateStr = worklog.getWorklogDate();
+                Date invoiceDate = inputFormat.parse(inputInvoiceDateStr);
+                String outputInvoiceDateStr = outputFormat.format(invoiceDate);
+                viewHolder.vitalInspectionDay.setText(outputInvoiceDateStr);
+
                 viewHolder.caregiverName.setText(worklog.getCaregiverName());
 
                 WorkLogFeedback workLogFeedback = realm.where(WorkLogFeedback.class).equalTo("careplanId",worklog.getCareplanId()).findFirst();
@@ -118,6 +128,7 @@ public class CaseVitalsAdapter extends RealmBasedRecyclerViewAdapter<WorkLog, Ca
 
                 if(!worklog.getVitals().isEmpty()) {
                     vitals = parser.parse(worklog.getVitals().toString()).getAsJsonArray();
+                    Log.v(Constants.TAG,"vitals sizee: "+vitals);
                 }
 
                 if(!worklog.getRoutines().isEmpty() && !worklog.getRoutines().equals("")) {
@@ -130,23 +141,41 @@ public class CaseVitalsAdapter extends RealmBasedRecyclerViewAdapter<WorkLog, Ca
                 viewHolder.btnViewVitalMorning.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        createTasksWebView("morning");
+//                        createTasksWebView("morning");
+                        Intent intent = new Intent(getContext(), RoutinesActivity.class);
+                        intent.putExtra("worklogDate",worklog.getWorklogDate());
+                        intent.putExtra("worlkogId",worklog.getId());
+                        mContext.startActivity(intent);
+
                     }
                 });
 
-                viewHolder.btnViewVitalNoon.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        createTasksWebView("afternoon");
-                    }
-                });
+//                viewHolder.btnViewVitalNoon.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//                        createTasksWebView("afternoon");
+//                    }
+//                });
 
                 viewHolder.btnViewVitalEvening.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        createTasksWebView("evening");
+//                        createTasksWebView("evening");
+
+                        Intent intent = new Intent(getContext(), VitalsActivity.class);
+                        intent.putExtra("worklogDate",worklog.getWorklogDate());
+                        intent.putExtra("worlkogId",worklog.getId());
+                        mContext.startActivity(intent);
+
                     }
                 });
+
+//                viewHolder.btnViewVitalEvening.setOnClickListener((View view) -> {
+//                    Intent intent = new Intent(getContext(), ViewPatientsActivity.class);
+////                    intent.putExtra("caseID",caseRecord.getId());
+//                    mContext.startActivity(intent);
+//                });
+
 
                 viewHolder.btnFeedback.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -240,8 +269,10 @@ public class CaseVitalsAdapter extends RealmBasedRecyclerViewAdapter<WorkLog, Ca
             htmlString += "<tr height='20'><th colspan='2'><center>Vitals</center></th></tr>";
             if (vitals != null && vitals.size() > 0) {
                 JsonObject vitalObject = vitals.get(0).getAsJsonObject();
+                Log.v(Constants.TAG,"vitalObject: "+vitalObject);
                 if (vitalObject.getAsJsonObject().get(sessionName).isJsonObject()) {
                     JsonObject sessionObject = (JsonObject) vitalObject.getAsJsonObject().get(sessionName);
+                    Log.v(Constants.TAG,"sessionObject: "+sessionObject);
 
                     if (sessionObject.size() > 0) {
                         htmlString += "<tr><td colspan='2'><center>Captured at " + strTime+ "</center></td></tr>";

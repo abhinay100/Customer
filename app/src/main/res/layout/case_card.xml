@@ -91,7 +91,7 @@
                         android:layout_marginLeft="5dp"
                         tools:text="23"
                         android:textSize="16sp"
-                        android:textColor="@color/colorOrange"
+                        android:textColor="#333"
                         android:layout_marginBottom="0dp" />
 
                         <TextView
@@ -103,7 +103,7 @@
                             tools:text="Aug"
                             android:layout_alignParentRight="@+id/lblRequestDay"
                             android:textSize="16sp"
-                            android:textColor="@color/colorOrange"
+                            android:textColor="#333"
                             android:layout_marginBottom="0dp" />
 
                         <TextView
@@ -115,15 +115,20 @@
                             tools:text="2016"
                             android:layout_alignParentRight="@+id/lblRequestMonth"
                             android:textSize="16sp"
-                            android:textColor="@color/colorOrange"
+                            android:textColor="#333"
                             android:layout_marginBottom="0dp" />
 
 
-
-
-
+                        <TextView
+                            android:id="@+id/line1"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/lblRequestYear"
+                            android:background="#CCC"/>
 
                     </RelativeLayout>
+
+
                     <TextView
                         android:id="@+id/lblPatientName"
                         android:layout_width="match_parent"
@@ -164,7 +169,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_below="@id/lblArea"
-                        android:background="#ff9500"/>
+                        android:background="#CCC"/>
 
                     <TextView
                         android:id="@+id/lblCaseStatus"
