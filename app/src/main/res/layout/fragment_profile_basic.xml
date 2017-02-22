@@ -5,17 +5,17 @@
     android:layout_height="fill_parent"
     android:layout_centerHorizontal="true">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true"
-        android:isScrollContainer="false">
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:fillViewport="true"-->
+    <!--android:isScrollContainer="false">-->
 
-    <!--<android.support.design.widget.NavigationView-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_gravity="start"-->
-        <!--android:fitsSystemWindows="true">-->
+    <android.support.design.widget.NavigationView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -66,7 +66,7 @@
 
             </LinearLayout>
 
-            <Button
+            <ToggleButton
                 android:id="@+id/btnCaregiverInfo"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
@@ -76,67 +76,67 @@
                 android:textColor="#FFF"
                 android:textSize="18sp"
                 android:textAllCaps="false"
-                android:text="More Info"/>
-
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fillViewport="true"
-                android:isScrollContainer="false">
+                android:textOff="More Info"
+                android:textOn="Less Info"/>
+            <!--<ScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:fillViewport="true"-->
+            <!--android:isScrollContainer="false">-->
 
             <!--<android.support.design.widget.NavigationView-->
-                <!--android:id="@+id/navv_view"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_gravity="start"-->
-                <!--android:fitsSystemWindows="true">-->
+            <!--android:id="@+id/navv_view"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_gravity="start"-->
+            <!--android:fitsSystemWindows="true">-->
 
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/documentList"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"/>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/documentList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
 
-            </ScrollView>
-              <!--</android.support.design.widget.NavigationView>-->
+            <!--</ScrollView>-->
+            <!--</android.support.design.widget.NavigationView>-->
 
         </LinearLayout>
 
 
 
 
-    </ScrollView>
+        <!--</ScrollView>-->
 
 
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/imageLayout"
-        android:visibility="gone"
-        android:orientation="vertical">
-
-
-        <Button
-            android:id="@+id/btnClose"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@drawable/layoutbutton"
-            android:text="Close"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/documentImage" />
+            android:layout_height="match_parent"
+            android:id="@+id/imageLayout"
+            android:visibility="gone"
+            android:orientation="vertical">
 
 
-    </LinearLayout>
-    <!--</android.support.design.widget.NavigationView>-->
+            <Button
+                android:id="@+id/btnClose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/layoutbutton"
+                android:text="Close"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/documentImage" />
+
+
+        </LinearLayout>
+    </android.support.design.widget.NavigationView>
 
 
 </RelativeLayout>

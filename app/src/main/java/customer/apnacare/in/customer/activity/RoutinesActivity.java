@@ -25,7 +25,6 @@ import java.util.List;
 import java.util.Map;
 
 import customer.apnacare.in.customer.R;
-import customer.apnacare.in.customer.model.Routine;
 import customer.apnacare.in.customer.model.WorkLog;
 import customer.apnacare.in.customer.utils.Constants;
 import io.realm.Realm;
@@ -76,18 +75,15 @@ public class RoutinesActivity extends BaseActivity {
 
 
         RealmResults<WorkLog> workLog = realm.where(WorkLog.class).equalTo("id",worlklogId).findAll();
-        Log.v(Constants.TAG,"workLog size: "+ workLog);
         JsonParser parser = new JsonParser();
         vitals = parser.parse(workLog.get(0).getRoutines().toString()).getAsJsonArray();
-        Log.v(Constants.TAG,"vitala "+ vitals);
         JsonObject vitalObject = vitals.get(0).getAsJsonObject();
-        Log.v(Constants.TAG,"vitalaObject: "+vitalObject);
+
 
         if(vitalObject !=null)  {
 
             try{
                 morningSession = vitalObject.get("morning").getAsJsonObject();
-                Log.v(Constants.TAG,"sessionaObject: "+morningSession);
 
             }catch (Exception e){
                 Log.v(Constants.TAG,"morning Session Exception: "+e.toString());
@@ -95,19 +91,16 @@ public class RoutinesActivity extends BaseActivity {
 
             try {
                 afternoonSession = vitalObject.get("afternoon").getAsJsonObject();
-                Log.v(Constants.TAG, "afternoonSession: " + afternoonSession);
             }catch (Exception e){
                 Log.v(Constants.TAG,"Afternoon Session Exception: "+e.toString());
             }
             try{
                 nightSession = vitalObject.get("night").getAsJsonObject();
-                Log.v(Constants.TAG,"nightSession"+ eveningSession);
             }catch (Exception e){
                 Log.v(Constants.TAG,"night Session Exception: "+e.toString());
             }
             try{
                 eveningSession = vitalObject.get("evening").getAsJsonObject();
-                Log.v(Constants.TAG,"eveningSession"+ eveningSession);
             }catch (Exception e){
                 Log.v(Constants.TAG,"evening Session Exception: "+e.toString());
             }
@@ -130,14 +123,14 @@ public class RoutinesActivity extends BaseActivity {
             if(morningSession.has("Mobilization")){
 
                 textMorningMobilization = new TextView(this);
-                textMorningMobilization.setText("Mobilization " + "- " + morningSession.get("Mobilization").toString().replace("\"", ""));
+                textMorningMobilization.setText("Mobilization " + "- " + "          " + morningSession.get("Mobilization").toString().replace("\"", ""));
                 textMorningMobilization.setTextSize(16);
                 textMorningMobilization.setGravity(Gravity.LEFT);
                 textMorningMobilization.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
             }else{
                 textMorningMobilization = new TextView(this);
-                textMorningMobilization.setText("Mobilization " + "- " + "Not Done");
+                textMorningMobilization.setText("Mobilization " + "- " + "          " + "Not Done");
                 textMorningMobilization.setTextColor(Color.RED);
                 textMorningMobilization.setTextSize(16);
                 textMorningMobilization.setGravity(Gravity.LEFT);
@@ -148,7 +141,7 @@ public class RoutinesActivity extends BaseActivity {
             if(morningSession.has("Vitals")){
 
                 textMorningVitals = new TextView(this);
-                textMorningVitals.setText("Vitals " + "- " + morningSession.get("Vitals").toString().replace("\"", ""));
+                textMorningVitals.setText("Vitals " + "- " + "                      " + morningSession.get("Vitals").toString().replace("\"", ""));
                 textMorningVitals.setTextSize(16);
                 textMorningVitals.setGravity(Gravity.LEFT);
                 textMorningVitals.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -156,7 +149,7 @@ public class RoutinesActivity extends BaseActivity {
             }
             else {
                 textMorningVitals = new TextView(this);
-                textMorningVitals.setText("Vitals " + "- " + "Not Done");
+                textMorningVitals.setText("Vitals " + "- " + "                      " + "Not Done");
                 textMorningVitals.setTextColor(Color.RED);
                 textMorningVitals.setTextSize(16);
                 textMorningVitals.setGravity(Gravity.LEFT);
@@ -168,7 +161,7 @@ public class RoutinesActivity extends BaseActivity {
             if(morningSession.has("Dressing")){
 
                 textMorningDressing = new TextView(this);
-                textMorningDressing.setText("Dressing " + "- " + morningSession.get("Dressing").toString().replace("\"", ""));
+                textMorningDressing.setText("Dressing " + "- " + "                " + morningSession.get("Dressing").toString().replace("\"", ""));
                 textMorningDressing.setTextSize(16);
                 textMorningDressing.setGravity(Gravity.LEFT);
                 textMorningDressing.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -176,7 +169,7 @@ public class RoutinesActivity extends BaseActivity {
             }
             else {
                 textMorningDressing = new TextView(this);
-                textMorningDressing.setText("Dressing " + "- " + "Not Done");
+                textMorningDressing.setText("Dressing " + "- " + "                " + "Not Done");
                 textMorningDressing.setTextColor(Color.RED);
                 textMorningDressing.setTextSize(16);
                 textMorningMobilization.setGravity(Gravity.LEFT);
@@ -187,7 +180,7 @@ public class RoutinesActivity extends BaseActivity {
             if(morningSession.has("Grooming")){
 
                 textMorningGrooming = new TextView(this);
-                textMorningGrooming.setText("Grooming " + "- " + morningSession.get("Grooming").toString().replace("\"", ""));
+                textMorningGrooming.setText("Grooming " + "- " + "              " + morningSession.get("Grooming").toString().replace("\"", ""));
                 textMorningGrooming.setTextSize(16);
                 textMorningGrooming.setGravity(Gravity.LEFT);
                 textMorningGrooming.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -195,7 +188,7 @@ public class RoutinesActivity extends BaseActivity {
             }
             else {
                 textMorningGrooming = new TextView(this);
-                textMorningGrooming.setText("Grooming " + "- " + "Not Done");
+                textMorningGrooming.setText("Grooming " + "- " + "              " + "Not Done");
                 textMorningGrooming.setTextColor(Color.RED);
                 textMorningGrooming.setTextSize(16);
                 textMorningGrooming.setGravity(Gravity.LEFT);
@@ -206,7 +199,7 @@ public class RoutinesActivity extends BaseActivity {
             if(morningSession.has("Bathing")){
 
                 textMorningBathing = new TextView(this);
-                textMorningBathing.setText("Bathing " + "- " + morningSession.get("Bathing").toString().replace("\"", ""));
+                textMorningBathing.setText("Bathing " + "- " + "                  " + morningSession.get("Bathing").toString().replace("\"", ""));
                 textMorningBathing.setTextSize(16);
                 textMorningBathing.setGravity(Gravity.LEFT);
                 textMorningBathing.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -214,7 +207,7 @@ public class RoutinesActivity extends BaseActivity {
             }
             else {
                 textMorningBathing = new TextView(this);
-                textMorningBathing.setText("Bathing " + "- " + "Not Done");
+                textMorningBathing.setText("Bathing " + "- " + "                  " + "Not Done");
                 textMorningBathing.setTextColor(Color.RED);
                 textMorningBathing.setTextSize(16);
                 textMorningBathing.setGravity(Gravity.LEFT);
@@ -225,7 +218,7 @@ public class RoutinesActivity extends BaseActivity {
             if(morningSession.has("Bed Care")){
 
                 textMorningBedCare = new TextView(this);
-                textMorningBedCare.setText("Bed Care " + "- " + morningSession.get("Bed Care").toString().replace("\"", ""));
+                textMorningBedCare.setText("Bed Care " + "- " + "               " + morningSession.get("Bed Care").toString().replace("\"", ""));
                 textMorningBedCare.setTextSize(16);
                 textMorningBedCare.setGravity(Gravity.LEFT);
                 textMorningBedCare.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -233,7 +226,7 @@ public class RoutinesActivity extends BaseActivity {
             }
             else {
                 textMorningBedCare = new TextView(this);
-                textMorningBedCare.setText("Bed Care " + "- " + "Not Done");
+                textMorningBedCare.setText("Bed Care " + "- " + "               " + "Not Done");
                 textMorningBedCare.setTextColor(Color.RED);
                 textMorningBedCare.setTextSize(16);
                 textMorningBedCare.setGravity(Gravity.LEFT);
@@ -244,7 +237,7 @@ public class RoutinesActivity extends BaseActivity {
             if(morningSession.has("Breakfast")){
 
                 textMorningBreakfast = new TextView(this);
-                textMorningBreakfast.setText("Breakfast " + "- " + morningSession.get("Breakfast").toString().replace("\"", ""));
+                textMorningBreakfast.setText("Breakfast " + "- " + "              " + morningSession.get("Breakfast").toString().replace("\"", ""));
                 textMorningBreakfast.setTextSize(16);
                 textMorningBreakfast.setGravity(Gravity.LEFT);
                 textMorningBreakfast.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -252,7 +245,7 @@ public class RoutinesActivity extends BaseActivity {
             }
             else {
                 textMorningBreakfast = new TextView(this);
-                textMorningBreakfast.setText("Breakfast " + "- " + "Not Done");
+                textMorningBreakfast.setText("Breakfast " + "- " + "              " + "Not Done");
                 textMorningBreakfast.setTextColor(Color.RED);
                 textMorningBreakfast.setTextSize(16);
                 textMorningBreakfast.setGravity(Gravity.LEFT);
@@ -263,7 +256,7 @@ public class RoutinesActivity extends BaseActivity {
             if(morningSession.has("Oral Care")){
 
                 textMorningOralCare = new TextView(this);
-                textMorningOralCare.setText("Oral Care " + "- " + morningSession.get("Oral Care").toString().replace("\"", ""));
+                textMorningOralCare.setText("Oral Care " + "- " + "               " + morningSession.get("Oral Care").toString().replace("\"", ""));
                 textMorningOralCare.setTextSize(16);
                 textMorningOralCare.setGravity(Gravity.LEFT);
                 textMorningOralCare.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -271,7 +264,7 @@ public class RoutinesActivity extends BaseActivity {
             }
             else {
                 textMorningOralCare = new TextView(this);
-                textMorningOralCare.setText("Oral Care " + "- " + "Not Done");
+                textMorningOralCare.setText("Oral Care " + "- " + "               " + "Not Done");
                 textMorningOralCare.setTextColor(Color.RED);
                 textMorningOralCare.setTextSize(16);
                 textMorningOralCare.setGravity(Gravity.LEFT);
@@ -282,7 +275,7 @@ public class RoutinesActivity extends BaseActivity {
             if(morningSession.has("Oral Medication")){
 
                 textMorningOralMedication = new TextView(this);
-                textMorningOralMedication.setText("Oral Medication " + "- " + morningSession.get("Oral Medication").toString().replace("\"", ""));
+                textMorningOralMedication.setText("Oral Medication " + "- " + "   " + morningSession.get("Oral Medication").toString().replace("\"", ""));
                 textMorningOralMedication.setTextSize(16);
                 textMorningOralMedication.setGravity(Gravity.LEFT);
                 textMorningOralMedication.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -290,7 +283,7 @@ public class RoutinesActivity extends BaseActivity {
             }
             else {
                 textMorningOralMedication = new TextView(this);
-                textMorningOralMedication.setText("Oral Medication " + "- " + "Not Done");
+                textMorningOralMedication.setText("Oral Medication " + "- " + "   " + "Not Done");
                 textMorningOralMedication.setTextColor(Color.RED);
                 textMorningOralMedication.setTextSize(16);
                 textMorningOralMedication.setGravity(Gravity.LEFT);
@@ -330,14 +323,14 @@ public class RoutinesActivity extends BaseActivity {
             if(afternoonSession.has("Vitals")){
 
                 txtAfternoonVitals = new TextView(this);
-                txtAfternoonVitals.setText("Vitals " + "- " + afternoonSession.get("Vitals").toString().replace("\"", ""));
+                txtAfternoonVitals.setText("Vitals " + "- " + "                      " + afternoonSession.get("Vitals").toString().replace("\"", ""));
                 txtAfternoonVitals.setTextSize(16);
                 txtAfternoonVitals.setGravity(Gravity.LEFT);
                 txtAfternoonVitals.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
             }else{
                 txtAfternoonVitals = new TextView(this);
-                txtAfternoonVitals.setText("Vitals " + "- " + "Not Done");
+                txtAfternoonVitals.setText("Vitals " + "- " + "                      " + "Not Done");
                 txtAfternoonVitals.setTextColor(Color.RED);
                 txtAfternoonVitals.setTextSize(16);
                 txtAfternoonVitals.setGravity(Gravity.LEFT);
@@ -348,14 +341,14 @@ public class RoutinesActivity extends BaseActivity {
             if(afternoonSession.has("Lunch")){
 
                 txtAfternoonLunch = new TextView(this);
-                txtAfternoonLunch.setText("Lunch " + "- " + afternoonSession.get("Lunch").toString().replace("\"", ""));
+                txtAfternoonLunch.setText("Lunch " + "- " + "                     " + afternoonSession.get("Lunch").toString().replace("\"", ""));
                 txtAfternoonLunch.setTextSize(16);
                 txtAfternoonLunch.setGravity(Gravity.LEFT);
                 txtAfternoonLunch.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
             }else{
                 txtAfternoonLunch = new TextView(this);
-                txtAfternoonLunch.setText("Lunch " + "- " + "Not Done");
+                txtAfternoonLunch.setText("Lunch " + "- " + "                     " + "Not Done");
                 txtAfternoonLunch.setTextColor(Color.RED);
                 txtAfternoonLunch.setTextSize(16);
                 txtAfternoonLunch.setGravity(Gravity.LEFT);
@@ -366,14 +359,14 @@ public class RoutinesActivity extends BaseActivity {
             if(afternoonSession.has("Oral Medication")){
 
                 txtAfternoonOral = new TextView(this);
-                txtAfternoonOral.setText("Oral Medication " + "- " + afternoonSession.get("Oral Medication").toString().replace("\"", ""));
+                txtAfternoonOral.setText("Oral Medication " + "- " + "   " + afternoonSession.get("Oral Medication").toString().replace("\"", ""));
                 txtAfternoonOral.setTextSize(16);
                 txtAfternoonOral.setGravity(Gravity.LEFT);
                 txtAfternoonOral.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
             }else{
                 txtAfternoonOral = new TextView(this);
-                txtAfternoonOral.setText("Oral Medication " + "- " + "Not Done");
+                txtAfternoonOral.setText("Oral Medication " + "- " + "   " + "Not Done");
                 txtAfternoonOral.setTextColor(Color.RED);
                 txtAfternoonOral.setTextSize(16);
                 txtAfternoonOral.setGravity(Gravity.LEFT);
@@ -402,14 +395,14 @@ public class RoutinesActivity extends BaseActivity {
             if(eveningSession.has("Oral Medication")){
 
                 txtEveningOral = new TextView(this);
-                txtEveningOral.setText("Oral Medication " + "- " + eveningSession.get("Oral Medication").toString().replace("\"", ""));
+                txtEveningOral.setText("Oral Medication " + "- " + "   " + eveningSession.get("Oral Medication").toString().replace("\"", ""));
                 txtEveningOral.setTextSize(16);
                 txtEveningOral.setGravity(Gravity.LEFT);
                 txtEveningOral.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
             }else{
                 txtEveningOral = new TextView(this);
-                txtEveningOral.setText("Oral Medication " + "- " + "Not Done");
+                txtEveningOral.setText("Oral Medication " + "- " + "   " + "Not Done");
                 txtEveningOral.setTextColor(Color.RED);
                 txtEveningOral.setTextSize(16);
                 txtEveningOral.setGravity(Gravity.LEFT);
@@ -417,17 +410,17 @@ public class RoutinesActivity extends BaseActivity {
 
             }
 
-            if(eveningSession.has("Vitals")){
+            if(eveningSession.has("Oral Medication")){
 
                 txtEveningOral = new TextView(this);
-                txtEveningOral.setText("Vitals " + "- " + eveningSession.get("Vitals").toString().replace("\"", ""));
+                txtEveningOral.setText("Oral Medication " + "- " + "   " + eveningSession.get("Oral Medication").toString().replace("\"", ""));
                 txtEveningOral.setTextSize(16);
                 txtEveningOral.setGravity(Gravity.LEFT);
                 txtEveningOral.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
             }else{
                 txtEveningOral = new TextView(this);
-                txtEveningOral.setText("Vitals " + "- " + "Not Done");
+                txtEveningOral.setText("Oral Medication " + "- " + "   " + "Not Done");
                 txtEveningOral.setTextColor(Color.RED);
                 txtEveningOral.setTextSize(16);
                 txtEveningOral.setGravity(Gravity.LEFT);
@@ -438,14 +431,14 @@ public class RoutinesActivity extends BaseActivity {
             if(eveningSession.has("Vitals")){
 
                 txtEveningVital = new TextView(this);
-                txtEveningVital.setText("Vitals " + "- " + eveningSession.get("Vitals").toString().replace("\"", ""));
+                txtEveningVital.setText("Vitals " + "- " + "                      " + eveningSession.get("Vitals").toString().replace("\"", ""));
                 txtEveningVital.setTextSize(16);
                 txtEveningVital.setGravity(Gravity.LEFT);
                 txtEveningVital.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
             }else{
                 txtEveningVital = new TextView(this);
-                txtEveningVital.setText("Vitals " + "- " + "Not Done");
+                txtEveningVital.setText("Vitals " + "- " + "                      " + "Not Done");
                 txtEveningVital.setTextColor(Color.RED);
                 txtEveningVital.setTextSize(16);
                 txtEveningVital.setGravity(Gravity.LEFT);
@@ -456,14 +449,14 @@ public class RoutinesActivity extends BaseActivity {
             if(eveningSession.has("Dinner")){
 
                 txtEveningDinner = new TextView(this);
-                txtEveningDinner.setText("Dinner " + "- " + eveningSession.get("Dinner").toString().replace("\"", ""));
+                txtEveningDinner.setText("Dinner " + "- " + "                    " + eveningSession.get("Dinner").toString().replace("\"", ""));
                 txtEveningDinner.setTextSize(16);
                 txtEveningDinner.setGravity(Gravity.LEFT);
                 txtEveningDinner.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
             }else{
                 txtEveningDinner = new TextView(this);
-                txtEveningDinner.setText("Dinner " + "- " + "Not Done");
+                txtEveningDinner.setText("Dinner " + "- " + "                    " + "Not Done");
                 txtEveningDinner.setTextColor(Color.RED);
                 txtEveningDinner.setTextSize(16);
                 txtEveningDinner.setGravity(Gravity.LEFT);
@@ -474,14 +467,14 @@ public class RoutinesActivity extends BaseActivity {
             if(eveningSession.has("Mobilization")){
 
                 txtEveningMobilization = new TextView(this);
-                txtEveningMobilization.setText("Mobilization " + "- " + eveningSession.get("Mobilization").toString().replace("\"", ""));
+                txtEveningMobilization.setText("Mobilization " + "- " + "          " + eveningSession.get("Mobilization").toString().replace("\"", ""));
                 txtEveningMobilization.setTextSize(16);
                 txtEveningMobilization.setGravity(Gravity.LEFT);
                 txtEveningMobilization.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
             }else{
                 txtEveningMobilization = new TextView(this);
-                txtEveningMobilization.setText("Mobilization " + "- " + "Not Done");
+                txtEveningMobilization.setText("Mobilization " + "- " + "          " + "Not Done");
                 txtEveningMobilization.setTextColor(Color.RED);
                 txtEveningMobilization.setTextSize(16);
                 txtEveningMobilization.setGravity(Gravity.LEFT);

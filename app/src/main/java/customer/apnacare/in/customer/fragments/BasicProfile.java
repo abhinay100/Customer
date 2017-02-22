@@ -1,8 +1,11 @@
 package customer.apnacare.in.customer.fragments;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,9 +16,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import com.squareup.picasso.Picasso;
 
@@ -69,108 +75,47 @@ public class BasicProfile extends Fragment {
     }
 
 
+    @TargetApi(Build.VERSION_CODES.M)
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-//        view = (ViewGroup) inflater.inflate(R.layout.fragment_profile_basic, container, false);
-//        mContext = getContext();
-//
-//        mRecyclerView = (RecyclerView) view.findViewById(R.id.documentList);
-//        moreDetails = (Button) view.findViewById(R.id.btnCaregiverInfo) ;
-//        mRecyclerView.setVisibility(view.GONE);
-//
-//        realm = Realm.getDefaultInstance();
-//
-//        LinearLayout imageLayout = (LinearLayout) view.findViewById(R.id.imageLayout);
-//        LinearLayout profileLayout = (LinearLayout) view.findViewById(R.id.profileLayout);
-//        imageLayout.setVisibility(View.GONE);
-//
-//        moreDetails.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                mRecyclerView.setVisibility(view.VISIBLE);
-//                if(documentsAdapter != null)
-//                    documentsAdapter.notifyDataSetChanged();
-//            }
-//        });
-//
-//        RealmResults<Documents> DocumentsList = realm.where(Documents.class).findAll();
-//        //Log.v(Constants.TAG,"DocumentsList: " + DocumentsList);
-//        documentsAdapter = new DocumentsAdapter(this.getContext(), DocumentsList, true, true, view);
-////        documentListRecycler.setAdapter(documentsAdapter);
-//
-//        mRecyclerView.setAdapter(documentsAdapter);
-//        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-//        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
-//        documentsAdapter.notifyDataSetChanged();
-//
-//
-//        caregiver = realm.where(Caregiver.class).findFirst();
-//        //Log.v(Constants.TAG,"caregiverprofile: "+caregiver);
-//
-//
-//        txtConcat = (TextView) view.findViewById(R.id.txtCareGiver);
-//        caregiverImage = (ImageView) view.findViewById(R.id.careGiverImage);
-//
-//        // Profile Description Builder
-//        String profileDesc = "Hi, <br> <br> I am <b>" + caregiver.getFirstName() + " " + caregiver.getLastName() + "</b>";
-//        if(!caregiver.getDateOfBirth().isEmpty() && getAge(caregiver.getDateOfBirth()) != 0){
-//            profileDesc += ". I am <b>" + String.valueOf(getAge(caregiver.getDateOfBirth())) + "</b> years old";
-//        }
-//
-//        if(caregiver.getExperience() != 0){
-//            profileDesc += ". I have <b>" + caregiver.getExperience() + "</b> years of experience as  <b>" + caregiver.getSpecialization() + "</b>" ;
-//        }
-//
-//        if(!caregiver.getCollegeName().isEmpty()){
-//            profileDesc += ". I studied at <b>" + caregiver.getCollegeName() +  ",Bangalore" + "</b>";
-//        }
-//
-//        profileDesc += ".\n\nI can speak <b>" +  "English, Hindi, kannada" + "</b>";
-////        profileDesc += ".\n\nMy Contact number is <b>" + caregiver.getMobileNumber() + "</b>";
-//        profileDesc += ".\n\nMy Contact number is <b>" + "9878597462" + "</b>";
-//        profileDesc += ". <br> <br>My supervisor is <b>" + "Krishna" + "</b>";
-//        profileDesc += ". Contact number <b>" + "9035656331" + "</b>";
-//        profileDesc += ". <br> <br>If you need more information about me, please click More Info button below";
-//        profileDesc += ". <br> <br> I look forward to taking care of your <b>" +  "GrandFather"  + "</b>";
-//
-////        String details7 = "I am looking forward to provide services to your";
-////        String relationship = "grandmother";
-//        String profileImage = caregiver.getProfileImage();
-//
-//        txtConcat .setText(Html.fromHtml(profileDesc));
-//
-//        //Loading Image from URL
-//        Picasso.with(getActivity())
-//                .load(profileImage)
-//                .resize(200,200)
-//                .transform(new CircleTransform())
-//                .into(caregiverImage);
-//
-//        return view;
         view = (ViewGroup) inflater.inflate(R.layout.fragment_profile_basic, container, false);
         mContext = getContext();
 
         mRecyclerView = (RecyclerView) view.findViewById(R.id.documentList);
-        moreDetails = (Button) view.findViewById(R.id.btnCaregiverInfo) ;
+//        moreDetails = (Button) view.findViewById(R.id.btnCaregiverInfo) ;
+        moreDetails = (ToggleButton) view.findViewById(R.id.btnCaregiverInfo) ;
         mRecyclerView.setVisibility(view.GONE);
 
         realm = Realm.getDefaultInstance();
 
         LinearLayout imageLayout = (LinearLayout) view.findViewById(R.id.imageLayout);
-        LinearLayout profileLayout = (LinearLayout) view.findViewById(R.id.profileLayout);
         imageLayout.setVisibility(View.GONE);
+
+
 
         moreDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mRecyclerView.setVisibility(view.VISIBLE);
-                if(documentsAdapter != null)
-                    documentsAdapter.notifyDataSetChanged();
+
+                String flag=(String) moreDetails.getText();
+                if(flag.equalsIgnoreCase("Less Info")){
+                    mRecyclerView.setVisibility(view.VISIBLE);
+                    if(documentsAdapter != null)
+                        documentsAdapter.notifyDataSetChanged();
+                }else {
+                    mRecyclerView.setVisibility(view.INVISIBLE);
+                }
             }
         });
+
+
+
+
+
 
         RealmResults<Documents> DocumentsList = realm.where(Documents.class).findAll();
         //Log.v(Constants.TAG,"DocumentsList: " + DocumentsList);
@@ -217,20 +162,7 @@ public class BasicProfile extends Fragment {
 
         txtConcat .setText(Html.fromHtml(profileDesc));
 
-//        String profileDesc = "Hi, <br> <br> I am Vivian. I am 29 yrs old. I have 5 years of experience as RNA. I studied at Bay Area College of Nursing, Daly City. I can speak English and Spanish. My contact number is (408) 737-0663";
-//        profileDesc += ". <br> <br> My supervisor is George. His number is (408) 329-0857. If you need more information about me. please click on 'More Info' button below";
-//        profileDesc += ". <br> <br> I look forward to serving your mom";
-//        profileDesc += ". <br> <br> Vivian";
-//        txtConcat .setText(Html.fromHtml(profileDesc));
-
         String profileImage = caregiver.getProfileImage();
-
-        //Loading Image from URL
-//        Picasso.with(getActivity())
-//                .load(R.drawable.ic_person)
-//                .resize(500,500)
-//                .transform(new CircleTransform())
-//                .into(caregiverImage);
 
         Picasso.with(getActivity())
                 .load(profileImage)

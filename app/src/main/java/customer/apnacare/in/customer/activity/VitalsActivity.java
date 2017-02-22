@@ -18,7 +18,6 @@ import java.util.List;
 import java.util.Map;
 
 import customer.apnacare.in.customer.R;
-import customer.apnacare.in.customer.model.Routine;
 import customer.apnacare.in.customer.model.WorkLog;
 import customer.apnacare.in.customer.utils.Constants;
 import io.realm.Realm;
@@ -42,7 +41,7 @@ public class VitalsActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_routines);
-        setUpNavigation("Routines");
+        setUpNavigation("Vitals");
         mContext = this;
 
         Bundle extras = getIntent().getExtras();
@@ -51,7 +50,7 @@ public class VitalsActivity extends BaseActivity {
 //        createRoutineBySession();
 
         lblCurrentDate = (TextView) findViewById(R.id.lblCurrentDate);
-        lblCurrentDate.setText("Routine Checklist " + "- " + logDate);
+        lblCurrentDate.setText("Vitals Checklist " + "- " + logDate);
 
         realm = Realm.getDefaultInstance();
 
@@ -65,7 +64,6 @@ public class VitalsActivity extends BaseActivity {
 
 
         RealmResults<WorkLog> workLog = realm.where(WorkLog.class).equalTo("id",worlklogId).findAll();
-        Log.v(Constants.TAG,"workLog size: "+ workLog);
         JsonParser parser = new JsonParser();
         vitals = parser.parse(workLog.get(0).getVitals().toString()).getAsJsonArray();
         JsonObject vitalObject = vitals.get(0).getAsJsonObject();
@@ -74,21 +72,17 @@ public class VitalsActivity extends BaseActivity {
 
             try{
                 morningSession = vitalObject.get("morning").getAsJsonObject();
-                Log.v(Constants.TAG,"sessionaObject: "+morningSession);
-
             }catch (Exception e){
                 Log.v(Constants.TAG,"morning Session Exception: "+e.toString());
             }
 
             try {
                 afternoonSession = vitalObject.get("afternoon").getAsJsonObject();
-                Log.v(Constants.TAG, "afternoonSession: " + afternoonSession);
             }catch (Exception e){
                 Log.v(Constants.TAG,"Afternoon Session Exception: "+e.toString());
             }
             try{
                 eveningSession = vitalObject.get("evening").getAsJsonObject();
-                Log.v(Constants.TAG,"eveningSession"+ eveningSession);
             }catch (Exception e){
                 Log.v(Constants.TAG,"evening Session Exception: "+e.toString());
             }
@@ -108,32 +102,32 @@ public class VitalsActivity extends BaseActivity {
             sessionName.setTextSize(22);
             sessionName.setGravity(Gravity.LEFT);
             sessionName.setTypeface(null, Typeface.BOLD);
-            sessionName.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            sessionName.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 2f));
 
 
             TextView textBlood = new TextView(this);
-            textBlood.setText("Blood Pressure " + "- " + morningSession.get("blood_pressure").toString().replace("\"", ""));
+            textBlood.setText("Blood Pressure " + "- " + "   " + morningSession.get("blood_pressure").toString().replace("\"", ""));
             textBlood.setTextSize(16);
             textBlood.setGravity(Gravity.LEFT);
-            textBlood.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+//            textBlood.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 2f));
 
             TextView textSugar = new TextView(this);
-            textSugar.setText("Sugar Level " + "- " + morningSession.get("sugar_level").toString().replace("\"", ""));
+            textSugar.setText("Sugar Level " + "- " + "          " + morningSession.get("sugar_level").toString().replace("\"", ""));
             textSugar.setTextSize(16);
             textSugar.setGravity(Gravity.LEFT);
-            textSugar.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+//            textSugar.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 2f));
 
             TextView textTemperature = new TextView(this);
-            textTemperature.setText("temperature " + "- " + morningSession.get("temperature").toString().replace("\"", ""));
+            textTemperature.setText("temperature " + "- " + "         " + morningSession.get("temperature").toString().replace("\"", ""));
             textTemperature.setTextSize(16);
             textTemperature.setGravity(Gravity.LEFT);
-            textTemperature.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+//            textTemperature.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 2f));
 
             TextView textPulse = new TextView(this);
-            textPulse.setText("Pulse Rate " + "- " + morningSession.get("pulse_rate").toString().replace("\"", ""));
+            textPulse.setText("Pulse Rate " + "- " + "            " + morningSession.get("pulse_rate").toString().replace("\"", ""));
             textPulse.setTextSize(16);
             textPulse.setGravity(Gravity.LEFT);
-            textPulse.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+//            textPulse.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 2f));
 
             morningLayout.addView(sessionName);
             morningLayout.addView(textBlood);
@@ -150,31 +144,32 @@ public class VitalsActivity extends BaseActivity {
             sessionName.setTextSize(22);
             sessionName.setGravity(Gravity.LEFT);
             sessionName.setTypeface(null, Typeface.BOLD);
-            sessionName.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            sessionName.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
 
             TextView textBlood = new TextView(this);
-            textBlood.setText("Blood Pressure " + "- " + afternoonSession.get("blood_pressure").toString().replace("\"", ""));
+            textBlood.setText("Blood Pressure " + "- " + "   " + afternoonSession.get("blood_pressure").toString().replace("\"", ""));
             textBlood.setTextSize(16);
             textBlood.setGravity(Gravity.LEFT);
-            textBlood.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            textBlood.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
 
             TextView textSugar = new TextView(this);
-            textSugar.setText("Sugar Level " + "- " + afternoonSession.get("sugar_level").toString().replace("\"", ""));
+            textSugar.setText("Sugar Level " + "- " + "          " + afternoonSession.get("sugar_level").toString().replace("\"", ""));
             textSugar.setTextSize(16);
             textSugar.setGravity(Gravity.LEFT);
-            textSugar.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            textSugar.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
 
             TextView textTemperature = new TextView(this);
-            textTemperature.setText("temperature " + "- " + afternoonSession.get("temperature").toString().replace("\"", ""));
+            textTemperature.setText("temperature " + "- " + "         " + afternoonSession.get("temperature").toString().replace("\"", ""));
             textTemperature.setTextSize(16);
             textTemperature.setGravity(Gravity.LEFT);
-            textTemperature.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            textTemperature.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
+
 
             TextView textPulse = new TextView(this);
-            textPulse.setText("Pulse Rate " + "- " + afternoonSession.get("pulse_rate").toString().replace("\"", ""));
+            textPulse.setText("Pulse Rate " + "- " + "            " + afternoonSession.get("pulse_rate").toString().replace("\"", ""));
             textPulse.setTextSize(16);
             textPulse.setGravity(Gravity.LEFT);
-            textPulse.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            textPulse.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
 
             afternoonLayout.addView(sessionName);
             afternoonLayout.addView(textBlood);
@@ -191,31 +186,31 @@ public class VitalsActivity extends BaseActivity {
             sessionName.setTextSize(22);
             sessionName.setGravity(Gravity.LEFT);
             sessionName.setTypeface(null, Typeface.BOLD);
-            sessionName.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            sessionName.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
             TextView textBlood = new TextView(this);
-            textBlood.setText("Blood Pressure " + "- " + eveningSession.get("blood_pressure").toString().replace("\"", ""));
+            textBlood.setText("Blood Pressure " + "- " + "   " + eveningSession.get("blood_pressure").toString().replace("\"", ""));
             textBlood.setTextSize(16);
             textBlood.setGravity(Gravity.LEFT);
-            textBlood.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            textBlood.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
             TextView textSugar = new TextView(this);
-            textSugar.setText("Sugar Level " + "- " + eveningSession.get("sugar_level").toString().replace("\"", ""));
+            textSugar.setText("Sugar Level " + "- " + "          " + eveningSession.get("sugar_level").toString().replace("\"", ""));
             textSugar.setTextSize(16);
             textSugar.setGravity(Gravity.LEFT);
-            textSugar.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            textSugar.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
             TextView textTemperature = new TextView(this);
-            textTemperature.setText("temperature " + "- " + eveningSession.get("temperature").toString().replace("\"", ""));
+            textTemperature.setText("temperature " + "- " + "         " + eveningSession.get("temperature").toString().replace("\"", ""));
             textTemperature.setTextSize(16);
             textTemperature.setGravity(Gravity.LEFT);
-            textTemperature.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            textTemperature.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
             TextView textPulse = new TextView(this);
-            textPulse.setText("Pulse Rate " + "- " + eveningSession.get("pulse_rate").toString().replace("\"", ""));
+            textPulse.setText("Pulse Rate " + "- " + "            " + eveningSession.get("pulse_rate").toString().replace("\"", ""));
             textPulse.setTextSize(16);
             textPulse.setGravity(Gravity.LEFT);
-            textPulse.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            textPulse.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
             eveningLayout.addView(sessionName);
             eveningLayout.addView(textBlood);
