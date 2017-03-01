@@ -5,18 +5,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-    <android.support.design.widget.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true">
+    <!--<android.support.design.widget.NavigationView-->
+        <!--android:id="@+id/nav_view"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_gravity="start"-->
+        <!--android:fitsSystemWindows="true">-->
 
-        <!--<ScrollView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:fillViewport="false"-->
-            <!--android:isScrollContainer="false">-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="false"
+            android:isScrollContainer="false">
 
 
 
@@ -414,8 +414,8 @@
 
         </LinearLayout>
 
-        <!--</ScrollView>-->
-    </android.support.design.widget.NavigationView>
+        </ScrollView>
+    <!--</android.support.design.widget.NavigationView>-->
 
 
 

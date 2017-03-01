@@ -51,7 +51,7 @@
             android:windowSoftInputMode="stateHidden">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.MainActivity" />
+                android:value="customer.apnacare.in.customer.activity.MainActivity" />
         </activity>
 
         <activity
@@ -59,7 +59,7 @@
             android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.MainActivity" />
+                android:value="customer.apnacare.in.customer.activity.MainActivity" />
         </activity>
 
         <activity

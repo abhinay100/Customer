@@ -155,7 +155,7 @@ public class BasicProfile extends Fragment {
         profileDesc += ". <br> <br>My supervisor is " + "Krishna";
         profileDesc += ". His number is " + "9035656331";
         profileDesc += ". <br> <br> If you need more information about me. please click on 'More Info' button below";
-        profileDesc += ". <br> <br> I look forward to serving your mom";
+        profileDesc += ". <br> <br> I look forward to serving your mom.";
 
 
 

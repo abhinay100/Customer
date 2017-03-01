@@ -95,12 +95,12 @@ public class VitalsActivity extends BaseActivity {
 
 
 
-        if(morningSession.size() > 0){
+        if(morningSession !=null && morningSession.size() >= 0){
 
             TextView sessionName = new TextView(this);
-            sessionName.setText("Morning");
+            sessionName.setText("Morning " + "(" + "Captured At: " + morningSession.get("captured_time").toString().replace("\"", "") + ")" );
             sessionName.setTextSize(22);
-            sessionName.setGravity(Gravity.LEFT);
+            sessionName.setGravity(Gravity.START);
             sessionName.setTypeface(null, Typeface.BOLD);
             sessionName.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 2f));
 
@@ -108,27 +108,28 @@ public class VitalsActivity extends BaseActivity {
             TextView textBlood = new TextView(this);
             textBlood.setText("Blood Pressure " + "- " + "   " + morningSession.get("blood_pressure").toString().replace("\"", ""));
             textBlood.setTextSize(16);
-            textBlood.setGravity(Gravity.LEFT);
+            textBlood.setGravity(Gravity.START);
 //            textBlood.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 2f));
 
             TextView textSugar = new TextView(this);
             textSugar.setText("Sugar Level " + "- " + "          " + morningSession.get("sugar_level").toString().replace("\"", ""));
             textSugar.setTextSize(16);
-            textSugar.setGravity(Gravity.LEFT);
+            textSugar.setGravity(Gravity.START);
 //            textSugar.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 2f));
 
             TextView textTemperature = new TextView(this);
             textTemperature.setText("temperature " + "- " + "         " + morningSession.get("temperature").toString().replace("\"", ""));
             textTemperature.setTextSize(16);
-            textTemperature.setGravity(Gravity.LEFT);
+            textTemperature.setGravity(Gravity.START);
 //            textTemperature.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 2f));
 
             TextView textPulse = new TextView(this);
             textPulse.setText("Pulse Rate " + "- " + "            " + morningSession.get("pulse_rate").toString().replace("\"", ""));
             textPulse.setTextSize(16);
-            textPulse.setGravity(Gravity.LEFT);
+            textPulse.setGravity(Gravity.START);
 //            textPulse.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 2f));
 
+            morningLayout.setPadding(10,10,10,10);
             morningLayout.addView(sessionName);
             morningLayout.addView(textBlood);
             morningLayout.addView(textSugar);
@@ -137,40 +138,41 @@ public class VitalsActivity extends BaseActivity {
 
         }
 
-        if(afternoonSession !=null && afternoonSession.size() > 0){
+        if(afternoonSession !=null && afternoonSession.size() >= 0){
 
             TextView sessionName = new TextView(this);
-            sessionName.setText("Afternoon");
+            sessionName.setText("Afternoon " + "(" + "Captured At: " + afternoonSession.get("captured_time").toString().replace("\"", "") + ")" );
             sessionName.setTextSize(22);
-            sessionName.setGravity(Gravity.LEFT);
+            sessionName.setGravity(Gravity.START);
             sessionName.setTypeface(null, Typeface.BOLD);
             sessionName.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
 
             TextView textBlood = new TextView(this);
             textBlood.setText("Blood Pressure " + "- " + "   " + afternoonSession.get("blood_pressure").toString().replace("\"", ""));
             textBlood.setTextSize(16);
-            textBlood.setGravity(Gravity.LEFT);
+            textBlood.setGravity(Gravity.START);
             textBlood.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
 
             TextView textSugar = new TextView(this);
             textSugar.setText("Sugar Level " + "- " + "          " + afternoonSession.get("sugar_level").toString().replace("\"", ""));
             textSugar.setTextSize(16);
-            textSugar.setGravity(Gravity.LEFT);
+            textSugar.setGravity(Gravity.START);
             textSugar.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
 
             TextView textTemperature = new TextView(this);
             textTemperature.setText("temperature " + "- " + "         " + afternoonSession.get("temperature").toString().replace("\"", ""));
             textTemperature.setTextSize(16);
-            textTemperature.setGravity(Gravity.LEFT);
+            textTemperature.setGravity(Gravity.START);
             textTemperature.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
 
 
             TextView textPulse = new TextView(this);
             textPulse.setText("Pulse Rate " + "- " + "            " + afternoonSession.get("pulse_rate").toString().replace("\"", ""));
             textPulse.setTextSize(16);
-            textPulse.setGravity(Gravity.LEFT);
+            textPulse.setGravity(Gravity.START);
             textPulse.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
 
+            afternoonLayout.setPadding(10,10,10,10);
             afternoonLayout.addView(sessionName);
             afternoonLayout.addView(textBlood);
             afternoonLayout.addView(textSugar);
@@ -179,39 +181,40 @@ public class VitalsActivity extends BaseActivity {
 
         }
 
-        if(eveningSession !=null && eveningSession.size() > 0 ){
+        if(eveningSession !=null && eveningSession.size() >= 0 ){
 
             TextView sessionName = new TextView(this);
-            sessionName.setText("Evening");
+            sessionName.setText("Evening " + "(" + "Captured At: " + eveningSession.get("captured_time").toString().replace("\"", "") + ")" );
             sessionName.setTextSize(22);
-            sessionName.setGravity(Gravity.LEFT);
+            sessionName.setGravity(Gravity.START);
             sessionName.setTypeface(null, Typeface.BOLD);
             sessionName.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
             TextView textBlood = new TextView(this);
             textBlood.setText("Blood Pressure " + "- " + "   " + eveningSession.get("blood_pressure").toString().replace("\"", ""));
             textBlood.setTextSize(16);
-            textBlood.setGravity(Gravity.LEFT);
+            textBlood.setGravity(Gravity.START);
             textBlood.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
             TextView textSugar = new TextView(this);
             textSugar.setText("Sugar Level " + "- " + "          " + eveningSession.get("sugar_level").toString().replace("\"", ""));
             textSugar.setTextSize(16);
-            textSugar.setGravity(Gravity.LEFT);
+            textSugar.setGravity(Gravity.START);
             textSugar.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
             TextView textTemperature = new TextView(this);
             textTemperature.setText("temperature " + "- " + "         " + eveningSession.get("temperature").toString().replace("\"", ""));
             textTemperature.setTextSize(16);
-            textTemperature.setGravity(Gravity.LEFT);
+            textTemperature.setGravity(Gravity.START);
             textTemperature.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
             TextView textPulse = new TextView(this);
             textPulse.setText("Pulse Rate " + "- " + "            " + eveningSession.get("pulse_rate").toString().replace("\"", ""));
             textPulse.setTextSize(16);
-            textPulse.setGravity(Gravity.LEFT);
+            textPulse.setGravity(Gravity.START);
             textPulse.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
+            eveningLayout.setPadding(10,10,10,10);
             eveningLayout.addView(sessionName);
             eveningLayout.addView(textBlood);
             eveningLayout.addView(textSugar);

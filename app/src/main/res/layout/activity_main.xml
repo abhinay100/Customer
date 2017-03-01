@@ -119,7 +119,7 @@
                                 android:layout_height="35dp"
                                 android:layout_marginTop="2dp"
                                 android:layout_gravity="center|center_horizontal|center_vertical"
-                                android:background="@drawable/ic_cases" />
+                                app:srcCompat="@drawable/ic_cases" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -159,7 +159,7 @@
                                 android:layout_height="35dp"
                                 android:layout_marginTop="2dp"
                                 android:layout_gravity="center|center_horizontal|center_vertical"
-                                android:background="@drawable/ic_add"
+                                app:srcCompat="@drawable/ic_add"
                                 android:backgroundTint="@color/apnacareDarkBlue"/>
 
                             <TextView
@@ -200,7 +200,7 @@
                                 android:layout_marginTop="2dp"
 
                                 android:layout_gravity="center|center_horizontal|center_vertical"
-                                android:background="@drawable/ic_routine" />
+                                app:srcCompat="@drawable/ic_routine" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -248,7 +248,7 @@
                                 android:layout_height="35dp"
                                 android:layout_marginTop="2dp"
                                 android:layout_gravity="center|center_horizontal|center_vertical"
-                                android:background="@drawable/ic_view_case" />
+                                app:srcCompat="@drawable/ic_view_case" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -287,7 +287,7 @@
                                 android:layout_height="35dp"
                                 android:layout_marginTop="2dp"
                                 android:layout_gravity="center|center_horizontal|center_vertical"
-                                android:background="@drawable/ic_location" />
+                                app:srcCompat="@drawable/ic_location" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -326,7 +326,7 @@
                                 android:layout_height="35dp"
                                 android:layout_marginTop="2dp"
                                 android:layout_gravity="center|center_horizontal|center_vertical"
-                                android:background="@drawable/ic_profile" />
+                                app:srcCompat="@drawable/ic_profile" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -374,7 +374,7 @@
                                 android:layout_height="35dp"
                                 android:layout_marginTop="2dp"
                                 android:layout_gravity="center|center_horizontal|center_vertical"
-                                android:background="@drawable/ic_cart" />
+                                app:srcCompat="@drawable/ic_cart" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -414,7 +414,7 @@
                                 android:layout_height="35dp"
                                 android:layout_marginTop="2dp"
                                 android:layout_gravity="center|center_horizontal|center_vertical"
-                                android:background="@drawable/ic_profile" />
+                                />
 
                             <TextView
                                 android:layout_width="match_parent"

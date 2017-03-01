@@ -176,7 +176,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:layout_alignParentRight="true"
-                        android:background="@drawable/ic_invoice" />
+                        app:srcCompat="@drawable/ic_invoice" />
                    </RelativeLayout>
 
 

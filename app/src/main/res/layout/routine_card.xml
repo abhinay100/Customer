@@ -45,22 +45,35 @@
                     <!--android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
                     <!--android:textColor="#333"-->
                     <!--android:layout_marginBottom="0dp" />-->
-                <TableLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginRight="0dp">
+                <!--<TableLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="0dp"-->
+                    <!--android:layout_marginRight="0dp">-->
 
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:paddingLeft="0dp">
+                    <!--<TableRow-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:paddingLeft="0dp">-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:minWidth="60dp"
+                    android:layout_gravity="center_horizontal|center|center_vertical"
+                    android:gravity="center|center_vertical|center_horizontal"
+                    android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left|center_vertical|center_horizontal"
                             android:text="16-02-2017"
+                            android:layout_weight="0.3"
                             android:id="@+id/lbl_caseTask_date"
                             android:layout_marginLeft="5dp"
                             android:textStyle="bold"
@@ -71,7 +84,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="Friday"
-                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.3"
                             android:id="@+id/lbl_caseTask_day"
                             android:textSize="16sp"
                             android:textStyle="bold"/>
@@ -81,14 +94,15 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
-                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.3"
                             android:text="Krishna"
                             android:textColor="@color/apnacareBlue"
                             android:textSize="16sp"
                             android:textStyle="bold"/>
-                    </TableRow>
+                    </LinearLayout>
+                    <!--</TableRow>-->
 
-                </TableLayout>
+                <!--</TableLayout>-->
 
                 <!--<RelativeLayout-->
                     <!--android:layout_width="match_parent"-->
@@ -195,7 +209,7 @@
 
                     <Button
                         android:id="@+id/btnViewMorning"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:layout_marginRight="10dp"
                         android:layout_weight="1"
@@ -221,7 +235,7 @@
 
                     <Button
                         android:id="@+id/btnViewEvening"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:layout_marginLeft="10dp"
                         android:layout_weight="1"

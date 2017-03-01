@@ -83,7 +83,7 @@ public class ViewCaseActivity extends BaseActivity implements CaseDetails.Provid
         bundle.putLong("caseID", caseID);
 
         mContext = this;
-        mCoordinatorLayout = (CoordinatorLayout) findViewById(R.id.viewCaseCoordinatorLayout);
+//        mCoordinatorLayout = (CoordinatorLayout) findViewById(R.id.viewCaseCoordinatorLayout);
         tabs = (TabLayout) findViewById(R.id.tabs);
         mViewPager = (ViewPager)findViewById(R.id.viewpager);
 

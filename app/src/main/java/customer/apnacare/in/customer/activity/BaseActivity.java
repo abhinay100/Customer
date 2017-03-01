@@ -11,6 +11,7 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -79,7 +80,12 @@ public class BaseActivity extends AppCompatActivity
             if(!title.equals(null)){
                 toolbar.setTitle(title);
             }
+
+
             setSupportActionBar(toolbar);
+
+
+
 
             drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
