@@ -1,422 +1,405 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:scrollbars="vertical">
 
 
-    <!--<android.support.design.widget.NavigationView-->
-        <!--android:id="@+id/nav_view"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_gravity="start"-->
-        <!--android:fitsSystemWindows="true">-->
 
-        <ScrollView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:orientation="vertical">
+
+
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fillViewport="false"
-            android:isScrollContainer="false">
+            android:layout_marginLeft="5dp"
+            android:text="Patient Details"
+            android:textColor="#333"
+            android:textSize="18sp"/>
 
-
-
-        <LinearLayout
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="5dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:id="@+id/patientdetails"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            app:cardCornerRadius="2dp"
+            android:elevation="2dp"
+            app:cardElevation="2dp">
 
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
 
+                <TableRow
+                    android:layout_marginBottom="5dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/apnacareDarkBlue"
+                        android:text="Patient Name"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text=" : "/>
+                    <TextView
+                        android:id="@+id/lblPatientName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""/>
+                </TableRow>
 
-            <TextView
+                <TableRow
+                    android:layout_marginBottom="5dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/apnacareDarkBlue"
+                        android:text="Patient Age"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text=" : "/>
+                    <TextView
+                        android:id="@+id/lblPatientAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginBottom="5dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/apnacareDarkBlue"
+                        android:text="Patient Weight"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text=" : "/>
+                    <TextView
+                        android:id="@+id/lblPatientWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""/>
+                </TableRow>
+
+            </TableLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!--<TextView-->
+        <!--android:id="@+id/line1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:layout_marginBottom="2dp"-->
+        <!--android:layout_below="@id/patientdetails"-->
+        <!--android:background="#CCC"/>-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:text="Clinical Details"
+            android:textColor="#333"
+            android:textSize="18sp"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/clinicaldetails"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            app:cardCornerRadius="2dp"
+            android:elevation="2dp"
+            app:cardElevation="2dp">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <TableRow
+                    android:layout_marginBottom="5dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/apnacareDarkBlue"
+                        android:text="Medical Conditions"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginBottom="5dp">
+                    <TextView
+                        android:id="@+id/lblMedicalConditions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="-"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginBottom="5dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/apnacareDarkBlue"
+                        android:text="Medications"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginBottom="5dp">
+                    <TextView
+                        android:id="@+id/lblMedications"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="-"/>
+                </TableRow>
+
+            </TableLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!--<TextView-->
+        <!--android:id="@+id/line2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:layout_marginBottom="2dp"-->
+        <!--android:layout_below="@id/clinicaldetails"-->
+        <!--android:background="#CCC"/>-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:text="Service Details"
+            android:textColor="#333"
+            android:textSize="18sp"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/servicedetails"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            app:cardCornerRadius="2dp"
+            android:elevation="2dp"
+            app:cardElevation="2dp">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <TableRow
+                    android:layout_marginBottom="5dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/apnacareDarkBlue"
+                        android:text="Service"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text=" : "/>
+                    <TextView
+                        android:id="@+id/lblService"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginBottom="5dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/apnacareDarkBlue"
+                        android:text="No. of Hours"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text=" : "/>
+                    <TextView
+                        android:id="@+id/lblNoOfHours"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginBottom="5dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/apnacareDarkBlue"
+                        android:text="Gender Preference"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text=" : "/>
+                    <TextView
+                        android:id="@+id/lblGenderPreference"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginBottom="5dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/apnacareDarkBlue"
+                        android:text="Language Preference"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text=" : "/>
+                    <TextView
+                        android:id="@+id/lblLanguagePreference"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""/>
+                </TableRow>
+
+            </TableLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!--<TextView-->
+        <!--android:id="@+id/line3"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:layout_marginBottom="2dp"-->
+        <!--android:layout_below="@id/servicedetails"-->
+        <!--android:background="#CCC"/>-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:text="Communication Details"
+            android:textColor="#333"
+            android:textSize="18sp"/>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/communicationdetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            app:cardCornerRadius="2dp"
+            android:elevation="2dp"
+            app:cardElevation="2dp">
+
+            <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:text="Patient Details"
-                android:textColor="#333"
-                android:textSize="18sp"/>
+                android:padding="5dp">
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/patientdetails"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="1dp"
-                android:layout_marginRight="1dp"
-                app:cardCornerRadius="2dp"
-                android:elevation="2dp"
-                app:cardElevation="2dp">
+                <TableRow>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/apnacareDarkBlue"
+                        android:text="Enquirer"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text=" : "/>
+                    <TextView
+                        android:id="@+id/lblEnquirerName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""/>
+                </TableRow>
 
-                <TableLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="5dp">
+                <TableRow>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/apnacareDarkBlue"
+                        android:text="Phone Number"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text=" : "/>
+                    <TextView
+                        android:id="@+id/lblEnquirerPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""/>
+                </TableRow>
 
-                    <TableRow
-                        android:layout_marginBottom="5dp">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/apnacareDarkBlue"
-                            android:text="Patient Name"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:text=" : "/>
-                        <TextView
-                            android:id="@+id/lblPatientName"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text=""/>
-                    </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/apnacareDarkBlue"
+                        android:text="Email"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text=" : "/>
+                    <TextView
+                        android:id="@+id/lblEnquirerEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""/>
+                </TableRow>
 
-                    <TableRow
-                        android:layout_marginBottom="5dp">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/apnacareDarkBlue"
-                            android:text="Patient Age"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:text=" : "/>
-                        <TextView
-                            android:id="@+id/lblPatientAge"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text=""/>
-                    </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/apnacareDarkBlue"
+                        android:text="Address"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text=" : "/>
+                    <TextView
+                        android:id="@+id/lblAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""/>
+                </TableRow>
 
-                    <TableRow
-                        android:layout_marginBottom="5dp">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/apnacareDarkBlue"
-                            android:text="Patient Weight"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:text=" : "/>
-                        <TextView
-                            android:id="@+id/lblPatientWeight"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text=""/>
-                    </TableRow>
+            </TableLayout>
 
-                </TableLayout>
+        </android.support.v7.widget.CardView>
 
-            </android.support.v7.widget.CardView>
+    </LinearLayout>
 
-            <!--<TextView-->
-                <!--android:id="@+id/line1"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="1dp"-->
-                <!--android:layout_marginBottom="2dp"-->
-                <!--android:layout_below="@id/patientdetails"-->
-                <!--android:background="#CCC"/>-->
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="5dp"
-                android:text="Clinical Details"
-                android:textColor="#333"
-                android:textSize="18sp"/>
-
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/clinicaldetails"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="1dp"
-                android:layout_marginRight="1dp"
-                app:cardCornerRadius="2dp"
-                android:elevation="2dp"
-                app:cardElevation="2dp">
-
-                <TableLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="5dp">
-
-                    <TableRow
-                        android:layout_marginBottom="5dp">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/apnacareDarkBlue"
-                            android:text="Medical Conditions"/>
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_marginBottom="5dp">
-                        <TextView
-                            android:id="@+id/lblMedicalConditions"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="-"/>
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_marginBottom="5dp">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/apnacareDarkBlue"
-                            android:text="Medications"/>
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_marginBottom="5dp">
-                        <TextView
-                            android:id="@+id/lblMedications"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="-"/>
-                    </TableRow>
-
-                </TableLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <!--<TextView-->
-                <!--android:id="@+id/line2"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="1dp"-->
-                <!--android:layout_marginBottom="2dp"-->
-                <!--android:layout_below="@id/clinicaldetails"-->
-                <!--android:background="#CCC"/>-->
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="5dp"
-                android:text="Service Details"
-                android:textColor="#333"
-                android:textSize="18sp"/>
-
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/servicedetails"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="1dp"
-                android:layout_marginRight="1dp"
-                app:cardCornerRadius="2dp"
-                android:elevation="2dp"
-                app:cardElevation="2dp">
-
-                <TableLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="5dp">
-
-                    <TableRow
-                        android:layout_marginBottom="5dp">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/apnacareDarkBlue"
-                            android:text="Service"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:text=" : "/>
-                        <TextView
-                            android:id="@+id/lblService"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text=""/>
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_marginBottom="5dp">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/apnacareDarkBlue"
-                            android:text="No. of Hours"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:text=" : "/>
-                        <TextView
-                            android:id="@+id/lblNoOfHours"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text=""/>
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_marginBottom="5dp">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/apnacareDarkBlue"
-                            android:text="Gender Preference"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:text=" : "/>
-                        <TextView
-                            android:id="@+id/lblGenderPreference"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text=""/>
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_marginBottom="5dp">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/apnacareDarkBlue"
-                            android:text="Language Preference"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:text=" : "/>
-                        <TextView
-                            android:id="@+id/lblLanguagePreference"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text=""/>
-                    </TableRow>
-
-                </TableLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <!--<TextView-->
-                <!--android:id="@+id/line3"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="1dp"-->
-                <!--android:layout_marginBottom="2dp"-->
-                <!--android:layout_below="@id/servicedetails"-->
-                <!--android:background="#CCC"/>-->
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="5dp"
-                android:text="Communication Details"
-                android:textColor="#333"
-                android:textSize="18sp"/>
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/communicationdetails"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="1dp"
-                android:layout_marginRight="1dp"
-                app:cardCornerRadius="2dp"
-                android:elevation="2dp"
-                app:cardElevation="2dp">
-
-                <TableLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp">
-
-                    <TableRow>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/apnacareDarkBlue"
-                            android:text="Enquirer"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:text=" : "/>
-                        <TextView
-                            android:id="@+id/lblEnquirerName"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text=""/>
-                    </TableRow>
-
-                    <TableRow>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/apnacareDarkBlue"
-                            android:text="Phone Number"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:text=" : "/>
-                        <TextView
-                            android:id="@+id/lblEnquirerPhone"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text=""/>
-                    </TableRow>
-
-                    <TableRow>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/apnacareDarkBlue"
-                            android:text="Email"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:text=" : "/>
-                        <TextView
-                            android:id="@+id/lblEnquirerEmail"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text=""/>
-                    </TableRow>
-
-                    <TableRow>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/apnacareDarkBlue"
-                            android:text="Address"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:text=" : "/>
-                        <TextView
-                            android:id="@+id/lblAddress"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text=""/>
-                    </TableRow>
-
-                </TableLayout>
-
-            </android.support.v7.widget.CardView>
-
-        </LinearLayout>
-
-        </ScrollView>
-    <!--</android.support.design.widget.NavigationView>-->
-
-
-
-</RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

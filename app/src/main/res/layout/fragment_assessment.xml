@@ -1,175 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_centerHorizontal="true">
+    android:layout_height="match_parent"
+    android:scrollbars="vertical">
 
 
-    <ScrollView
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fillViewport="true"
-        android:isScrollContainer="true">
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:orientation="vertical">
 
-    <!--<android.support.design.widget.NavigationView-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_gravity="start"-->
-        <!--android:fitsSystemWindows="true">-->
-
-        <LinearLayout
+        <android.support.v7.widget.CardView
+            android:id="@+id/assessmentDetails"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="5dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:visibility="visible">
 
-            <android.support.v7.widget.CardView
-                android:id="@+id/assessmentDetails"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:visibility="visible">
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="30dp"
-                            android:layout_marginTop="5dp"
-                            android:minWidth="130dp"
-                            android:layout_gravity="left|center_horizontal|center_vertical"
-                            android:textColor="@color/apnacareBlue"
-                            android:padding="5dp"
-                            android:text="Assessment Date"
-                            android:textSize="15sp"/>
-
-                        <TextView
-                            android:id="@+id/assessmentDate"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_gravity="left|center_horizontal|center_vertical"
-                            android:padding="5dp"
-                            android:text="-"
-                            android:textSize="15sp"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="30dp"
-                            android:layout_marginTop="5dp"
-                            android:minWidth="130dp"
-                            android:layout_gravity="left|center_horizontal|center_vertical"
-                            android:textColor="@color/apnacareBlue"
-                            android:padding="5dp"
-                            android:text="Assessed By"
-                            android:textSize="15sp"/>
-
-                        <TextView
-                            android:id="@+id/assessor"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_gravity="left|center_horizontal|center_vertical"
-                            android:padding="5dp"
-                            android:text="-"
-                            android:textSize="15sp"/>
-
-                    </LinearLayout>
-
+                    android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="30dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
+                        android:minWidth="130dp"
                         android:layout_gravity="left|center_horizontal|center_vertical"
                         android:textColor="@color/apnacareBlue"
                         android:padding="5dp"
-                        android:text="Patient Condition"
+                        android:text="Assessment Date"
                         android:textSize="15sp"/>
 
                     <TextView
-                        android:id="@+id/assessmentPatientConditions"
-                        android:layout_width="match_parent"
+                        android:id="@+id/assessmentDate"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:layout_gravity="left|center_horizontal|center_vertical"
-                        android:padding="5dp"
-                        android:text="-"
-                        android:textSize="15sp"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_gravity="left|center_horizontal|center_vertical"
-                        android:textColor="@color/apnacareBlue"
-                        android:padding="5dp"
-                        android:text="Medical Procedures"
-                        android:textSize="15sp"/>
-
-                    <TextView
-                        android:id="@+id/assessmentMedicalProcedures"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:layout_gravity="left|center_horizontal|center_vertical"
-                        android:padding="5dp"
-                        android:text="-"
-                        android:textSize="15sp"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_gravity="left|center_horizontal|center_vertical"
-                        android:textColor="@color/apnacareBlue"
-                        android:padding="5dp"
-                        android:text="Suggested Professional"
-                        android:textSize="15sp"/>
-
-                    <TextView
-                        android:id="@+id/assessmentSuggestedProfessional"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:layout_gravity="left|center_horizontal|center_vertical"
-                        android:padding="5dp"
-                        android:text="-"
-                        android:textSize="15sp"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_gravity="left|center_horizontal|center_vertical"
-                        android:textColor="@color/apnacareBlue"
-                        android:padding="5dp"
-                        android:text="Remarks / Comments"
-                        android:textSize="15sp"/>
-
-                    <TextView
-                        android:id="@+id/assessmentComment"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
                         android:layout_gravity="left|center_horizontal|center_vertical"
                         android:padding="5dp"
                         android:text="-"
@@ -177,15 +57,124 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:minWidth="130dp"
+                        android:layout_gravity="left|center_horizontal|center_vertical"
+                        android:textColor="@color/apnacareBlue"
+                        android:padding="5dp"
+                        android:text="Assessed By"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/assessor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="left|center_horizontal|center_vertical"
+                        android:padding="5dp"
+                        android:text="-"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="left|center_horizontal|center_vertical"
+                    android:textColor="@color/apnacareBlue"
+                    android:padding="5dp"
+                    android:text="Patient Condition"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/assessmentPatientConditions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="left|center_horizontal|center_vertical"
+                    android:padding="5dp"
+                    android:text="-"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="left|center_horizontal|center_vertical"
+                    android:textColor="@color/apnacareBlue"
+                    android:padding="5dp"
+                    android:text="Medical Procedures"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/assessmentMedicalProcedures"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="left|center_horizontal|center_vertical"
+                    android:padding="5dp"
+                    android:text="-"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="left|center_horizontal|center_vertical"
+                    android:textColor="@color/apnacareBlue"
+                    android:padding="5dp"
+                    android:text="Suggested Professional"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/assessmentSuggestedProfessional"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="left|center_horizontal|center_vertical"
+                    android:padding="5dp"
+                    android:text="-"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="left|center_horizontal|center_vertical"
+                    android:textColor="@color/apnacareBlue"
+                    android:padding="5dp"
+                    android:text="Remarks / Comments"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/assessmentComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="left|center_horizontal|center_vertical"
+                    android:padding="5dp"
+                    android:text="-"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
 
 
 
 
-        </LinearLayout>
+    </LinearLayout>
 
 
-    </ScrollView>
-
-<!--</android.support.design.widget.NavigationView>-->
-</RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

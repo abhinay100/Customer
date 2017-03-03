@@ -11,7 +11,7 @@
                     "endOffset": 105
                 },
                 "from": {
-                    "file": "/home/abhinay/AndroidStudioProjects/AndroidStudioProjects/Customer/citruspay-sdk-ui/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-w500dp/values-w500dp.xml",
+                    "file": "/root/.android/build-cache/4808db087c0dadbfb8e44d6aae210a5d0a9e4563/output/res/values-w500dp/values-w500dp.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
