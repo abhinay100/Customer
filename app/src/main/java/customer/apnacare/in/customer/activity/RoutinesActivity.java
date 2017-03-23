@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -81,7 +82,7 @@ public class RoutinesActivity extends BaseActivity {
             try {
                 vitals = parser.parse(workLog.get(0).getRoutines().toString()).getAsJsonArray();
             }catch (Exception e){
-                Log.v(Constants.TAG,"vitals Exception: "+e.toString());
+                Log.v(Constants.TAG,"routines Exception: "+e.toString());
             }
         }
 
@@ -93,6 +94,10 @@ public class RoutinesActivity extends BaseActivity {
                 Log.v(Constants.TAG,"vitalObject Exception: "+e.toString());
             }
 
+        }
+
+        else{
+            Toast.makeText(mContext, "Routines not available", Toast.LENGTH_SHORT).show();
         }
 
 

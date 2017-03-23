@@ -152,10 +152,10 @@ public class BasicProfile extends Fragment {
         profileDesc += ".\n\nI can speak " +  "English, Hindi, kannada";
 //        profileDesc += ".\n\nMy Contact number is <b>" + caregiver.getMobileNumber() + "</b>";
         profileDesc += ".\n\nMy Contact number is " + "9878597462";
-        profileDesc += ". <br> <br>My supervisor is " + "Krishna";
-        profileDesc += ". His number is " + "9035656331";
+//        profileDesc += ". <br> <br>My supervisor is " + "Krishna";
+//        profileDesc += ". His number is " + "9035656331";
         profileDesc += ". <br> <br> If you need more information about me. please click on 'More Info' button below";
-        profileDesc += ". <br> <br> I look forward to serving your mom.";
+//        profileDesc += ". <br> <br> I look forward to serving your mom.";
 
 
 

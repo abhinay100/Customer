@@ -9,6 +9,7 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.LocalBroadcastManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +20,7 @@ import butterknife.OnClick;
 import customer.apnacare.in.customer.R;
 import customer.apnacare.in.customer.model.Patient;
 import customer.apnacare.in.customer.service.DataSyncService;
+import customer.apnacare.in.customer.utils.Constants;
 import io.realm.Realm;
 
 /**

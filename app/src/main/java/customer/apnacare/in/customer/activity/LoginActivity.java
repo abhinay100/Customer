@@ -102,6 +102,7 @@ public class LoginActivity extends AppCompatActivity {
         Intent i = new Intent(mContext, DataSyncService.class);
         i.putExtra("serviceName", "signup");
         i.putExtra("email",email);
+        i.putExtra("password", txtPassword.getText().toString());
         startService(i);
     }
 

@@ -63,14 +63,14 @@ public class BillsActivity extends BaseActivity {
         billsListAdapter = new BillsListAdapter(this, billsList, true, true);
         billsListRecycler.setAdapter(billsListAdapter);
 
-        billsListRecycler.setOnRefreshListener(new RealmRecyclerView.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                Intent i = new Intent(mContext, DataSyncService.class);
-                i.putExtra("serviceName", "getMyBills");
-                startService(i);
-            }
-        });
+//        billsListRecycler.setOnRefreshListener(new RealmRecyclerView.OnRefreshListener() {
+//            @Override
+//            public void onRefresh() {
+//                Intent i = new Intent(mContext, DataSyncService.class);
+//                i.putExtra("serviceName", "getMyBills");
+//                startService(i);
+//            }
+//        });
 
         //setting citrus to production environment
         settings = getSharedPreferences("settings", MODE_PRIVATE);
@@ -94,10 +94,10 @@ public class BillsActivity extends BaseActivity {
                 serviceName = intent.getStringExtra("serviceName");
                 int resultValue = intent.getIntExtra("resultValue",2);
 
-                hideProgressBar();
+//                hideProgressBar();
 
-                billsListRecycler.setRefreshing(false);
-                billsListAdapter.notifyDataSetChanged();
+//                billsListRecycler.setRefreshing(false);
+//                billsListAdapter.notifyDataSetChanged();
             }
         }
     };
@@ -131,7 +131,7 @@ public class BillsActivity extends BaseActivity {
         IntentFilter filter = new IntentFilter(DataSyncService.ACTION);
         LocalBroadcastManager.getInstance(mContext).registerReceiver(DataSyncReceiver, filter);
         // or `registerReceiver(DataSyncReceiver, filter)` for a normal broadcast
-        hideProgressBar();
+//        hideProgressBar();
         super.onResume();
     }
 
@@ -140,7 +140,7 @@ public class BillsActivity extends BaseActivity {
         // Unregister the listener when the application is paused
         LocalBroadcastManager.getInstance(mContext).unregisterReceiver(DataSyncReceiver);
         // or `unregisterReceiver(DataSyncReceiver)` for a normal broadcast
-        hideProgressBar();
+//        hideProgressBar();
         super.onPause();
     }
 
@@ -148,7 +148,7 @@ public class BillsActivity extends BaseActivity {
     @Override
     public void onDestroy(){
         LocalBroadcastManager.getInstance(mContext).unregisterReceiver(DataSyncReceiver);
-        hideProgressBar();
+//        hideProgressBar();
 
         realm.close();
         realm = null;
@@ -158,7 +158,7 @@ public class BillsActivity extends BaseActivity {
 
     @Override
     public void onStop(){
-        hideProgressBar();
+//        hideProgressBar();
 
         super.onStop();
     }

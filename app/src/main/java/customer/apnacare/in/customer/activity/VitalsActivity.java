@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -36,6 +37,7 @@ public class VitalsActivity extends BaseActivity {
     private Realm realm;
     JsonArray vitals;
     JsonObject morningSession,afternoonSession,eveningSession;
+    JsonObject vitalObject;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,8 +67,31 @@ public class VitalsActivity extends BaseActivity {
 
         RealmResults<WorkLog> workLog = realm.where(WorkLog.class).equalTo("id",worlklogId).findAll();
         JsonParser parser = new JsonParser();
-        vitals = parser.parse(workLog.get(0).getVitals().toString()).getAsJsonArray();
-        JsonObject vitalObject = vitals.get(0).getAsJsonObject();
+        if(workLog.get(0).getVitals().toString() != null){
+            try {
+                vitals = parser.parse(workLog.get(0).getVitals().toString()).getAsJsonArray();
+            }catch (Exception e){
+                Log.v(Constants.TAG,"vitals Exception: "+e.toString());
+            }
+            
+        }
+
+        if(vitals != null) {
+            try {
+
+                vitalObject = vitals.get(0).getAsJsonObject();
+
+            }catch (Exception e){
+                Log.v(Constants.TAG,"vitalObject Exception: "+e.toString());
+            }
+
+        }
+
+        else{
+            Toast.makeText(mContext, "Vitals not available", Toast.LENGTH_SHORT).show();
+
+        }
+
 
         if(vitalObject !=null)  {
 

@@ -8,7 +8,7 @@ import java.io.File;
 
 public class Constants {
 
-    public static final String API_URL = "https://beta.apnacare.in/api/v1/";
+    public static final String API_URL = "https://portal.apnacare.in/api/v1/";
 //    public static final String API_URL = "http://192.168.0.15/apnacare_saas_nitish/public/api/v1/";
     //public static final String API_URL = "https://portal.apnacare.in/api/v1/";
     public static final String DATABASE_NAME = "apnacare_leadmanager.db";

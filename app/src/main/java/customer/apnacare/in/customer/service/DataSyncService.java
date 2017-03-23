@@ -129,6 +129,8 @@ public class DataSyncService extends IntentService {
             mNetworkSubscription = NetworkRequest.performAsyncRequest(api.signup(email, password), (data) -> {
                 // Update UI on main thread
                 try {
+                    Log.v(Constants.TAG, " datalog" + data);
+
                     if (data.getAsJsonObject().get("error") != null) {
                         CustomerApp.e.putBoolean("isLoggedIn", false);
                         CustomerApp.e.apply();
@@ -551,6 +553,7 @@ public class DataSyncService extends IntentService {
 
             JsonObject requestJson = new JsonObject();
             requestJson.add("request", requestObject);
+            Log.i("abhi", "request" + requestJson);
 
 
             try {
@@ -587,6 +590,7 @@ public class DataSyncService extends IntentService {
     public void updateProfile(Intent intent) {
         String serviceName = intent.getStringExtra("serviceName");
         long requestID = intent.getLongExtra("requestID", 0);
+        Log.i(Constants.TAG,"requestID" + requestID );
         Patient patient = realm.where(Patient.class).equalTo("id", requestID).findFirst();
 
         if (patient != null) {
@@ -605,6 +609,8 @@ public class DataSyncService extends IntentService {
 
             JsonObject patientJson = new JsonObject();
             patientJson.add("request", patientObject);
+            Log.i("nay", "request" + patientObject);
+
 
 
             try {

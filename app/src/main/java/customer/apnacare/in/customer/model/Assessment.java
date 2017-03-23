@@ -21,6 +21,16 @@ public class Assessment extends RealmObject {
     private long careplanId;
     private long userId;
     private String formData;
+
+    public String getFormType() {
+        return formType;
+    }
+
+    public void setFormType(String formType) {
+        this.formType = formType;
+    }
+
+    private String formType;
     private Date createdAt;
 
 
@@ -31,6 +41,7 @@ public class Assessment extends RealmObject {
         this.careplanId = data.get("careplan_id").getAsLong();
         this.userId = data.get("user_id").getAsLong();
         this.formData = data.get("assess_form_data").getAsString();
+        this.formType = data.get("form_type").getAsString();
         this.createdAt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(data.get("created_at").getAsString());
 
     }

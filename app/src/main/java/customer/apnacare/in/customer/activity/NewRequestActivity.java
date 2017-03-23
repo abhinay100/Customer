@@ -229,6 +229,7 @@ public class NewRequestActivity extends BaseActivity implements View.OnClickList
                 long id = 0;
                 if(realm.where(ServiceRequest.class).max("id") != null){
                     id = realm.where(ServiceRequest.class).max("id").longValue();
+                    Log.i(Constants.TAG, "realmid" + id );
                 }
 
                 request.setId((id + 1));
